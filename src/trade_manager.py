@@ -9,10 +9,16 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 class TradeManager:
-    def __init__(self, kite_client, log_file="trades.csv"):
+    def __init__(self, kite_client, base_log_dir="logs"):
         self.kite_client = kite_client
         self.active_trades = []  # List of dictionaries: {symbol, order_id, entry_price, sl_price, quantity, trail_gap}
-        self.log_file = log_file
+        
+        # Create daily logging directory
+        today_str = datetime.datetime.now().strftime("%Y-%m-%d")
+        self.log_dir = os.path.join(base_log_dir, today_str)
+        os.makedirs(self.log_dir, exist_ok=True)
+        
+        self.log_file = os.path.join(self.log_dir, "trades.csv")
         
         # Initialize log file with headers if it doesn't exist
         if not os.path.exists(self.log_file):
@@ -35,7 +41,7 @@ class TradeManager:
 
     def get_open_trades_from_csv(self):
         """
-        Parses the CSV log and returns a list of currently open positions.
+        Parses the today's CSV log and returns a list of currently open positions.
         Returns: { 'StrategyName': [{'symbol': '...', 'quantity': ..., 'entry_price': ...}] }
         """
         if not os.path.exists(self.log_file):
@@ -65,9 +71,6 @@ class TradeManager:
                             open_positions[key]["price"] = total_cost / open_positions[key]["qty"]
                     else: # SELL
                         open_positions[key]["qty"] -= qty
-                        # If selling a short, you'd add to qty. 
-                        # But our logic assumes: IronFly sells (Short), Momentum Buys (Long).
-                        # Let's adjust for Side sensitivity.
             
             # Refined logic: Net Quantity. 
             # If Strategy is IronFly, initial orders are SELL (Short), so negative is Open.

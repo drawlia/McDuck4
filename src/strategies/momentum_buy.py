@@ -6,13 +6,14 @@ from src.strategies.base import BaseStrategy
 logger = logging.getLogger(__name__)
 
 class MomentumBuyStrategy(BaseStrategy):
-    def __init__(self, kite_client, trade_manager, expiry_stamp, candle_size=50, interval="15minute", trailing_points=20, quantity=50, end_time=None):
+    def __init__(self, kite_client, trade_manager, expiry_stamp, candle_size=50, interval="15minute", trailing_points=20, quantity=65, end_time=None, profit_target=500):
         """
         expiry_stamp: e.g. "23OCT"
-        candle_size: Minimum points difference between Open and Close.
+        candle_size: Default minimum points difference, but will be dynamic max(40, ATR14).
         interval: Candle interval str (default "15minute")
         trailing_points: Points to trail SL by
         end_time: datetime.time object for auto-exit time (e.g., 15:20)
+        profit_target: MTM profit target to exit trade (default 500)
         """
         super().__init__(kite_client, trade_manager)
         self.expiry_stamp = expiry_stamp
@@ -21,14 +22,37 @@ class MomentumBuyStrategy(BaseStrategy):
         self.trailing_points = trailing_points
         self.quantity = quantity
         self.end_time = end_time
+        self.profit_target = profit_target
         
         self.symbol = "NSE:NIFTY 50"
         self.instrument_token = 256265 # Token for Nifty 50. Ideally fetch this dynamically.
         
-        self.state = "IDLE" # IDLE, IN_TRADE
+        self.state = "IDLE" # IDLE, IN_TRADE, EXITED
         self.current_trade = None # {order_id, symbol, entry_price, sl_price, type}
         self.last_candle_time = None
         self.last_check_minute = -1 # Track minute to avoid multiple checks in same minute boundary
+
+        # Restore positions from CSV if any
+        self.restore_state()
+
+    def restore_state(self):
+        try:
+            open_trades = self.trade_manager.get_open_trades_from_csv()
+            if "MomentumBuy" in open_trades and open_trades["MomentumBuy"]:
+                logger.info("Restoring MomentumBuy position from log...")
+                # MomentumBuy usually has only one active trade at a time
+                trade_data = open_trades["MomentumBuy"][0]
+                self.current_trade = {
+                    "symbol": trade_data["symbol"],
+                    "order_id": "RESTORED",
+                    "entry_price": trade_data["entry_price"],
+                    "sl_price": trade_data["entry_price"] - self.trailing_points,
+                    "quantity": trade_data["quantity"],
+                    "highest_ltp": trade_data["entry_price"]
+                }
+                self.state = "IN_TRADE"
+        except Exception as e:
+            logger.error(f"Error restoring MomentumBuy state: {e}")
 
     def get_strike_symbol(self, strike, option_type):
         # Example: NIFTY23OCT19500CE
@@ -60,27 +84,38 @@ class MomentumBuyStrategy(BaseStrategy):
             # Only check at 15-minute boundaries (e.g., 00, 15, 30, 45)
             # We add a small delay (10s) to ensure the candle is formed on the server
             now_dt = datetime.datetime.now()
-            if now_dt.minute % 15 == 0 and now_dt.second >= 10:
+            if now_dt.minute % 5 == 0 and now_dt.second >= 10:
                 if now_dt.minute != self.last_check_minute:
                     self.check_entry()
                     self.last_check_minute = now_dt.minute
 
     def check_entry(self):
-        # Calculate time range for last completed candle
+        # Calculate time range for last completed candles (need at least 15 for ATR14)
         now = datetime.datetime.now()
-        # End time should be now, start time should be enough to get last few candles
-        from_date = now - datetime.timedelta(minutes=60)
+        # End time should be now, start time should be enough for 15-20 candles
+        from_date = now - datetime.timedelta(days=3) 
         to_date = now
 
         # Fetch historical data
-        # Note: We hardcoded token 256265 for Nifty 50. 
-        # In prod, we should map 'NSE:NIFTY 50' to token via instrument dump.
+        # import ipdb
+
         data = self.kite_client.get_historical_data(self.instrument_token, from_date, to_date, self.interval)
         
-        if not data:
+        # ipdb.set_trace()
+        if not data or len(data) < 15:
+            logger.warning(f"Insufficient data for Momentum check. Need 15 candles, got {len(data) if data else 0}")
             return
 
-        last_candle = data[-1]
+        # 1. Calculate ATR14 (Simple Average of High-Low for last 14 completed candles)
+        # We use data[:-1] because the last candle in 'data' is the one we want to trade on.
+        # So we use the 14 candles BEFORE the current one to calculate ATR.
+        atr_candles = data[-15:-1]
+        atr14 = sum([(c['high'] - c['low']) for c in atr_candles]) / 14
+        
+        # Dynamic Threshold: max(40, ATR14)
+        dynamic_threshold = max(self.candle_size, atr14)
+        
+        last_candle = data[-2]
         candle_time = last_candle['date']
         
         # Ensure we only process a candle once
@@ -94,33 +129,27 @@ class MomentumBuyStrategy(BaseStrategy):
         high_p = last_candle['high']
         low_p = last_candle['low']
         
+        candle_total_size = high_p - low_p
         body_size = abs(close_p - open_p)
-        
-        logger.info(f"Momentum Check: Time={candle_time}, O={open_p}, C={close_p}, Size={body_size}")
+        # Wick Tolerance: min(5, 0.1 * candle_total_size)
+        tolerance = min(5, 0.1 * candle_total_size)
+    
+        logger.info(f"Momentum Check: Time={candle_time}, O={open_p}, C={close_p}, H = {high_p}, L = {low_p}, TotalSize={candle_total_size}, BodySize={body_size}, ATR14={atr14:.2f},Tolerance={tolerance:.2f}, Threshold={dynamic_threshold:.2f}")
 
-        if body_size >= self.candle_size:
-            # Check Direction and Momentum Strength
+        if candle_total_size >= dynamic_threshold:
             
             # Green Candle
             if close_p > open_p:
-                # Momentum Check: Close near High, Open near Low (Strong body)
-                # Let's say wicks should be small relative to body or just pure body check
-                # User asked: open is high/ low, and cloase is low/ high respectively
-                # Wait, for GREEN: Open should be Low, Close should be High.
-                # For RED: Open should be High, Close should be Low.
-                
-                # Allow some buffer (e.g. 10% of body size)
-                buffer = body_size * 0.2 
-                is_strong_green = (open_p - low_p <= buffer) and (high_p - close_p <= buffer)
+                # Strong Green: Open near Low, Close near High
+                is_strong_green = (open_p - low_p <= tolerance) and (high_p - close_p <= tolerance)
                 
                 if is_strong_green:
                     self.enter_trade("BUY_CE", close_p, low_p) # SL at Low of candle
 
             # Red Candle
             elif open_p > close_p:
-                # Strong Red
-                buffer = body_size * 0.2
-                is_strong_red = (high_p - open_p <= buffer) and (close_p - low_p <= buffer)
+                # Strong Red: Open near High, Close near Low
+                is_strong_red = (high_p - open_p <= tolerance) and (close_p - low_p <= tolerance)
                 
                 if is_strong_red:
                     self.enter_trade("BUY_PE", close_p, high_p) # SL at High of candle
@@ -188,6 +217,15 @@ class MomentumBuyStrategy(BaseStrategy):
 
         ltp = quote[quote_key]["last_price"]
         sl_price = self.current_trade["sl_price"]
+        entry_price = self.current_trade["entry_price"]
+        quantity = self.current_trade["quantity"]
+
+        # 0. Check Profit Target
+        current_mtm = (ltp - entry_price) * quantity
+        if current_mtm >= self.profit_target:
+            logger.info(f"Profit Target Hit for {symbol}! MTM: {current_mtm} >= {self.profit_target}. Exiting...")
+            self.exit_trade()
+            return
         
         # 1. Check SL Hit
         if ltp <= sl_price:

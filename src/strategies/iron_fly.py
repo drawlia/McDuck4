@@ -27,10 +27,25 @@ class IronFlyStrategy(BaseStrategy):
         self.end_time = end_time
         
         self.state = "INIT" # INIT, OPEN, EXITED
-        self.legs = [] # List of {symbol, type: BUY/SELL, entry_price, quantity}
+        self.legs = [] # List of {symbol, side: BUY/SELL, entry_price, quantity}
         self.atm_strike = None
         self.max_mtm_reached = -999999
         self.trailing_sl_value = self.sl_mtm # Starts at initial SL
+
+        # Restore positions from CSV if any
+        self.restore_state()
+
+    def restore_state(self):
+        try:
+            open_trades = self.trade_manager.get_open_trades_from_csv()
+            if "IronFly" in open_trades:
+                logger.info("Restoring IronFly positions from log...")
+                self.legs = open_trades["IronFly"]
+                self.state = "OPEN"
+                # Approximate max_mtm from current if we were to be precise, 
+                # but for now we just resume monitoring.
+        except Exception as e:
+            logger.error(f"Error restoring IronFly state: {e}")
 
     def get_strike_symbol(self, strike, option_type):
         # Example: NIFTY23OCT19500CE
@@ -200,18 +215,37 @@ class IronFlyStrategy(BaseStrategy):
 
     def exit_all_positions(self):
         logger.info("Exiting all positions...")
+        
+        # Separate legs into Buy and Sell orders for exit
+        # Buying back shorts first, then selling longs
+        buy_orders = []
+        sell_orders = []
+
         for leg in self.legs:
             exit_side = "SELL" if leg["side"] == "BUY" else "BUY"
-            
-            self.trade_manager.place_order(
-                symbol=leg["symbol"],
-                exchange="NFO",
-                transaction_type=exit_side,
-                quantity=leg["quantity"],
-                order_type="MARKET",
-                product="MIS",
-                tag="IronFly"
-            )
+            order_params = {
+                "symbol": leg["symbol"],
+                "exchange": "NFO",
+                "transaction_type": exit_side,
+                "quantity": leg["quantity"],
+                "order_type": "MARKET",
+                "product": "MIS",
+                "tag": "IronFly"
+            }
+            if exit_side == "BUY":
+                buy_orders.append(order_params)
+            else:
+                sell_orders.append(order_params)
+
+        # 1. Execute BUYs first
+        for order in buy_orders:
+            self.trade_manager.place_order(**order)
+            logger.info(f"Exit (Cover): BUY {order['symbol']}")
+
+        # 2. Execute SELLs second
+        for order in sell_orders:
+            self.trade_manager.place_order(**order)
+            logger.info(f"Exit (Close): SELL {order['symbol']}")
         
         self.state = "EXITED"
-        logger.info(f"Iron Fly Strategy Exited. Final MTM approx: {self.max_mtm_reached} (peak) / Monitor Trigger.")
+        logger.info(f"Iron Fly Strategy Exited. Final MTM (approx peak): {self.max_mtm_reached}")
