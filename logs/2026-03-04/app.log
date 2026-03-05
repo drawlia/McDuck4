@@ -1,0 +1,1087 @@
+2026-03-04 09:02:01,091 - INFO - Starting KiteConnect Trading App...
+2026-03-04 09:02:01,091 - WARNING - No Access Token found. You may need to generate one.
+2026-03-04 09:02:46,944 - INFO - Session generated. Access Token: 58ranElRj5rveN7Py5uXF6GBuXoyUHyG
+2026-03-04 09:02:46,962 - INFO - Strategies Initialized: Iron Fly, Momentum Buy & ORB on NIFTY
+2026-03-04 09:02:46,962 - INFO - Application Initialized. Starting Main Loop...
+2026-03-04 09:02:46,967 - INFO - Waiting for start time 09:18:00. Current: 09:02:46.966342
+2026-03-04 09:02:47,974 - INFO - Waiting for start time 09:18:00. Current: 09:02:47.974192
+2026-03-04 09:02:48,977 - INFO - Waiting for start time 09:18:00. Current: 09:02:48.977148
+2026-03-04 09:02:49,978 - INFO - Waiting for start time 09:18:00. Current: 09:02:49.978622
+2026-03-04 09:02:50,987 - INFO - Waiting for start time 09:18:00. Current: 09:02:50.987610
+2026-03-04 09:02:51,989 - INFO - Waiting for start time 09:18:00. Current: 09:02:51.989317
+2026-03-04 09:02:52,993 - INFO - Waiting for start time 09:18:00. Current: 09:02:52.993070
+2026-03-04 09:02:53,994 - INFO - Waiting for start time 09:18:00. Current: 09:02:53.994593
+2026-03-04 09:02:54,996 - INFO - Waiting for start time 09:18:00. Current: 09:02:54.996566
+2026-03-04 09:02:55,998 - INFO - Waiting for start time 09:18:00. Current: 09:02:55.998308
+2026-03-04 09:02:57,001 - INFO - Waiting for start time 09:18:00. Current: 09:02:57.001308
+2026-03-04 09:02:58,002 - INFO - Waiting for start time 09:18:00. Current: 09:02:58.002981
+2026-03-04 09:02:59,011 - INFO - Waiting for start time 09:18:00. Current: 09:02:59.011083
+2026-03-04 09:03:00,013 - INFO - Waiting for start time 09:18:00. Current: 09:03:00.013895
+2026-03-04 09:03:01,024 - INFO - Waiting for start time 09:18:00. Current: 09:03:01.024402
+2026-03-04 09:03:02,026 - INFO - Waiting for start time 09:18:00. Current: 09:03:02.026122
+2026-03-04 09:03:03,030 - INFO - Waiting for start time 09:18:00. Current: 09:03:03.030624
+2026-03-04 09:03:04,035 - INFO - Waiting for start time 09:18:00. Current: 09:03:04.034990
+2026-03-04 09:03:05,037 - INFO - Waiting for start time 09:18:00. Current: 09:03:05.037388
+2026-03-04 09:03:06,056 - INFO - Waiting for start time 09:18:00. Current: 09:03:06.056530
+2026-03-04 09:03:07,075 - INFO - Waiting for start time 09:18:00. Current: 09:03:07.075000
+2026-03-04 09:03:08,077 - INFO - Waiting for start time 09:18:00. Current: 09:03:08.077654
+2026-03-04 09:03:09,079 - INFO - Waiting for start time 09:18:00. Current: 09:03:09.079627
+2026-03-04 09:03:10,085 - INFO - Waiting for start time 09:18:00. Current: 09:03:10.085042
+2026-03-04 09:03:11,088 - INFO - Waiting for start time 09:18:00. Current: 09:03:11.088115
+2026-03-04 09:03:12,090 - INFO - Waiting for start time 09:18:00. Current: 09:03:12.090593
+2026-03-04 09:03:13,094 - INFO - Waiting for start time 09:18:00. Current: 09:03:13.094052
+2026-03-04 09:03:14,099 - INFO - Waiting for start time 09:18:00. Current: 09:03:14.099277
+2026-03-04 09:03:15,102 - INFO - Waiting for start time 09:18:00. Current: 09:03:15.102918
+2026-03-04 09:03:16,108 - INFO - Waiting for start time 09:18:00. Current: 09:03:16.108693
+2026-03-04 09:03:17,114 - INFO - Waiting for start time 09:18:00. Current: 09:03:17.114716
+2026-03-04 09:03:18,122 - INFO - Waiting for start time 09:18:00. Current: 09:03:18.122338
+2026-03-04 09:03:19,127 - INFO - Waiting for start time 09:18:00. Current: 09:03:19.127427
+2026-03-04 09:03:20,130 - INFO - Waiting for start time 09:18:00. Current: 09:03:20.130033
+2026-03-04 09:03:21,139 - INFO - Waiting for start time 09:18:00. Current: 09:03:21.139842
+2026-03-04 09:03:22,142 - INFO - Waiting for start time 09:18:00. Current: 09:03:22.142451
+2026-03-04 09:03:23,146 - INFO - Waiting for start time 09:18:00. Current: 09:03:23.146164
+2026-03-04 09:03:24,149 - INFO - Waiting for start time 09:18:00. Current: 09:03:24.149864
+2026-03-04 09:03:25,153 - INFO - Waiting for start time 09:18:00. Current: 09:03:25.153643
+2026-03-04 09:03:26,156 - INFO - Waiting for start time 09:18:00. Current: 09:03:26.156718
+2026-03-04 09:03:27,159 - INFO - Waiting for start time 09:18:00. Current: 09:03:27.159839
+2026-03-04 09:03:28,163 - INFO - Waiting for start time 09:18:00. Current: 09:03:28.163118
+2026-03-04 09:03:29,176 - INFO - Waiting for start time 09:18:00. Current: 09:03:29.176535
+2026-03-04 09:03:30,179 - INFO - Waiting for start time 09:18:00. Current: 09:03:30.179208
+2026-03-04 09:03:31,181 - INFO - Waiting for start time 09:18:00. Current: 09:03:31.181006
+2026-03-04 09:03:32,184 - INFO - Waiting for start time 09:18:00. Current: 09:03:32.184742
+2026-03-04 09:03:33,188 - INFO - Waiting for start time 09:18:00. Current: 09:03:33.188907
+2026-03-04 09:03:34,202 - INFO - Waiting for start time 09:18:00. Current: 09:03:34.202233
+2026-03-04 09:03:35,204 - INFO - Waiting for start time 09:18:00. Current: 09:03:35.204373
+2026-03-04 09:03:36,206 - INFO - Waiting for start time 09:18:00. Current: 09:03:36.206201
+2026-03-04 09:03:37,208 - INFO - Waiting for start time 09:18:00. Current: 09:03:37.208494
+2026-03-04 09:03:38,211 - INFO - Waiting for start time 09:18:00. Current: 09:03:38.211785
+2026-03-04 09:03:39,214 - INFO - Waiting for start time 09:18:00. Current: 09:03:39.214309
+2026-03-04 09:03:40,217 - INFO - Waiting for start time 09:18:00. Current: 09:03:40.217544
+2026-03-04 09:03:41,219 - INFO - Waiting for start time 09:18:00. Current: 09:03:41.219243
+2026-03-04 09:03:42,227 - INFO - Waiting for start time 09:18:00. Current: 09:03:42.227443
+2026-03-04 09:03:43,231 - INFO - Waiting for start time 09:18:00. Current: 09:03:43.231333
+2026-03-04 09:03:44,236 - INFO - Waiting for start time 09:18:00. Current: 09:03:44.236178
+2026-03-04 09:03:45,240 - INFO - Waiting for start time 09:18:00. Current: 09:03:45.240299
+2026-03-04 09:03:46,245 - INFO - Waiting for start time 09:18:00. Current: 09:03:46.245462
+2026-03-04 09:03:47,248 - INFO - Waiting for start time 09:18:00. Current: 09:03:47.248162
+2026-03-04 09:03:48,250 - INFO - Waiting for start time 09:18:00. Current: 09:03:48.250188
+2026-03-04 09:03:49,252 - INFO - Waiting for start time 09:18:00. Current: 09:03:49.252528
+2026-03-04 09:03:50,255 - INFO - Waiting for start time 09:18:00. Current: 09:03:50.255254
+2026-03-04 09:03:51,257 - INFO - Waiting for start time 09:18:00. Current: 09:03:51.257584
+2026-03-04 09:03:52,260 - INFO - Waiting for start time 09:18:00. Current: 09:03:52.260374
+2026-03-04 09:03:53,263 - INFO - Waiting for start time 09:18:00. Current: 09:03:53.263646
+2026-03-04 09:03:54,265 - INFO - Waiting for start time 09:18:00. Current: 09:03:54.265728
+2026-03-04 09:03:55,268 - INFO - Waiting for start time 09:18:00. Current: 09:03:55.268758
+2026-03-04 09:03:56,274 - INFO - Waiting for start time 09:18:00. Current: 09:03:56.274487
+2026-03-04 09:03:57,276 - INFO - Waiting for start time 09:18:00. Current: 09:03:57.276475
+2026-03-04 09:03:58,286 - INFO - Waiting for start time 09:18:00. Current: 09:03:58.286269
+2026-03-04 09:03:59,295 - INFO - Waiting for start time 09:18:00. Current: 09:03:59.295894
+2026-03-04 09:04:00,298 - INFO - Waiting for start time 09:18:00. Current: 09:04:00.298240
+2026-03-04 09:04:01,301 - INFO - Waiting for start time 09:18:00. Current: 09:04:01.301459
+2026-03-04 09:04:02,304 - INFO - Waiting for start time 09:18:00. Current: 09:04:02.304265
+2026-03-04 09:04:03,307 - INFO - Waiting for start time 09:18:00. Current: 09:04:03.307409
+2026-03-04 09:04:04,310 - INFO - Waiting for start time 09:18:00. Current: 09:04:04.310633
+2026-03-04 09:04:05,312 - INFO - Waiting for start time 09:18:00. Current: 09:04:05.312637
+2026-03-04 09:04:06,314 - INFO - Waiting for start time 09:18:00. Current: 09:04:06.314708
+2026-03-04 09:04:07,316 - INFO - Waiting for start time 09:18:00. Current: 09:04:07.316527
+2026-03-04 09:04:08,320 - INFO - Waiting for start time 09:18:00. Current: 09:04:08.320551
+2026-03-04 09:04:09,323 - INFO - Waiting for start time 09:18:00. Current: 09:04:09.323249
+2026-03-04 09:04:10,326 - INFO - Waiting for start time 09:18:00. Current: 09:04:10.326403
+2026-03-04 09:04:11,329 - INFO - Waiting for start time 09:18:00. Current: 09:04:11.329502
+2026-03-04 09:04:12,335 - INFO - Waiting for start time 09:18:00. Current: 09:04:12.335715
+2026-03-04 09:04:13,356 - INFO - Waiting for start time 09:18:00. Current: 09:04:13.355112
+2026-03-04 09:04:14,358 - INFO - Waiting for start time 09:18:00. Current: 09:04:14.358023
+2026-03-04 09:04:15,360 - INFO - Waiting for start time 09:18:00. Current: 09:04:15.360487
+2026-03-04 09:04:16,365 - INFO - Waiting for start time 09:18:00. Current: 09:04:16.365070
+2026-03-04 09:04:17,368 - INFO - Waiting for start time 09:18:00. Current: 09:04:17.368287
+2026-03-04 09:04:18,370 - INFO - Waiting for start time 09:18:00. Current: 09:04:18.370325
+2026-03-04 09:04:19,374 - INFO - Waiting for start time 09:18:00. Current: 09:04:19.374147
+2026-03-04 09:04:20,377 - INFO - Waiting for start time 09:18:00. Current: 09:04:20.376482
+2026-03-04 09:04:21,380 - INFO - Waiting for start time 09:18:00. Current: 09:04:21.380476
+2026-03-04 09:04:22,384 - INFO - Waiting for start time 09:18:00. Current: 09:04:22.384667
+2026-03-04 09:04:23,386 - INFO - Waiting for start time 09:18:00. Current: 09:04:23.386712
+2026-03-04 09:04:24,389 - INFO - Waiting for start time 09:18:00. Current: 09:04:24.389711
+2026-03-04 09:04:25,393 - INFO - Waiting for start time 09:18:00. Current: 09:04:25.393584
+2026-03-04 09:04:26,396 - INFO - Waiting for start time 09:18:00. Current: 09:04:26.396190
+2026-03-04 09:04:27,399 - INFO - Waiting for start time 09:18:00. Current: 09:04:27.399637
+2026-03-04 09:04:28,403 - INFO - Waiting for start time 09:18:00. Current: 09:04:28.403206
+2026-03-04 09:04:29,407 - INFO - Waiting for start time 09:18:00. Current: 09:04:29.407066
+2026-03-04 09:04:30,412 - INFO - Waiting for start time 09:18:00. Current: 09:04:30.412936
+2026-03-04 09:04:31,416 - INFO - Waiting for start time 09:18:00. Current: 09:04:31.416030
+2026-03-04 09:04:32,418 - INFO - Waiting for start time 09:18:00. Current: 09:04:32.418478
+2026-03-04 09:04:33,422 - INFO - Waiting for start time 09:18:00. Current: 09:04:33.422246
+2026-03-04 09:04:34,426 - INFO - Waiting for start time 09:18:00. Current: 09:04:34.426266
+2026-03-04 09:04:35,439 - INFO - Waiting for start time 09:18:00. Current: 09:04:35.439594
+2026-03-04 09:04:36,443 - INFO - Waiting for start time 09:18:00. Current: 09:04:36.443986
+2026-03-04 09:04:37,446 - INFO - Waiting for start time 09:18:00. Current: 09:04:37.446707
+2026-03-04 09:04:38,458 - INFO - Waiting for start time 09:18:00. Current: 09:04:38.458617
+2026-03-04 09:04:39,463 - INFO - Waiting for start time 09:18:00. Current: 09:04:39.463029
+2026-03-04 09:04:40,478 - INFO - Waiting for start time 09:18:00. Current: 09:04:40.478597
+2026-03-04 09:04:41,482 - INFO - Waiting for start time 09:18:00. Current: 09:04:41.482720
+2026-03-04 09:04:42,486 - INFO - Waiting for start time 09:18:00. Current: 09:04:42.486227
+2026-03-04 09:04:43,489 - INFO - Waiting for start time 09:18:00. Current: 09:04:43.489072
+2026-03-04 09:04:44,491 - INFO - Waiting for start time 09:18:00. Current: 09:04:44.491382
+2026-03-04 09:04:45,495 - INFO - Waiting for start time 09:18:00. Current: 09:04:45.495038
+2026-03-04 09:04:46,498 - INFO - Waiting for start time 09:18:00. Current: 09:04:46.498138
+2026-03-04 09:04:47,502 - INFO - Waiting for start time 09:18:00. Current: 09:04:47.502041
+2026-03-04 09:04:48,504 - INFO - Waiting for start time 09:18:00. Current: 09:04:48.504634
+2026-03-04 09:04:49,513 - INFO - Waiting for start time 09:18:00. Current: 09:04:49.513948
+2026-03-04 09:04:50,517 - INFO - Waiting for start time 09:18:00. Current: 09:04:50.517989
+2026-03-04 09:04:51,520 - INFO - Waiting for start time 09:18:00. Current: 09:04:51.520371
+2026-03-04 09:04:52,522 - INFO - Waiting for start time 09:18:00. Current: 09:04:52.522157
+2026-03-04 09:04:53,524 - INFO - Waiting for start time 09:18:00. Current: 09:04:53.524696
+2026-03-04 09:04:54,527 - INFO - Waiting for start time 09:18:00. Current: 09:04:54.527663
+2026-03-04 09:04:55,531 - INFO - Waiting for start time 09:18:00. Current: 09:04:55.531567
+2026-03-04 09:04:56,534 - INFO - Waiting for start time 09:18:00. Current: 09:04:56.534588
+2026-03-04 09:04:57,537 - INFO - Waiting for start time 09:18:00. Current: 09:04:57.537308
+2026-03-04 09:04:58,545 - INFO - Waiting for start time 09:18:00. Current: 09:04:58.545354
+2026-03-04 09:04:59,558 - INFO - Waiting for start time 09:18:00. Current: 09:04:59.558343
+2026-03-04 09:05:00,564 - INFO - Waiting for start time 09:18:00. Current: 09:05:00.564011
+2026-03-04 09:05:01,567 - INFO - Waiting for start time 09:18:00. Current: 09:05:01.567460
+2026-03-04 09:05:02,569 - INFO - Waiting for start time 09:18:00. Current: 09:05:02.569501
+2026-03-04 09:05:03,583 - INFO - Waiting for start time 09:18:00. Current: 09:05:03.583966
+2026-03-04 09:05:04,590 - INFO - Waiting for start time 09:18:00. Current: 09:05:04.590051
+2026-03-04 09:05:05,594 - INFO - Waiting for start time 09:18:00. Current: 09:05:05.594247
+2026-03-04 09:05:06,597 - INFO - Waiting for start time 09:18:00. Current: 09:05:06.597146
+2026-03-04 09:05:07,599 - INFO - Waiting for start time 09:18:00. Current: 09:05:07.599421
+2026-03-04 09:05:08,602 - INFO - Waiting for start time 09:18:00. Current: 09:05:08.602249
+2026-03-04 09:05:09,604 - INFO - Waiting for start time 09:18:00. Current: 09:05:09.604340
+2026-03-04 09:05:10,610 - INFO - Waiting for start time 09:18:00. Current: 09:05:10.610597
+2026-03-04 09:05:10,676 - INFO - Momentum Check: Time=2026-03-02 15:20:00+05:30, O=24913.45, C=24864.25, H = 24914.85, L = 24860.4, TotalSize=54.44999999999709, BodySize=49.20000000000073, ATR14=50.96,Tolerance=5.00, Threshold=50.96
+2026-03-04 09:05:10,681 - INFO - Momentum Signal! BUY_PE NIFTY2631024850PE. Spot: 24864.25, SL Level: 24914.85
+2026-03-04 09:05:10,753 - ERROR - Error placing order: Your order could not be converted to a After Market Order (AMO).
+2026-03-04 09:05:11,756 - INFO - Waiting for start time 09:18:00. Current: 09:05:11.756312
+2026-03-04 09:05:12,761 - INFO - Waiting for start time 09:18:00. Current: 09:05:12.761266
+2026-03-04 09:05:13,780 - INFO - Waiting for start time 09:18:00. Current: 09:05:13.780773
+2026-03-04 09:05:14,786 - INFO - Waiting for start time 09:18:00. Current: 09:05:14.786029
+2026-03-04 09:05:15,788 - INFO - Waiting for start time 09:18:00. Current: 09:05:15.788401
+2026-03-04 09:05:16,795 - INFO - Waiting for start time 09:18:00. Current: 09:05:16.795038
+2026-03-04 09:05:17,797 - INFO - Waiting for start time 09:18:00. Current: 09:05:17.797255
+2026-03-04 09:05:18,800 - INFO - Waiting for start time 09:18:00. Current: 09:05:18.800280
+2026-03-04 09:05:19,803 - INFO - Waiting for start time 09:18:00. Current: 09:05:19.803104
+2026-03-04 09:05:20,807 - INFO - Waiting for start time 09:18:00. Current: 09:05:20.805772
+2026-03-04 09:05:21,819 - INFO - Waiting for start time 09:18:00. Current: 09:05:21.819416
+2026-03-04 09:05:22,823 - INFO - Waiting for start time 09:18:00. Current: 09:05:22.823887
+2026-03-04 09:05:23,826 - INFO - Waiting for start time 09:18:00. Current: 09:05:23.826691
+2026-03-04 09:05:24,829 - INFO - Waiting for start time 09:18:00. Current: 09:05:24.829046
+2026-03-04 09:05:25,831 - INFO - Waiting for start time 09:18:00. Current: 09:05:25.831417
+2026-03-04 09:05:26,833 - INFO - Waiting for start time 09:18:00. Current: 09:05:26.833742
+2026-03-04 09:05:27,837 - INFO - Waiting for start time 09:18:00. Current: 09:05:27.837261
+2026-03-04 09:05:28,840 - INFO - Waiting for start time 09:18:00. Current: 09:05:28.840466
+2026-03-04 09:05:29,842 - INFO - Waiting for start time 09:18:00. Current: 09:05:29.842846
+2026-03-04 09:05:30,847 - INFO - Waiting for start time 09:18:00. Current: 09:05:30.847835
+2026-03-04 09:05:31,854 - INFO - Waiting for start time 09:18:00. Current: 09:05:31.854211
+2026-03-04 09:05:32,856 - INFO - Waiting for start time 09:18:00. Current: 09:05:32.856641
+2026-03-04 09:05:33,858 - INFO - Waiting for start time 09:18:00. Current: 09:05:33.858851
+2026-03-04 09:05:34,866 - INFO - Waiting for start time 09:18:00. Current: 09:05:34.862150
+2026-03-04 09:05:35,875 - INFO - Waiting for start time 09:18:00. Current: 09:05:35.875276
+2026-03-04 09:05:36,878 - INFO - Waiting for start time 09:18:00. Current: 09:05:36.878215
+2026-03-04 09:05:37,888 - INFO - Waiting for start time 09:18:00. Current: 09:05:37.888173
+2026-03-04 09:05:38,889 - INFO - Waiting for start time 09:18:00. Current: 09:05:38.889967
+2026-03-04 09:05:39,892 - INFO - Waiting for start time 09:18:00. Current: 09:05:39.892436
+2026-03-04 09:05:40,896 - INFO - Waiting for start time 09:18:00. Current: 09:05:40.896562
+2026-03-04 09:05:41,899 - INFO - Waiting for start time 09:18:00. Current: 09:05:41.899713
+2026-03-04 09:05:42,903 - INFO - Waiting for start time 09:18:00. Current: 09:05:42.903949
+2026-03-04 09:05:43,905 - INFO - Waiting for start time 09:18:00. Current: 09:05:43.905862
+2026-03-04 09:05:44,908 - INFO - Waiting for start time 09:18:00. Current: 09:05:44.908172
+2026-03-04 09:05:45,914 - INFO - Waiting for start time 09:18:00. Current: 09:05:45.914516
+2026-03-04 09:05:46,916 - INFO - Waiting for start time 09:18:00. Current: 09:05:46.916932
+2026-03-04 09:05:47,919 - INFO - Waiting for start time 09:18:00. Current: 09:05:47.919555
+2026-03-04 09:05:48,922 - INFO - Waiting for start time 09:18:00. Current: 09:05:48.922401
+2026-03-04 09:05:49,924 - INFO - Waiting for start time 09:18:00. Current: 09:05:49.924768
+2026-03-04 09:05:50,931 - INFO - Waiting for start time 09:18:00. Current: 09:05:50.931575
+2026-03-04 09:05:51,934 - INFO - Waiting for start time 09:18:00. Current: 09:05:51.934679
+2026-03-04 09:05:52,939 - INFO - Waiting for start time 09:18:00. Current: 09:05:52.939046
+2026-03-04 09:05:53,959 - INFO - Waiting for start time 09:18:00. Current: 09:05:53.957925
+2026-03-04 09:05:54,961 - INFO - Waiting for start time 09:18:00. Current: 09:05:54.961784
+2026-03-04 09:05:55,964 - INFO - Waiting for start time 09:18:00. Current: 09:05:55.964267
+2026-03-04 09:05:56,968 - INFO - Waiting for start time 09:18:00. Current: 09:05:56.967993
+2026-03-04 09:05:57,971 - INFO - Waiting for start time 09:18:00. Current: 09:05:57.971255
+2026-03-04 09:05:58,977 - INFO - Waiting for start time 09:18:00. Current: 09:05:58.977687
+2026-03-04 09:05:59,979 - INFO - Waiting for start time 09:18:00. Current: 09:05:59.979719
+2026-03-04 09:06:00,983 - INFO - Waiting for start time 09:18:00. Current: 09:06:00.983575
+2026-03-04 09:06:01,986 - INFO - Waiting for start time 09:18:00. Current: 09:06:01.986647
+2026-03-04 09:06:02,989 - INFO - Waiting for start time 09:18:00. Current: 09:06:02.989730
+2026-03-04 09:06:03,992 - INFO - Waiting for start time 09:18:00. Current: 09:06:03.992651
+2026-03-04 09:06:04,994 - INFO - Waiting for start time 09:18:00. Current: 09:06:04.994134
+2026-03-04 09:06:05,996 - INFO - Waiting for start time 09:18:00. Current: 09:06:05.996167
+2026-03-04 09:06:07,003 - INFO - Waiting for start time 09:18:00. Current: 09:06:07.003992
+2026-03-04 09:06:08,023 - INFO - Waiting for start time 09:18:00. Current: 09:06:08.023443
+2026-03-04 09:06:09,025 - INFO - Waiting for start time 09:18:00. Current: 09:06:09.025854
+2026-03-04 09:06:10,028 - INFO - Waiting for start time 09:18:00. Current: 09:06:10.028556
+2026-03-04 09:06:11,031 - INFO - Waiting for start time 09:18:00. Current: 09:06:11.031695
+2026-03-04 09:06:12,045 - INFO - Waiting for start time 09:18:00. Current: 09:06:12.045851
+2026-03-04 09:06:13,051 - INFO - Waiting for start time 09:18:00. Current: 09:06:13.051239
+2026-03-04 09:06:14,056 - INFO - Waiting for start time 09:18:00. Current: 09:06:14.056025
+2026-03-04 09:06:15,060 - INFO - Waiting for start time 09:18:00. Current: 09:06:15.060468
+2026-03-04 09:06:16,062 - INFO - Waiting for start time 09:18:00. Current: 09:06:16.062511
+2026-03-04 09:06:17,064 - INFO - Waiting for start time 09:18:00. Current: 09:06:17.064724
+2026-03-04 09:06:18,067 - INFO - Waiting for start time 09:18:00. Current: 09:06:18.067044
+2026-03-04 09:06:19,069 - INFO - Waiting for start time 09:18:00. Current: 09:06:19.069954
+2026-03-04 09:06:20,071 - INFO - Waiting for start time 09:18:00. Current: 09:06:20.071656
+2026-03-04 09:06:21,074 - INFO - Waiting for start time 09:18:00. Current: 09:06:21.074078
+2026-03-04 09:06:22,079 - INFO - Waiting for start time 09:18:00. Current: 09:06:22.079855
+2026-03-04 09:06:23,084 - INFO - Waiting for start time 09:18:00. Current: 09:06:23.084684
+2026-03-04 09:06:24,087 - INFO - Waiting for start time 09:18:00. Current: 09:06:24.087065
+2026-03-04 09:06:25,090 - INFO - Waiting for start time 09:18:00. Current: 09:06:25.090676
+2026-03-04 09:06:26,093 - INFO - Waiting for start time 09:18:00. Current: 09:06:26.093654
+2026-03-04 09:06:27,096 - INFO - Waiting for start time 09:18:00. Current: 09:06:27.096935
+2026-03-04 09:06:28,102 - INFO - Waiting for start time 09:18:00. Current: 09:06:28.102346
+2026-03-04 09:06:29,105 - INFO - Waiting for start time 09:18:00. Current: 09:06:29.105831
+2026-03-04 09:06:30,115 - INFO - Waiting for start time 09:18:00. Current: 09:06:30.115109
+2026-03-04 09:06:31,118 - INFO - Waiting for start time 09:18:00. Current: 09:06:31.118260
+2026-03-04 09:06:32,123 - INFO - Waiting for start time 09:18:00. Current: 09:06:32.123775
+2026-03-04 09:06:33,127 - INFO - Waiting for start time 09:18:00. Current: 09:06:33.127160
+2026-03-04 09:06:34,129 - INFO - Waiting for start time 09:18:00. Current: 09:06:34.129834
+2026-03-04 09:06:35,132 - INFO - Waiting for start time 09:18:00. Current: 09:06:35.132133
+2026-03-04 09:06:36,133 - INFO - Waiting for start time 09:18:00. Current: 09:06:36.133790
+2026-03-04 09:06:37,136 - INFO - Waiting for start time 09:18:00. Current: 09:06:37.136004
+2026-03-04 09:06:38,138 - INFO - Waiting for start time 09:18:00. Current: 09:06:38.138058
+2026-03-04 09:06:39,140 - INFO - Waiting for start time 09:18:00. Current: 09:06:39.140382
+2026-03-04 09:06:40,142 - INFO - Waiting for start time 09:18:00. Current: 09:06:40.142537
+2026-03-04 09:06:41,145 - INFO - Waiting for start time 09:18:00. Current: 09:06:41.145156
+2026-03-04 09:06:42,147 - INFO - Waiting for start time 09:18:00. Current: 09:06:42.147178
+2026-03-04 09:06:43,149 - INFO - Waiting for start time 09:18:00. Current: 09:06:43.149724
+2026-03-04 09:06:44,151 - INFO - Waiting for start time 09:18:00. Current: 09:06:44.151627
+2026-03-04 09:06:45,153 - INFO - Waiting for start time 09:18:00. Current: 09:06:45.153989
+2026-03-04 09:06:46,167 - INFO - Waiting for start time 09:18:00. Current: 09:06:46.167461
+2026-03-04 09:06:47,170 - INFO - Waiting for start time 09:18:00. Current: 09:06:47.170162
+2026-03-04 09:06:48,171 - INFO - Waiting for start time 09:18:00. Current: 09:06:48.171828
+2026-03-04 09:06:49,177 - INFO - Waiting for start time 09:18:00. Current: 09:06:49.177675
+2026-03-04 09:06:50,180 - INFO - Waiting for start time 09:18:00. Current: 09:06:50.180936
+2026-03-04 09:06:51,184 - INFO - Waiting for start time 09:18:00. Current: 09:06:51.184170
+2026-03-04 09:06:52,187 - INFO - Waiting for start time 09:18:00. Current: 09:06:52.187557
+2026-03-04 09:06:53,190 - INFO - Waiting for start time 09:18:00. Current: 09:06:53.190313
+2026-03-04 09:06:54,192 - INFO - Waiting for start time 09:18:00. Current: 09:06:54.192491
+2026-03-04 09:06:55,194 - INFO - Waiting for start time 09:18:00. Current: 09:06:55.194715
+2026-03-04 09:06:56,198 - INFO - Waiting for start time 09:18:00. Current: 09:06:56.198153
+2026-03-04 09:06:57,200 - INFO - Waiting for start time 09:18:00. Current: 09:06:57.200763
+2026-03-04 09:06:58,204 - INFO - Waiting for start time 09:18:00. Current: 09:06:58.204559
+2026-03-04 09:06:59,207 - INFO - Waiting for start time 09:18:00. Current: 09:06:59.207947
+2026-03-04 09:07:00,211 - INFO - Waiting for start time 09:18:00. Current: 09:07:00.211351
+2026-03-04 09:07:01,214 - INFO - Waiting for start time 09:18:00. Current: 09:07:01.214576
+2026-03-04 09:07:02,221 - INFO - Waiting for start time 09:18:00. Current: 09:07:02.221514
+2026-03-04 09:07:03,224 - INFO - Waiting for start time 09:18:00. Current: 09:07:03.224893
+2026-03-04 09:07:04,229 - INFO - Waiting for start time 09:18:00. Current: 09:07:04.229272
+2026-03-04 09:07:05,232 - INFO - Waiting for start time 09:18:00. Current: 09:07:05.232221
+2026-03-04 09:07:06,246 - INFO - Waiting for start time 09:18:00. Current: 09:07:06.246002
+2026-03-04 09:07:07,255 - INFO - Waiting for start time 09:18:00. Current: 09:07:07.255328
+2026-03-04 09:07:08,257 - INFO - Waiting for start time 09:18:00. Current: 09:07:08.257851
+2026-03-04 09:07:09,261 - INFO - Waiting for start time 09:18:00. Current: 09:07:09.261624
+2026-03-04 09:07:10,264 - INFO - Waiting for start time 09:18:00. Current: 09:07:10.264496
+2026-03-04 09:07:11,266 - INFO - Waiting for start time 09:18:00. Current: 09:07:11.266261
+2026-03-04 09:07:12,269 - INFO - Waiting for start time 09:18:00. Current: 09:07:12.269049
+2026-03-04 09:07:13,271 - INFO - Waiting for start time 09:18:00. Current: 09:07:13.271857
+2026-03-04 09:07:14,280 - INFO - Waiting for start time 09:18:00. Current: 09:07:14.280902
+2026-03-04 09:07:15,286 - INFO - Waiting for start time 09:18:00. Current: 09:07:15.286156
+2026-03-04 09:07:16,289 - INFO - Waiting for start time 09:18:00. Current: 09:07:16.289393
+2026-03-04 09:07:17,292 - INFO - Waiting for start time 09:18:00. Current: 09:07:17.292547
+2026-03-04 09:07:18,295 - INFO - Waiting for start time 09:18:00. Current: 09:07:18.295303
+2026-03-04 09:07:19,297 - INFO - Waiting for start time 09:18:00. Current: 09:07:19.297184
+2026-03-04 09:07:20,301 - INFO - Waiting for start time 09:18:00. Current: 09:07:20.301847
+2026-03-04 09:07:21,304 - INFO - Waiting for start time 09:18:00. Current: 09:07:21.304245
+2026-03-04 09:07:22,307 - INFO - Waiting for start time 09:18:00. Current: 09:07:22.307735
+2026-03-04 09:07:23,311 - INFO - Waiting for start time 09:18:00. Current: 09:07:23.311850
+2026-03-04 09:07:24,313 - INFO - Waiting for start time 09:18:00. Current: 09:07:24.313271
+2026-03-04 09:07:25,315 - INFO - Waiting for start time 09:18:00. Current: 09:07:25.315637
+2026-03-04 09:07:26,318 - INFO - Waiting for start time 09:18:00. Current: 09:07:26.318423
+2026-03-04 09:07:27,320 - INFO - Waiting for start time 09:18:00. Current: 09:07:27.320478
+2026-03-04 09:07:28,322 - INFO - Waiting for start time 09:18:00. Current: 09:07:28.322644
+2026-03-04 09:07:29,325 - INFO - Waiting for start time 09:18:00. Current: 09:07:29.325105
+2026-03-04 09:07:30,327 - INFO - Waiting for start time 09:18:00. Current: 09:07:30.327888
+2026-03-04 09:07:31,330 - INFO - Waiting for start time 09:18:00. Current: 09:07:31.330720
+2026-03-04 09:07:32,340 - INFO - Waiting for start time 09:18:00. Current: 09:07:32.340139
+2026-03-04 09:07:33,348 - INFO - Waiting for start time 09:18:00. Current: 09:07:33.348086
+2026-03-04 09:07:34,373 - INFO - Waiting for start time 09:18:00. Current: 09:07:34.373500
+2026-03-04 09:07:35,379 - INFO - Waiting for start time 09:18:00. Current: 09:07:35.379844
+2026-03-04 09:07:36,385 - INFO - Waiting for start time 09:18:00. Current: 09:07:36.385219
+2026-03-04 09:07:37,389 - INFO - Waiting for start time 09:18:00. Current: 09:07:37.389010
+2026-03-04 09:07:38,393 - INFO - Waiting for start time 09:18:00. Current: 09:07:38.393573
+2026-03-04 09:07:39,396 - INFO - Waiting for start time 09:18:00. Current: 09:07:39.396022
+2026-03-04 09:07:40,400 - INFO - Waiting for start time 09:18:00. Current: 09:07:40.400864
+2026-03-04 09:07:41,419 - INFO - Waiting for start time 09:18:00. Current: 09:07:41.419615
+2026-03-04 09:07:42,438 - INFO - Waiting for start time 09:18:00. Current: 09:07:42.438395
+2026-03-04 09:07:43,443 - INFO - Waiting for start time 09:18:00. Current: 09:07:43.442759
+2026-03-04 09:07:44,444 - INFO - Waiting for start time 09:18:00. Current: 09:07:44.444959
+2026-03-04 09:07:45,448 - INFO - Waiting for start time 09:18:00. Current: 09:07:45.448050
+2026-03-04 09:07:46,454 - INFO - Waiting for start time 09:18:00. Current: 09:07:46.454964
+2026-03-04 09:07:47,458 - INFO - Waiting for start time 09:18:00. Current: 09:07:47.458963
+2026-03-04 09:07:48,461 - INFO - Waiting for start time 09:18:00. Current: 09:07:48.461676
+2026-03-04 09:07:49,464 - INFO - Waiting for start time 09:18:00. Current: 09:07:49.464309
+2026-03-04 09:07:50,466 - INFO - Waiting for start time 09:18:00. Current: 09:07:50.466708
+2026-03-04 09:07:51,468 - INFO - Waiting for start time 09:18:00. Current: 09:07:51.468295
+2026-03-04 09:07:52,472 - INFO - Waiting for start time 09:18:00. Current: 09:07:52.472163
+2026-03-04 09:07:53,475 - INFO - Waiting for start time 09:18:00. Current: 09:07:53.475234
+2026-03-04 09:07:54,477 - INFO - Waiting for start time 09:18:00. Current: 09:07:54.477803
+2026-03-04 09:07:55,483 - INFO - Waiting for start time 09:18:00. Current: 09:07:55.483375
+2026-03-04 09:07:56,486 - INFO - Waiting for start time 09:18:00. Current: 09:07:56.486046
+2026-03-04 09:07:57,489 - INFO - Waiting for start time 09:18:00. Current: 09:07:57.489751
+2026-03-04 09:07:58,494 - INFO - Waiting for start time 09:18:00. Current: 09:07:58.494953
+2026-03-04 09:07:59,498 - INFO - Waiting for start time 09:18:00. Current: 09:07:59.498046
+2026-03-04 09:08:00,499 - INFO - Waiting for start time 09:18:00. Current: 09:08:00.499560
+2026-03-04 09:08:01,501 - INFO - Waiting for start time 09:18:00. Current: 09:08:01.501927
+2026-03-04 09:08:02,510 - INFO - Waiting for start time 09:18:00. Current: 09:08:02.510900
+2026-03-04 09:08:03,516 - INFO - Waiting for start time 09:18:00. Current: 09:08:03.516084
+2026-03-04 09:08:04,520 - INFO - Waiting for start time 09:18:00. Current: 09:08:04.519443
+2026-03-04 09:08:05,523 - INFO - Waiting for start time 09:18:00. Current: 09:08:05.523244
+2026-03-04 09:08:06,526 - INFO - Waiting for start time 09:18:00. Current: 09:08:06.526918
+2026-03-04 09:08:07,534 - INFO - Waiting for start time 09:18:00. Current: 09:08:07.534787
+2026-03-04 09:08:08,542 - INFO - Waiting for start time 09:18:00. Current: 09:08:08.542138
+2026-03-04 09:08:09,548 - INFO - Waiting for start time 09:18:00. Current: 09:08:09.547881
+2026-03-04 09:08:10,550 - INFO - Waiting for start time 09:18:00. Current: 09:08:10.550922
+2026-03-04 09:08:11,553 - INFO - Waiting for start time 09:18:00. Current: 09:08:11.553147
+2026-03-04 09:08:12,557 - INFO - Waiting for start time 09:18:00. Current: 09:08:12.555990
+2026-03-04 09:08:13,561 - INFO - Waiting for start time 09:18:00. Current: 09:08:13.561407
+2026-03-04 09:08:14,563 - INFO - Waiting for start time 09:18:00. Current: 09:08:14.563635
+2026-03-04 09:08:15,572 - INFO - Waiting for start time 09:18:00. Current: 09:08:15.572238
+2026-03-04 09:08:16,578 - INFO - Waiting for start time 09:18:00. Current: 09:08:16.578864
+2026-03-04 09:08:17,581 - INFO - Waiting for start time 09:18:00. Current: 09:08:17.580817
+2026-03-04 09:08:18,583 - INFO - Waiting for start time 09:18:00. Current: 09:08:18.583678
+2026-03-04 09:08:19,590 - INFO - Waiting for start time 09:18:00. Current: 09:08:19.590313
+2026-03-04 09:08:20,592 - INFO - Waiting for start time 09:18:00. Current: 09:08:20.592216
+2026-03-04 09:08:21,600 - INFO - Waiting for start time 09:18:00. Current: 09:08:21.600293
+2026-03-04 09:08:22,603 - INFO - Waiting for start time 09:18:00. Current: 09:08:22.603402
+2026-03-04 09:08:23,606 - INFO - Waiting for start time 09:18:00. Current: 09:08:23.606706
+2026-03-04 09:08:24,609 - INFO - Waiting for start time 09:18:00. Current: 09:08:24.609992
+2026-03-04 09:08:25,617 - INFO - Waiting for start time 09:18:00. Current: 09:08:25.617714
+2026-03-04 09:08:26,621 - INFO - Waiting for start time 09:18:00. Current: 09:08:26.621867
+2026-03-04 09:08:27,630 - INFO - Waiting for start time 09:18:00. Current: 09:08:27.630184
+2026-03-04 09:08:28,632 - INFO - Waiting for start time 09:18:00. Current: 09:08:28.632337
+2026-03-04 09:08:29,634 - INFO - Waiting for start time 09:18:00. Current: 09:08:29.634577
+2026-03-04 09:08:30,638 - INFO - Waiting for start time 09:18:00. Current: 09:08:30.638640
+2026-03-04 09:08:31,642 - INFO - Waiting for start time 09:18:00. Current: 09:08:31.642293
+2026-03-04 09:08:32,644 - INFO - Waiting for start time 09:18:00. Current: 09:08:32.644856
+2026-03-04 09:08:33,647 - INFO - Waiting for start time 09:18:00. Current: 09:08:33.647000
+2026-03-04 09:08:34,654 - INFO - Waiting for start time 09:18:00. Current: 09:08:34.654199
+2026-03-04 09:08:35,657 - INFO - Waiting for start time 09:18:00. Current: 09:08:35.657417
+2026-03-04 09:08:36,659 - INFO - Waiting for start time 09:18:00. Current: 09:08:36.659452
+2026-03-04 09:08:37,662 - INFO - Waiting for start time 09:18:00. Current: 09:08:37.662070
+2026-03-04 09:08:38,665 - INFO - Waiting for start time 09:18:00. Current: 09:08:38.664802
+2026-03-04 09:08:39,666 - INFO - Waiting for start time 09:18:00. Current: 09:08:39.666645
+2026-03-04 09:08:40,668 - INFO - Waiting for start time 09:18:00. Current: 09:08:40.668812
+2026-03-04 09:08:41,676 - INFO - Waiting for start time 09:18:00. Current: 09:08:41.676094
+2026-03-04 09:08:42,678 - INFO - Waiting for start time 09:18:00. Current: 09:08:42.678068
+2026-03-04 09:08:43,687 - INFO - Waiting for start time 09:18:00. Current: 09:08:43.687248
+2026-03-04 09:08:44,689 - INFO - Waiting for start time 09:18:00. Current: 09:08:44.689242
+2026-03-04 09:08:45,702 - INFO - Waiting for start time 09:18:00. Current: 09:08:45.702846
+2026-03-04 09:08:46,705 - INFO - Waiting for start time 09:18:00. Current: 09:08:46.705795
+2026-03-04 09:08:47,709 - INFO - Waiting for start time 09:18:00. Current: 09:08:47.709592
+2026-03-04 09:08:48,721 - INFO - Waiting for start time 09:18:00. Current: 09:08:48.721141
+2026-03-04 09:08:49,723 - INFO - Waiting for start time 09:18:00. Current: 09:08:49.723249
+2026-03-04 09:08:50,726 - INFO - Waiting for start time 09:18:00. Current: 09:08:50.726538
+2026-03-04 09:08:51,730 - INFO - Waiting for start time 09:18:00. Current: 09:08:51.730994
+2026-03-04 09:08:52,732 - INFO - Waiting for start time 09:18:00. Current: 09:08:52.732900
+2026-03-04 09:08:53,735 - INFO - Waiting for start time 09:18:00. Current: 09:08:53.735895
+2026-03-04 09:08:54,746 - INFO - Waiting for start time 09:18:00. Current: 09:08:54.745703
+2026-03-04 09:08:55,750 - INFO - Waiting for start time 09:18:00. Current: 09:08:55.750384
+2026-03-04 09:08:56,753 - INFO - Waiting for start time 09:18:00. Current: 09:08:56.753839
+2026-03-04 09:08:57,756 - INFO - Waiting for start time 09:18:00. Current: 09:08:57.756400
+2026-03-04 09:08:58,758 - INFO - Waiting for start time 09:18:00. Current: 09:08:58.758889
+2026-03-04 09:08:59,760 - INFO - Waiting for start time 09:18:00. Current: 09:08:59.760817
+2026-03-04 09:09:00,764 - INFO - Waiting for start time 09:18:00. Current: 09:09:00.764564
+2026-03-04 09:09:01,766 - INFO - Waiting for start time 09:18:00. Current: 09:09:01.766805
+2026-03-04 09:09:02,769 - INFO - Waiting for start time 09:18:00. Current: 09:09:02.769906
+2026-03-04 09:09:03,772 - INFO - Waiting for start time 09:18:00. Current: 09:09:03.772433
+2026-03-04 09:09:04,775 - INFO - Waiting for start time 09:18:00. Current: 09:09:04.775784
+2026-03-04 09:09:05,778 - INFO - Waiting for start time 09:18:00. Current: 09:09:05.778070
+2026-03-04 09:09:06,779 - INFO - Waiting for start time 09:18:00. Current: 09:09:06.779943
+2026-03-04 09:09:07,782 - INFO - Waiting for start time 09:18:00. Current: 09:09:07.782421
+2026-03-04 09:09:08,786 - INFO - Waiting for start time 09:18:00. Current: 09:09:08.784972
+2026-03-04 09:09:09,791 - INFO - Waiting for start time 09:18:00. Current: 09:09:09.791951
+2026-03-04 09:09:10,798 - INFO - Waiting for start time 09:18:00. Current: 09:09:10.797711
+2026-03-04 09:09:11,801 - INFO - Waiting for start time 09:18:00. Current: 09:09:11.801184
+2026-03-04 09:09:12,812 - INFO - Waiting for start time 09:18:00. Current: 09:09:12.811466
+2026-03-04 09:09:13,815 - INFO - Waiting for start time 09:18:00. Current: 09:09:13.815455
+2026-03-04 09:09:14,820 - INFO - Waiting for start time 09:18:00. Current: 09:09:14.820266
+2026-03-04 09:09:15,825 - INFO - Waiting for start time 09:18:00. Current: 09:09:15.825446
+2026-03-04 09:09:16,827 - INFO - Waiting for start time 09:18:00. Current: 09:09:16.827326
+2026-03-04 09:09:17,829 - INFO - Waiting for start time 09:18:00. Current: 09:09:17.829950
+2026-03-04 09:09:18,831 - INFO - Waiting for start time 09:18:00. Current: 09:09:18.831911
+2026-03-04 09:09:19,833 - INFO - Waiting for start time 09:18:00. Current: 09:09:19.833600
+2026-03-04 09:09:20,838 - INFO - Waiting for start time 09:18:00. Current: 09:09:20.838428
+2026-03-04 09:09:21,842 - INFO - Waiting for start time 09:18:00. Current: 09:09:21.842139
+2026-03-04 09:09:22,846 - INFO - Waiting for start time 09:18:00. Current: 09:09:22.846609
+2026-03-04 09:09:23,852 - INFO - Waiting for start time 09:18:00. Current: 09:09:23.852976
+2026-03-04 09:09:24,856 - INFO - Waiting for start time 09:18:00. Current: 09:09:24.856641
+2026-03-04 09:09:25,866 - INFO - Waiting for start time 09:18:00. Current: 09:09:25.866485
+2026-03-04 09:09:26,872 - INFO - Waiting for start time 09:18:00. Current: 09:09:26.872363
+2026-03-04 09:09:27,874 - INFO - Waiting for start time 09:18:00. Current: 09:09:27.874798
+2026-03-04 09:09:28,878 - INFO - Waiting for start time 09:18:00. Current: 09:09:28.878246
+2026-03-04 09:09:29,882 - INFO - Waiting for start time 09:18:00. Current: 09:09:29.882282
+2026-03-04 09:09:30,886 - INFO - Waiting for start time 09:18:00. Current: 09:09:30.886089
+2026-03-04 09:09:31,888 - INFO - Waiting for start time 09:18:00. Current: 09:09:31.888539
+2026-03-04 09:09:32,891 - INFO - Waiting for start time 09:18:00. Current: 09:09:32.891151
+2026-03-04 09:09:33,899 - INFO - Waiting for start time 09:18:00. Current: 09:09:33.899222
+2026-03-04 09:09:34,901 - INFO - Waiting for start time 09:18:00. Current: 09:09:34.901569
+2026-03-04 09:09:35,911 - INFO - Waiting for start time 09:18:00. Current: 09:09:35.908857
+2026-03-04 09:09:36,914 - INFO - Waiting for start time 09:18:00. Current: 09:09:36.914820
+2026-03-04 09:09:37,922 - INFO - Waiting for start time 09:18:00. Current: 09:09:37.921969
+2026-03-04 09:09:38,924 - INFO - Waiting for start time 09:18:00. Current: 09:09:38.924919
+2026-03-04 09:09:39,930 - INFO - Waiting for start time 09:18:00. Current: 09:09:39.930342
+2026-03-04 09:09:40,935 - INFO - Waiting for start time 09:18:00. Current: 09:09:40.935771
+2026-03-04 09:09:41,943 - INFO - Waiting for start time 09:18:00. Current: 09:09:41.943780
+2026-03-04 09:09:42,946 - INFO - Waiting for start time 09:18:00. Current: 09:09:42.946927
+2026-03-04 09:09:43,949 - INFO - Waiting for start time 09:18:00. Current: 09:09:43.949368
+2026-03-04 09:09:44,951 - INFO - Waiting for start time 09:18:00. Current: 09:09:44.951344
+2026-03-04 09:09:45,953 - INFO - Waiting for start time 09:18:00. Current: 09:09:45.953727
+2026-03-04 09:09:46,956 - INFO - Waiting for start time 09:18:00. Current: 09:09:46.956455
+2026-03-04 09:09:47,959 - INFO - Waiting for start time 09:18:00. Current: 09:09:47.959631
+2026-03-04 09:09:48,970 - INFO - Waiting for start time 09:18:00. Current: 09:09:48.970986
+2026-03-04 09:09:49,974 - INFO - Waiting for start time 09:18:00. Current: 09:09:49.974490
+2026-03-04 09:09:50,976 - INFO - Waiting for start time 09:18:00. Current: 09:09:50.976079
+2026-03-04 09:09:51,983 - INFO - Waiting for start time 09:18:00. Current: 09:09:51.983361
+2026-03-04 09:09:52,988 - INFO - Waiting for start time 09:18:00. Current: 09:09:52.988059
+2026-03-04 09:09:53,991 - INFO - Waiting for start time 09:18:00. Current: 09:09:53.991437
+2026-03-04 09:09:54,994 - INFO - Waiting for start time 09:18:00. Current: 09:09:54.994561
+2026-03-04 09:09:55,996 - INFO - Waiting for start time 09:18:00. Current: 09:09:55.996606
+2026-03-04 09:09:56,998 - INFO - Waiting for start time 09:18:00. Current: 09:09:56.998680
+2026-03-04 09:09:58,000 - INFO - Waiting for start time 09:18:00. Current: 09:09:58.000840
+2026-03-04 09:09:59,005 - INFO - Waiting for start time 09:18:00. Current: 09:09:59.004969
+2026-03-04 09:10:00,007 - INFO - Waiting for start time 09:18:00. Current: 09:10:00.007928
+2026-03-04 09:10:01,009 - INFO - Waiting for start time 09:18:00. Current: 09:10:01.009731
+2026-03-04 09:10:02,012 - INFO - Waiting for start time 09:18:00. Current: 09:10:02.012093
+2026-03-04 09:10:03,015 - INFO - Waiting for start time 09:18:00. Current: 09:10:03.015454
+2026-03-04 09:10:04,018 - INFO - Waiting for start time 09:18:00. Current: 09:10:04.018624
+2026-03-04 09:10:05,025 - INFO - Waiting for start time 09:18:00. Current: 09:10:05.025497
+2026-03-04 09:10:06,028 - INFO - Waiting for start time 09:18:00. Current: 09:10:06.028213
+2026-03-04 09:10:07,032 - INFO - Waiting for start time 09:18:00. Current: 09:10:07.032578
+2026-03-04 09:10:08,037 - INFO - Waiting for start time 09:18:00. Current: 09:10:08.037028
+2026-03-04 09:10:09,041 - INFO - Waiting for start time 09:18:00. Current: 09:10:09.041841
+2026-03-04 09:10:10,045 - INFO - Waiting for start time 09:18:00. Current: 09:10:10.045084
+2026-03-04 09:10:11,109 - INFO - Waiting for start time 09:18:00. Current: 09:10:11.109718
+2026-03-04 09:10:12,112 - INFO - Waiting for start time 09:18:00. Current: 09:10:12.112642
+2026-03-04 09:10:13,114 - INFO - Waiting for start time 09:18:00. Current: 09:10:13.114756
+2026-03-04 09:10:14,116 - INFO - Waiting for start time 09:18:00. Current: 09:10:14.116982
+2026-03-04 09:10:15,124 - INFO - Waiting for start time 09:18:00. Current: 09:10:15.124796
+2026-03-04 09:10:16,127 - INFO - Waiting for start time 09:18:00. Current: 09:10:16.127961
+2026-03-04 09:10:17,145 - INFO - Waiting for start time 09:18:00. Current: 09:10:17.145765
+2026-03-04 09:10:18,148 - INFO - Waiting for start time 09:18:00. Current: 09:10:18.148715
+2026-03-04 09:10:19,150 - INFO - Waiting for start time 09:18:00. Current: 09:10:19.150785
+2026-03-04 09:10:20,152 - INFO - Waiting for start time 09:18:00. Current: 09:10:20.152779
+2026-03-04 09:10:21,157 - INFO - Waiting for start time 09:18:00. Current: 09:10:21.157092
+2026-03-04 09:10:22,160 - INFO - Waiting for start time 09:18:00. Current: 09:10:22.160742
+2026-03-04 09:10:23,162 - INFO - Waiting for start time 09:18:00. Current: 09:10:23.162727
+2026-03-04 09:10:24,165 - INFO - Waiting for start time 09:18:00. Current: 09:10:24.165710
+2026-03-04 09:10:25,168 - INFO - Waiting for start time 09:18:00. Current: 09:10:25.168379
+2026-03-04 09:10:26,173 - INFO - Waiting for start time 09:18:00. Current: 09:10:26.173696
+2026-03-04 09:10:27,179 - INFO - Waiting for start time 09:18:00. Current: 09:10:27.179715
+2026-03-04 09:10:28,185 - INFO - Waiting for start time 09:18:00. Current: 09:10:28.184264
+2026-03-04 09:10:29,188 - INFO - Waiting for start time 09:18:00. Current: 09:10:29.188049
+2026-03-04 09:10:30,192 - INFO - Waiting for start time 09:18:00. Current: 09:10:30.192978
+2026-03-04 09:10:31,197 - INFO - Waiting for start time 09:18:00. Current: 09:10:31.197363
+2026-03-04 09:10:32,199 - INFO - Waiting for start time 09:18:00. Current: 09:10:32.199708
+2026-03-04 09:10:33,202 - INFO - Waiting for start time 09:18:00. Current: 09:10:33.202128
+2026-03-04 09:10:34,207 - INFO - Waiting for start time 09:18:00. Current: 09:10:34.207323
+2026-03-04 09:10:35,209 - INFO - Waiting for start time 09:18:00. Current: 09:10:35.209366
+2026-03-04 09:10:36,211 - INFO - Waiting for start time 09:18:00. Current: 09:10:36.211904
+2026-03-04 09:10:37,213 - INFO - Waiting for start time 09:18:00. Current: 09:10:37.213879
+2026-03-04 09:10:38,218 - INFO - Waiting for start time 09:18:00. Current: 09:10:38.217982
+2026-03-04 09:10:39,221 - INFO - Waiting for start time 09:18:00. Current: 09:10:39.221260
+2026-03-04 09:10:40,224 - INFO - Waiting for start time 09:18:00. Current: 09:10:40.224581
+2026-03-04 09:10:41,226 - INFO - Waiting for start time 09:18:00. Current: 09:10:41.226693
+2026-03-04 09:10:42,229 - INFO - Waiting for start time 09:18:00. Current: 09:10:42.229142
+2026-03-04 09:10:43,232 - INFO - Waiting for start time 09:18:00. Current: 09:10:43.232472
+2026-03-04 09:10:44,236 - INFO - Waiting for start time 09:18:00. Current: 09:10:44.236792
+2026-03-04 09:10:45,240 - INFO - Waiting for start time 09:18:00. Current: 09:10:45.240823
+2026-03-04 09:10:46,244 - INFO - Waiting for start time 09:18:00. Current: 09:10:46.244731
+2026-03-04 09:10:47,247 - INFO - Waiting for start time 09:18:00. Current: 09:10:47.247498
+2026-03-04 09:10:48,253 - INFO - Waiting for start time 09:18:00. Current: 09:10:48.253946
+2026-03-04 09:10:49,256 - INFO - Waiting for start time 09:18:00. Current: 09:10:49.256129
+2026-03-04 09:10:50,260 - INFO - Waiting for start time 09:18:00. Current: 09:10:50.260102
+2026-03-04 09:10:51,261 - INFO - Waiting for start time 09:18:00. Current: 09:10:51.261763
+2026-03-04 09:10:52,265 - INFO - Waiting for start time 09:18:00. Current: 09:10:52.265449
+2026-03-04 09:10:53,273 - INFO - Waiting for start time 09:18:00. Current: 09:10:53.273992
+2026-03-04 09:10:54,277 - INFO - Waiting for start time 09:18:00. Current: 09:10:54.277846
+2026-03-04 09:10:55,279 - INFO - Waiting for start time 09:18:00. Current: 09:10:55.279786
+2026-03-04 09:10:56,282 - INFO - Waiting for start time 09:18:00. Current: 09:10:56.282855
+2026-03-04 09:10:57,285 - INFO - Waiting for start time 09:18:00. Current: 09:10:57.285065
+2026-03-04 09:10:58,286 - INFO - Waiting for start time 09:18:00. Current: 09:10:58.286911
+2026-03-04 09:10:59,317 - INFO - Waiting for start time 09:18:00. Current: 09:10:59.317790
+2026-03-04 09:11:00,320 - INFO - Waiting for start time 09:18:00. Current: 09:11:00.320684
+2026-03-04 09:11:01,326 - INFO - Waiting for start time 09:18:00. Current: 09:11:01.326717
+2026-03-04 09:11:02,330 - INFO - Waiting for start time 09:18:00. Current: 09:11:02.330608
+2026-03-04 09:11:03,334 - INFO - Waiting for start time 09:18:00. Current: 09:11:03.334745
+2026-03-04 09:11:04,339 - INFO - Waiting for start time 09:18:00. Current: 09:11:04.339648
+2026-03-04 09:11:05,342 - INFO - Waiting for start time 09:18:00. Current: 09:11:05.342707
+2026-03-04 09:11:06,346 - INFO - Waiting for start time 09:18:00. Current: 09:11:06.346928
+2026-03-04 09:11:07,352 - INFO - Waiting for start time 09:18:00. Current: 09:11:07.352566
+2026-03-04 09:11:08,354 - INFO - Waiting for start time 09:18:00. Current: 09:11:08.354784
+2026-03-04 09:11:09,357 - INFO - Waiting for start time 09:18:00. Current: 09:11:09.357707
+2026-03-04 09:11:10,359 - INFO - Waiting for start time 09:18:00. Current: 09:11:10.359707
+2026-03-04 09:11:11,362 - INFO - Waiting for start time 09:18:00. Current: 09:11:11.362616
+2026-03-04 09:11:12,371 - INFO - Waiting for start time 09:18:00. Current: 09:11:12.371863
+2026-03-04 09:11:13,374 - INFO - Waiting for start time 09:18:00. Current: 09:11:13.374810
+2026-03-04 09:11:14,377 - INFO - Waiting for start time 09:18:00. Current: 09:11:14.377019
+2026-03-04 09:11:15,387 - INFO - Waiting for start time 09:18:00. Current: 09:11:15.387251
+2026-03-04 09:11:16,389 - INFO - Waiting for start time 09:18:00. Current: 09:11:16.389630
+2026-03-04 09:11:17,392 - INFO - Waiting for start time 09:18:00. Current: 09:11:17.392967
+2026-03-04 09:11:18,395 - INFO - Waiting for start time 09:18:00. Current: 09:11:18.395671
+2026-03-04 09:11:19,406 - INFO - Waiting for start time 09:18:00. Current: 09:11:19.406480
+2026-03-04 09:11:20,408 - INFO - Waiting for start time 09:18:00. Current: 09:11:20.408883
+2026-03-04 09:11:21,412 - INFO - Waiting for start time 09:18:00. Current: 09:11:21.412616
+2026-03-04 09:11:22,414 - INFO - Waiting for start time 09:18:00. Current: 09:11:22.414645
+2026-03-04 09:11:23,418 - INFO - Waiting for start time 09:18:00. Current: 09:11:23.418680
+2026-03-04 09:11:24,434 - INFO - Waiting for start time 09:18:00. Current: 09:11:24.434399
+2026-03-04 09:11:25,455 - INFO - Waiting for start time 09:18:00. Current: 09:11:25.455444
+2026-03-04 09:11:26,467 - INFO - Waiting for start time 09:18:00. Current: 09:11:26.467637
+2026-03-04 09:11:27,482 - INFO - Waiting for start time 09:18:00. Current: 09:11:27.482053
+2026-03-04 09:11:28,505 - INFO - Waiting for start time 09:18:00. Current: 09:11:28.505123
+2026-03-04 09:11:29,507 - INFO - Waiting for start time 09:18:00. Current: 09:11:29.507495
+2026-03-04 09:11:30,510 - INFO - Waiting for start time 09:18:00. Current: 09:11:30.510009
+2026-03-04 09:11:31,513 - INFO - Waiting for start time 09:18:00. Current: 09:11:31.513803
+2026-03-04 09:11:32,515 - INFO - Waiting for start time 09:18:00. Current: 09:11:32.515868
+2026-03-04 09:11:33,517 - INFO - Waiting for start time 09:18:00. Current: 09:11:33.517894
+2026-03-04 09:11:34,522 - INFO - Waiting for start time 09:18:00. Current: 09:11:34.520436
+2026-03-04 09:11:35,525 - INFO - Waiting for start time 09:18:00. Current: 09:11:35.525791
+2026-03-04 09:11:36,529 - INFO - Waiting for start time 09:18:00. Current: 09:11:36.529747
+2026-03-04 09:11:37,535 - INFO - Waiting for start time 09:18:00. Current: 09:11:37.535276
+2026-03-04 09:11:38,538 - INFO - Waiting for start time 09:18:00. Current: 09:11:38.538448
+2026-03-04 09:11:39,540 - INFO - Waiting for start time 09:18:00. Current: 09:11:39.540560
+2026-03-04 09:11:40,543 - INFO - Waiting for start time 09:18:00. Current: 09:11:40.543777
+2026-03-04 09:11:41,546 - INFO - Waiting for start time 09:18:00. Current: 09:11:41.546075
+2026-03-04 09:11:42,556 - INFO - Waiting for start time 09:18:00. Current: 09:11:42.555667
+2026-03-04 09:11:43,564 - INFO - Waiting for start time 09:18:00. Current: 09:11:43.564852
+2026-03-04 09:11:44,569 - INFO - Waiting for start time 09:18:00. Current: 09:11:44.569656
+2026-03-04 09:11:45,577 - INFO - Waiting for start time 09:18:00. Current: 09:11:45.577110
+2026-03-04 09:11:46,583 - INFO - Waiting for start time 09:18:00. Current: 09:11:46.583150
+2026-03-04 09:11:47,587 - INFO - Waiting for start time 09:18:00. Current: 09:11:47.587001
+2026-03-04 09:11:48,597 - INFO - Waiting for start time 09:18:00. Current: 09:11:48.597991
+2026-03-04 09:11:49,601 - INFO - Waiting for start time 09:18:00. Current: 09:11:49.601377
+2026-03-04 09:11:50,604 - INFO - Waiting for start time 09:18:00. Current: 09:11:50.604275
+2026-03-04 09:11:51,607 - INFO - Waiting for start time 09:18:00. Current: 09:11:51.607219
+2026-03-04 09:11:52,617 - INFO - Waiting for start time 09:18:00. Current: 09:11:52.617597
+2026-03-04 09:11:53,624 - INFO - Waiting for start time 09:18:00. Current: 09:11:53.624645
+2026-03-04 09:11:54,627 - INFO - Waiting for start time 09:18:00. Current: 09:11:54.627031
+2026-03-04 09:11:55,630 - INFO - Waiting for start time 09:18:00. Current: 09:11:55.630052
+2026-03-04 09:11:56,634 - INFO - Waiting for start time 09:18:00. Current: 09:11:56.634329
+2026-03-04 09:11:57,640 - INFO - Waiting for start time 09:18:00. Current: 09:11:57.640999
+2026-03-04 09:11:58,643 - INFO - Waiting for start time 09:18:00. Current: 09:11:58.643308
+2026-03-04 09:11:59,649 - INFO - Waiting for start time 09:18:00. Current: 09:11:59.646261
+2026-03-04 09:12:00,652 - INFO - Waiting for start time 09:18:00. Current: 09:12:00.652702
+2026-03-04 09:12:01,655 - INFO - Waiting for start time 09:18:00. Current: 09:12:01.655699
+2026-03-04 09:12:02,658 - INFO - Waiting for start time 09:18:00. Current: 09:12:02.658030
+2026-03-04 09:12:03,666 - INFO - Waiting for start time 09:18:00. Current: 09:12:03.666562
+2026-03-04 09:12:04,669 - INFO - Waiting for start time 09:18:00. Current: 09:12:04.669972
+2026-03-04 09:12:05,673 - INFO - Waiting for start time 09:18:00. Current: 09:12:05.673690
+2026-03-04 09:12:06,675 - INFO - Waiting for start time 09:18:00. Current: 09:12:06.675764
+2026-03-04 09:12:07,680 - INFO - Waiting for start time 09:18:00. Current: 09:12:07.680045
+2026-03-04 09:12:08,683 - INFO - Waiting for start time 09:18:00. Current: 09:12:08.683043
+2026-03-04 09:12:09,685 - INFO - Waiting for start time 09:18:00. Current: 09:12:09.685702
+2026-03-04 09:12:10,688 - INFO - Waiting for start time 09:18:00. Current: 09:12:10.688291
+2026-03-04 09:12:11,691 - INFO - Waiting for start time 09:18:00. Current: 09:12:11.691021
+2026-03-04 09:12:12,694 - INFO - Waiting for start time 09:18:00. Current: 09:12:12.693937
+2026-03-04 09:12:13,696 - INFO - Waiting for start time 09:18:00. Current: 09:12:13.696721
+2026-03-04 09:12:14,699 - INFO - Waiting for start time 09:18:00. Current: 09:12:14.699553
+2026-03-04 09:12:15,701 - INFO - Waiting for start time 09:18:00. Current: 09:12:15.701552
+2026-03-04 09:12:16,703 - INFO - Waiting for start time 09:18:00. Current: 09:12:16.703563
+2026-03-04 09:12:17,705 - INFO - Waiting for start time 09:18:00. Current: 09:12:17.705410
+2026-03-04 09:12:18,710 - INFO - Waiting for start time 09:18:00. Current: 09:12:18.710521
+2026-03-04 09:12:19,714 - INFO - Waiting for start time 09:18:00. Current: 09:12:19.714690
+2026-03-04 09:12:20,716 - INFO - Waiting for start time 09:18:00. Current: 09:12:20.716854
+2026-03-04 09:12:21,721 - INFO - Waiting for start time 09:18:00. Current: 09:12:21.721107
+2026-03-04 09:12:22,725 - INFO - Waiting for start time 09:18:00. Current: 09:12:22.725188
+2026-03-04 09:12:23,728 - INFO - Waiting for start time 09:18:00. Current: 09:12:23.728301
+2026-03-04 09:12:24,730 - INFO - Waiting for start time 09:18:00. Current: 09:12:24.730639
+2026-03-04 09:12:25,732 - INFO - Waiting for start time 09:18:00. Current: 09:12:25.732498
+2026-03-04 09:12:26,734 - INFO - Waiting for start time 09:18:00. Current: 09:12:26.734723
+2026-03-04 09:12:27,736 - INFO - Waiting for start time 09:18:00. Current: 09:12:27.736503
+2026-03-04 09:12:28,743 - INFO - Waiting for start time 09:18:00. Current: 09:12:28.743002
+2026-03-04 09:12:29,745 - INFO - Waiting for start time 09:18:00. Current: 09:12:29.745088
+2026-03-04 09:12:30,747 - INFO - Waiting for start time 09:18:00. Current: 09:12:30.747388
+2026-03-04 09:12:31,749 - INFO - Waiting for start time 09:18:00. Current: 09:12:31.749395
+2026-03-04 09:12:32,751 - INFO - Waiting for start time 09:18:00. Current: 09:12:32.751432
+2026-03-04 09:12:33,755 - INFO - Waiting for start time 09:18:00. Current: 09:12:33.754946
+2026-03-04 09:12:34,756 - INFO - Waiting for start time 09:18:00. Current: 09:12:34.756971
+2026-03-04 09:12:35,758 - INFO - Waiting for start time 09:18:00. Current: 09:12:35.758973
+2026-03-04 09:12:36,761 - INFO - Waiting for start time 09:18:00. Current: 09:12:36.761059
+2026-03-04 09:12:37,763 - INFO - Waiting for start time 09:18:00. Current: 09:12:37.763276
+2026-03-04 09:12:38,765 - INFO - Waiting for start time 09:18:00. Current: 09:12:38.765053
+2026-03-04 09:12:39,769 - INFO - Waiting for start time 09:18:00. Current: 09:12:39.769583
+2026-03-04 09:12:40,772 - INFO - Waiting for start time 09:18:00. Current: 09:12:40.772139
+2026-03-04 09:12:41,774 - INFO - Waiting for start time 09:18:00. Current: 09:12:41.774229
+2026-03-04 09:12:42,777 - INFO - Waiting for start time 09:18:00. Current: 09:12:42.777138
+2026-03-04 09:12:43,779 - INFO - Waiting for start time 09:18:00. Current: 09:12:43.779578
+2026-03-04 09:12:44,786 - INFO - Waiting for start time 09:18:00. Current: 09:12:44.783899
+2026-03-04 09:12:45,790 - INFO - Waiting for start time 09:18:00. Current: 09:12:45.790510
+2026-03-04 09:12:46,793 - INFO - Waiting for start time 09:18:00. Current: 09:12:46.793115
+2026-03-04 09:12:47,799 - INFO - Waiting for start time 09:18:00. Current: 09:12:47.799356
+2026-03-04 09:12:48,804 - INFO - Waiting for start time 09:18:00. Current: 09:12:48.804394
+2026-03-04 09:12:49,808 - INFO - Waiting for start time 09:18:00. Current: 09:12:49.808042
+2026-03-04 09:12:50,811 - INFO - Waiting for start time 09:18:00. Current: 09:12:50.811066
+2026-03-04 09:12:51,813 - INFO - Waiting for start time 09:18:00. Current: 09:12:51.813683
+2026-03-04 09:12:52,819 - INFO - Waiting for start time 09:18:00. Current: 09:12:52.819976
+2026-03-04 09:12:53,825 - INFO - Waiting for start time 09:18:00. Current: 09:12:53.825738
+2026-03-04 09:12:54,834 - INFO - Waiting for start time 09:18:00. Current: 09:12:54.834923
+2026-03-04 09:12:55,852 - INFO - Waiting for start time 09:18:00. Current: 09:12:55.852071
+2026-03-04 09:12:56,860 - INFO - Waiting for start time 09:18:00. Current: 09:12:56.860990
+2026-03-04 09:12:57,869 - INFO - Waiting for start time 09:18:00. Current: 09:12:57.869115
+2026-03-04 09:12:58,872 - INFO - Waiting for start time 09:18:00. Current: 09:12:58.872919
+2026-03-04 09:12:59,878 - INFO - Waiting for start time 09:18:00. Current: 09:12:59.878124
+2026-03-04 09:13:00,883 - INFO - Waiting for start time 09:18:00. Current: 09:13:00.883013
+2026-03-04 09:13:01,886 - INFO - Waiting for start time 09:18:00. Current: 09:13:01.886604
+2026-03-04 09:13:02,888 - INFO - Waiting for start time 09:18:00. Current: 09:13:02.888809
+2026-03-04 09:13:03,892 - INFO - Waiting for start time 09:18:00. Current: 09:13:03.892053
+2026-03-04 09:13:04,893 - INFO - Waiting for start time 09:18:00. Current: 09:13:04.893890
+2026-03-04 09:13:05,897 - INFO - Waiting for start time 09:18:00. Current: 09:13:05.897254
+2026-03-04 09:13:06,902 - INFO - Waiting for start time 09:18:00. Current: 09:13:06.902406
+2026-03-04 09:13:07,924 - INFO - Waiting for start time 09:18:00. Current: 09:13:07.924673
+2026-03-04 09:13:08,935 - INFO - Waiting for start time 09:18:00. Current: 09:13:08.935156
+2026-03-04 09:13:09,941 - INFO - Waiting for start time 09:18:00. Current: 09:13:09.941724
+2026-03-04 09:13:10,943 - INFO - Waiting for start time 09:18:00. Current: 09:13:10.943665
+2026-03-04 09:13:11,946 - INFO - Waiting for start time 09:18:00. Current: 09:13:11.946503
+2026-03-04 09:13:12,950 - INFO - Waiting for start time 09:18:00. Current: 09:13:12.948515
+2026-03-04 09:13:13,954 - INFO - Waiting for start time 09:18:00. Current: 09:13:13.954794
+2026-03-04 09:13:14,957 - INFO - Waiting for start time 09:18:00. Current: 09:13:14.957907
+2026-03-04 09:13:15,965 - INFO - Waiting for start time 09:18:00. Current: 09:13:15.965340
+2026-03-04 09:13:16,969 - INFO - Waiting for start time 09:18:00. Current: 09:13:16.969397
+2026-03-04 09:13:17,973 - INFO - Waiting for start time 09:18:00. Current: 09:13:17.972803
+2026-03-04 09:13:18,979 - INFO - Waiting for start time 09:18:00. Current: 09:13:18.979707
+2026-03-04 09:13:19,986 - INFO - Waiting for start time 09:18:00. Current: 09:13:19.986318
+2026-03-04 09:13:20,993 - INFO - Waiting for start time 09:18:00. Current: 09:13:20.993164
+2026-03-04 09:13:21,995 - INFO - Waiting for start time 09:18:00. Current: 09:13:21.995227
+2026-03-04 09:13:23,000 - INFO - Waiting for start time 09:18:00. Current: 09:13:23.000118
+2026-03-04 09:13:24,003 - INFO - Waiting for start time 09:18:00. Current: 09:13:24.003988
+2026-03-04 09:13:25,008 - INFO - Waiting for start time 09:18:00. Current: 09:13:25.008643
+2026-03-04 09:13:26,010 - INFO - Waiting for start time 09:18:00. Current: 09:13:26.010649
+2026-03-04 09:13:27,013 - INFO - Waiting for start time 09:18:00. Current: 09:13:27.013760
+2026-03-04 09:13:28,016 - INFO - Waiting for start time 09:18:00. Current: 09:13:28.016549
+2026-03-04 09:13:29,019 - INFO - Waiting for start time 09:18:00. Current: 09:13:29.019439
+2026-03-04 09:13:30,024 - INFO - Waiting for start time 09:18:00. Current: 09:13:30.024803
+2026-03-04 09:13:31,029 - INFO - Waiting for start time 09:18:00. Current: 09:13:31.029796
+2026-03-04 09:13:32,034 - INFO - Waiting for start time 09:18:00. Current: 09:13:32.034675
+2026-03-04 09:13:33,037 - INFO - Waiting for start time 09:18:00. Current: 09:13:33.037027
+2026-03-04 09:13:34,044 - INFO - Waiting for start time 09:18:00. Current: 09:13:34.044331
+2026-03-04 09:13:35,047 - INFO - Waiting for start time 09:18:00. Current: 09:13:35.047170
+2026-03-04 09:13:36,058 - INFO - Waiting for start time 09:18:00. Current: 09:13:36.058462
+2026-03-04 09:13:37,072 - INFO - Waiting for start time 09:18:00. Current: 09:13:37.072454
+2026-03-04 09:13:38,084 - INFO - Waiting for start time 09:18:00. Current: 09:13:38.084537
+2026-03-04 09:13:39,088 - INFO - Waiting for start time 09:18:00. Current: 09:13:39.088447
+2026-03-04 09:13:40,091 - INFO - Waiting for start time 09:18:00. Current: 09:13:40.091743
+2026-03-04 09:13:41,094 - INFO - Waiting for start time 09:18:00. Current: 09:13:41.094325
+2026-03-04 09:13:42,097 - INFO - Waiting for start time 09:18:00. Current: 09:13:42.097136
+2026-03-04 09:13:43,099 - INFO - Waiting for start time 09:18:00. Current: 09:13:43.099102
+2026-03-04 09:13:44,101 - INFO - Waiting for start time 09:18:00. Current: 09:13:44.101494
+2026-03-04 09:13:45,103 - INFO - Waiting for start time 09:18:00. Current: 09:13:45.103297
+2026-03-04 09:13:46,106 - INFO - Waiting for start time 09:18:00. Current: 09:13:46.106051
+2026-03-04 09:13:47,108 - INFO - Waiting for start time 09:18:00. Current: 09:13:47.108096
+2026-03-04 09:13:48,110 - INFO - Waiting for start time 09:18:00. Current: 09:13:48.110766
+2026-03-04 09:13:49,113 - INFO - Waiting for start time 09:18:00. Current: 09:13:49.113221
+2026-03-04 09:13:50,115 - INFO - Waiting for start time 09:18:00. Current: 09:13:50.115615
+2026-03-04 09:13:51,119 - INFO - Waiting for start time 09:18:00. Current: 09:13:51.119000
+2026-03-04 09:13:52,123 - INFO - Waiting for start time 09:18:00. Current: 09:13:52.123938
+2026-03-04 09:13:53,127 - INFO - Waiting for start time 09:18:00. Current: 09:13:53.127228
+2026-03-04 09:13:54,130 - INFO - Waiting for start time 09:18:00. Current: 09:13:54.130607
+2026-03-04 09:13:55,142 - INFO - Waiting for start time 09:18:00. Current: 09:13:55.142202
+2026-03-04 09:13:56,155 - INFO - Waiting for start time 09:18:00. Current: 09:13:56.154706
+2026-03-04 09:13:57,164 - INFO - Waiting for start time 09:18:00. Current: 09:13:57.164657
+2026-03-04 09:13:58,184 - INFO - Waiting for start time 09:18:00. Current: 09:13:58.184002
+2026-03-04 09:13:59,192 - INFO - Waiting for start time 09:18:00. Current: 09:13:59.192811
+2026-03-04 09:14:00,195 - INFO - Waiting for start time 09:18:00. Current: 09:14:00.195107
+2026-03-04 09:14:01,198 - INFO - Waiting for start time 09:18:00. Current: 09:14:01.198969
+2026-03-04 09:14:02,201 - INFO - Waiting for start time 09:18:00. Current: 09:14:02.201044
+2026-03-04 09:14:03,204 - INFO - Waiting for start time 09:18:00. Current: 09:14:03.204299
+2026-03-04 09:14:04,207 - INFO - Waiting for start time 09:18:00. Current: 09:14:04.206387
+2026-03-04 09:14:05,213 - INFO - Waiting for start time 09:18:00. Current: 09:14:05.213218
+2026-03-04 09:14:06,215 - INFO - Waiting for start time 09:18:00. Current: 09:14:06.215360
+2026-03-04 09:14:07,217 - INFO - Waiting for start time 09:18:00. Current: 09:14:07.217246
+2026-03-04 09:14:08,219 - INFO - Waiting for start time 09:18:00. Current: 09:14:08.219284
+2026-03-04 09:14:09,221 - INFO - Waiting for start time 09:18:00. Current: 09:14:09.221580
+2026-03-04 09:14:10,223 - INFO - Waiting for start time 09:18:00. Current: 09:14:10.223624
+2026-03-04 09:14:11,225 - INFO - Waiting for start time 09:18:00. Current: 09:14:11.225537
+2026-03-04 09:14:12,230 - INFO - Waiting for start time 09:18:00. Current: 09:14:12.230024
+2026-03-04 09:14:13,236 - INFO - Waiting for start time 09:18:00. Current: 09:14:13.236086
+2026-03-04 09:14:14,240 - INFO - Waiting for start time 09:18:00. Current: 09:14:14.239141
+2026-03-04 09:14:15,248 - INFO - Waiting for start time 09:18:00. Current: 09:14:15.248920
+2026-03-04 09:14:16,267 - INFO - Waiting for start time 09:18:00. Current: 09:14:16.267823
+2026-03-04 09:14:17,270 - INFO - Waiting for start time 09:18:00. Current: 09:14:17.270880
+2026-03-04 09:14:18,274 - INFO - Waiting for start time 09:18:00. Current: 09:14:18.274584
+2026-03-04 09:14:19,276 - INFO - Waiting for start time 09:18:00. Current: 09:14:19.276718
+2026-03-04 09:14:20,279 - INFO - Waiting for start time 09:18:00. Current: 09:14:20.278816
+2026-03-04 09:14:21,289 - INFO - Waiting for start time 09:18:00. Current: 09:14:21.289161
+2026-03-04 09:14:22,291 - INFO - Waiting for start time 09:18:00. Current: 09:14:22.291412
+2026-03-04 09:14:23,293 - INFO - Waiting for start time 09:18:00. Current: 09:14:23.293380
+2026-03-04 09:14:24,296 - INFO - Waiting for start time 09:18:00. Current: 09:14:24.296212
+2026-03-04 09:14:25,298 - INFO - Waiting for start time 09:18:00. Current: 09:14:25.298321
+2026-03-04 09:14:26,300 - INFO - Waiting for start time 09:18:00. Current: 09:14:26.300156
+2026-03-04 09:14:27,302 - INFO - Waiting for start time 09:18:00. Current: 09:14:27.302410
+2026-03-04 09:14:28,306 - INFO - Waiting for start time 09:18:00. Current: 09:14:28.306505
+2026-03-04 09:14:29,311 - INFO - Waiting for start time 09:18:00. Current: 09:14:29.311161
+2026-03-04 09:14:30,313 - INFO - Waiting for start time 09:18:00. Current: 09:14:30.313601
+2026-03-04 09:14:31,315 - INFO - Waiting for start time 09:18:00. Current: 09:14:31.315731
+2026-03-04 09:14:32,319 - INFO - Waiting for start time 09:18:00. Current: 09:14:32.319462
+2026-03-04 09:14:33,321 - INFO - Waiting for start time 09:18:00. Current: 09:14:33.321735
+2026-03-04 09:14:34,324 - INFO - Waiting for start time 09:18:00. Current: 09:14:34.324177
+2026-03-04 09:14:35,326 - INFO - Waiting for start time 09:18:00. Current: 09:14:35.326350
+2026-03-04 09:14:36,334 - INFO - Waiting for start time 09:18:00. Current: 09:14:36.334971
+2026-03-04 09:14:37,342 - INFO - Waiting for start time 09:18:00. Current: 09:14:37.342853
+2026-03-04 09:14:38,345 - INFO - Waiting for start time 09:18:00. Current: 09:14:38.345284
+2026-03-04 09:14:39,350 - INFO - Waiting for start time 09:18:00. Current: 09:14:39.350675
+2026-03-04 09:14:40,353 - INFO - Waiting for start time 09:18:00. Current: 09:14:40.353218
+2026-03-04 09:14:41,357 - INFO - Waiting for start time 09:18:00. Current: 09:14:41.357898
+2026-03-04 09:14:42,359 - INFO - Waiting for start time 09:18:00. Current: 09:14:42.359852
+2026-03-04 09:14:43,364 - INFO - Waiting for start time 09:18:00. Current: 09:14:43.364010
+2026-03-04 09:14:44,367 - INFO - Waiting for start time 09:18:00. Current: 09:14:44.367157
+2026-03-04 09:14:45,370 - INFO - Waiting for start time 09:18:00. Current: 09:14:45.369917
+2026-03-04 09:14:46,377 - INFO - Waiting for start time 09:18:00. Current: 09:14:46.377680
+2026-03-04 09:14:47,389 - INFO - Waiting for start time 09:18:00. Current: 09:14:47.389089
+2026-03-04 09:14:48,404 - INFO - Waiting for start time 09:18:00. Current: 09:14:48.404881
+2026-03-04 09:14:49,406 - INFO - Waiting for start time 09:18:00. Current: 09:14:49.406993
+2026-03-04 09:14:50,408 - INFO - Waiting for start time 09:18:00. Current: 09:14:50.408910
+2026-03-04 09:14:51,414 - INFO - Waiting for start time 09:18:00. Current: 09:14:51.413424
+2026-03-04 09:14:52,417 - INFO - Waiting for start time 09:18:00. Current: 09:14:52.417166
+2026-03-04 09:14:53,421 - INFO - Waiting for start time 09:18:00. Current: 09:14:53.421083
+2026-03-04 09:14:54,425 - INFO - Waiting for start time 09:18:00. Current: 09:14:54.425591
+2026-03-04 09:14:55,437 - INFO - Waiting for start time 09:18:00. Current: 09:14:55.437679
+2026-03-04 09:14:56,440 - INFO - Waiting for start time 09:18:00. Current: 09:14:56.440189
+2026-03-04 09:14:57,442 - INFO - Waiting for start time 09:18:00. Current: 09:14:57.442705
+2026-03-04 09:14:58,447 - INFO - Waiting for start time 09:18:00. Current: 09:14:58.447499
+2026-03-04 09:14:59,455 - INFO - Waiting for start time 09:18:00. Current: 09:14:59.454047
+2026-03-04 09:15:00,458 - INFO - Waiting for start time 09:18:00. Current: 09:15:00.458217
+2026-03-04 09:15:01,460 - INFO - Waiting for start time 09:18:00. Current: 09:15:01.460533
+2026-03-04 09:15:02,462 - INFO - Waiting for start time 09:18:00. Current: 09:15:02.462955
+2026-03-04 09:15:03,466 - INFO - Waiting for start time 09:18:00. Current: 09:15:03.466241
+2026-03-04 09:15:04,468 - INFO - Waiting for start time 09:18:00. Current: 09:15:04.468907
+2026-03-04 09:15:05,474 - INFO - Waiting for start time 09:18:00. Current: 09:15:05.474014
+2026-03-04 09:15:06,477 - INFO - Waiting for start time 09:18:00. Current: 09:15:06.477803
+2026-03-04 09:15:07,482 - INFO - Waiting for start time 09:18:00. Current: 09:15:07.482822
+2026-03-04 09:15:08,493 - INFO - Waiting for start time 09:18:00. Current: 09:15:08.493935
+2026-03-04 09:15:09,496 - INFO - Waiting for start time 09:18:00. Current: 09:15:09.496094
+2026-03-04 09:15:10,498 - INFO - Waiting for start time 09:18:00. Current: 09:15:10.498397
+2026-03-04 09:15:10,630 - INFO - Momentum Check: Time=2026-03-02 15:25:00+05:30, O=24865.05, C=24849.75, H = 24886.1, L = 24845.2, TotalSize=40.89999999999782, BodySize=15.299999999999272, ATR14=50.86,Tolerance=4.09, Threshold=50.86
+2026-03-04 09:15:11,634 - INFO - Waiting for start time 09:18:00. Current: 09:15:11.634870
+2026-03-04 09:15:12,637 - INFO - Waiting for start time 09:18:00. Current: 09:15:12.637111
+2026-03-04 09:15:13,647 - INFO - Waiting for start time 09:18:00. Current: 09:15:13.647358
+2026-03-04 09:15:14,654 - INFO - Waiting for start time 09:18:00. Current: 09:15:14.654893
+2026-03-04 09:15:15,657 - INFO - Waiting for start time 09:18:00. Current: 09:15:15.657490
+2026-03-04 09:15:16,659 - INFO - Waiting for start time 09:18:00. Current: 09:15:16.659895
+2026-03-04 09:15:17,661 - INFO - Waiting for start time 09:18:00. Current: 09:15:17.661910
+2026-03-04 09:15:18,670 - INFO - Waiting for start time 09:18:00. Current: 09:15:18.670551
+2026-03-04 09:15:19,673 - INFO - Waiting for start time 09:18:00. Current: 09:15:19.673231
+2026-03-04 09:15:20,677 - INFO - Waiting for start time 09:18:00. Current: 09:15:20.676851
+2026-03-04 09:15:21,679 - INFO - Waiting for start time 09:18:00. Current: 09:15:21.679305
+2026-03-04 09:15:22,693 - INFO - Waiting for start time 09:18:00. Current: 09:15:22.693845
+2026-03-04 09:15:23,696 - INFO - Waiting for start time 09:18:00. Current: 09:15:23.696619
+2026-03-04 09:15:24,701 - INFO - Waiting for start time 09:18:00. Current: 09:15:24.701572
+2026-03-04 09:15:25,704 - INFO - Waiting for start time 09:18:00. Current: 09:15:25.704536
+2026-03-04 09:15:26,706 - INFO - Waiting for start time 09:18:00. Current: 09:15:26.706630
+2026-03-04 09:15:27,712 - INFO - Waiting for start time 09:18:00. Current: 09:15:27.712172
+2026-03-04 09:15:28,721 - INFO - Waiting for start time 09:18:00. Current: 09:15:28.714618
+2026-03-04 09:15:29,725 - INFO - Waiting for start time 09:18:00. Current: 09:15:29.725175
+2026-03-04 09:15:30,728 - INFO - Waiting for start time 09:18:00. Current: 09:15:30.728298
+2026-03-04 09:15:31,730 - INFO - Waiting for start time 09:18:00. Current: 09:15:31.730099
+2026-03-04 09:15:32,733 - INFO - Waiting for start time 09:18:00. Current: 09:15:32.733662
+2026-03-04 09:15:33,737 - INFO - Waiting for start time 09:18:00. Current: 09:15:33.737537
+2026-03-04 09:15:34,758 - INFO - Waiting for start time 09:18:00. Current: 09:15:34.758170
+2026-03-04 09:15:35,761 - INFO - Waiting for start time 09:18:00. Current: 09:15:35.761123
+2026-03-04 09:15:36,769 - INFO - Waiting for start time 09:18:00. Current: 09:15:36.769485
+2026-03-04 09:15:37,772 - INFO - Waiting for start time 09:18:00. Current: 09:15:37.772174
+2026-03-04 09:15:38,797 - INFO - Waiting for start time 09:18:00. Current: 09:15:38.797828
+2026-03-04 09:15:39,800 - INFO - Waiting for start time 09:18:00. Current: 09:15:39.800512
+2026-03-04 09:15:40,806 - INFO - Waiting for start time 09:18:00. Current: 09:15:40.806363
+2026-03-04 09:15:41,808 - INFO - Waiting for start time 09:18:00. Current: 09:15:41.808134
+2026-03-04 09:15:42,810 - INFO - Waiting for start time 09:18:00. Current: 09:15:42.810041
+2026-03-04 09:15:43,812 - INFO - Waiting for start time 09:18:00. Current: 09:15:43.812068
+2026-03-04 09:15:44,814 - INFO - Waiting for start time 09:18:00. Current: 09:15:44.814278
+2026-03-04 09:15:45,816 - INFO - Waiting for start time 09:18:00. Current: 09:15:45.816516
+2026-03-04 09:15:46,818 - INFO - Waiting for start time 09:18:00. Current: 09:15:46.818802
+2026-03-04 09:15:47,820 - INFO - Waiting for start time 09:18:00. Current: 09:15:47.820653
+2026-03-04 09:15:48,822 - INFO - Waiting for start time 09:18:00. Current: 09:15:48.822567
+2026-03-04 09:15:49,824 - INFO - Waiting for start time 09:18:00. Current: 09:15:49.824297
+2026-03-04 09:15:50,827 - INFO - Waiting for start time 09:18:00. Current: 09:15:50.827395
+2026-03-04 09:15:51,835 - INFO - Waiting for start time 09:18:00. Current: 09:15:51.835913
+2026-03-04 09:15:52,837 - INFO - Waiting for start time 09:18:00. Current: 09:15:52.837920
+2026-03-04 09:15:53,839 - INFO - Waiting for start time 09:18:00. Current: 09:15:53.839923
+2026-03-04 09:15:54,841 - INFO - Waiting for start time 09:18:00. Current: 09:15:54.841781
+2026-03-04 09:15:55,843 - INFO - Waiting for start time 09:18:00. Current: 09:15:55.843745
+2026-03-04 09:15:56,845 - INFO - Waiting for start time 09:18:00. Current: 09:15:56.845952
+2026-03-04 09:15:57,848 - INFO - Waiting for start time 09:18:00. Current: 09:15:57.848986
+2026-03-04 09:15:58,854 - INFO - Waiting for start time 09:18:00. Current: 09:15:58.854006
+2026-03-04 09:15:59,856 - INFO - Waiting for start time 09:18:00. Current: 09:15:59.856127
+2026-03-04 09:16:00,873 - INFO - Waiting for start time 09:18:00. Current: 09:16:00.873316
+2026-03-04 09:16:01,877 - INFO - Waiting for start time 09:18:00. Current: 09:16:01.877764
+2026-03-04 09:16:02,880 - INFO - Waiting for start time 09:18:00. Current: 09:16:02.880293
+2026-03-04 09:16:03,882 - INFO - Waiting for start time 09:18:00. Current: 09:16:03.882012
+2026-03-04 09:16:04,885 - INFO - Waiting for start time 09:18:00. Current: 09:16:04.885430
+2026-03-04 09:16:05,889 - INFO - Waiting for start time 09:18:00. Current: 09:16:05.889679
+2026-03-04 09:16:06,895 - INFO - Waiting for start time 09:18:00. Current: 09:16:06.895368
+2026-03-04 09:16:07,899 - INFO - Waiting for start time 09:18:00. Current: 09:16:07.899790
+2026-03-04 09:16:08,904 - INFO - Waiting for start time 09:18:00. Current: 09:16:08.904837
+2026-03-04 09:16:09,913 - INFO - Waiting for start time 09:18:00. Current: 09:16:09.913433
+2026-03-04 09:16:10,916 - INFO - Waiting for start time 09:18:00. Current: 09:16:10.916687
+2026-03-04 09:16:11,924 - INFO - Waiting for start time 09:18:00. Current: 09:16:11.923929
+2026-03-04 09:16:12,928 - INFO - Waiting for start time 09:18:00. Current: 09:16:12.928844
+2026-03-04 09:16:13,931 - INFO - Waiting for start time 09:18:00. Current: 09:16:13.931629
+2026-03-04 09:16:14,934 - INFO - Waiting for start time 09:18:00. Current: 09:16:14.934805
+2026-03-04 09:16:15,938 - INFO - Waiting for start time 09:18:00. Current: 09:16:15.938055
+2026-03-04 09:16:16,946 - INFO - Waiting for start time 09:18:00. Current: 09:16:16.946611
+2026-03-04 09:16:17,951 - INFO - Waiting for start time 09:18:00. Current: 09:16:17.951981
+2026-03-04 09:16:18,955 - INFO - Waiting for start time 09:18:00. Current: 09:16:18.955246
+2026-03-04 09:16:19,959 - INFO - Waiting for start time 09:18:00. Current: 09:16:19.959689
+2026-03-04 09:16:20,964 - INFO - Waiting for start time 09:18:00. Current: 09:16:20.964037
+2026-03-04 09:16:21,966 - INFO - Waiting for start time 09:18:00. Current: 09:16:21.966181
+2026-03-04 09:16:22,969 - INFO - Waiting for start time 09:18:00. Current: 09:16:22.969486
+2026-03-04 09:16:23,973 - INFO - Waiting for start time 09:18:00. Current: 09:16:23.973425
+2026-03-04 09:16:24,975 - INFO - Waiting for start time 09:18:00. Current: 09:16:24.975791
+2026-03-04 09:16:25,978 - INFO - Waiting for start time 09:18:00. Current: 09:16:25.978038
+2026-03-04 09:16:26,980 - INFO - Waiting for start time 09:18:00. Current: 09:16:26.980265
+2026-03-04 09:16:27,983 - INFO - Waiting for start time 09:18:00. Current: 09:16:27.983410
+2026-03-04 09:16:28,987 - INFO - Waiting for start time 09:18:00. Current: 09:16:28.987794
+2026-03-04 09:16:29,989 - INFO - Waiting for start time 09:18:00. Current: 09:16:29.989610
+2026-03-04 09:16:30,991 - INFO - Waiting for start time 09:18:00. Current: 09:16:30.991715
+2026-03-04 09:16:31,994 - INFO - Waiting for start time 09:18:00. Current: 09:16:31.994359
+2026-03-04 09:16:32,997 - INFO - Waiting for start time 09:18:00. Current: 09:16:32.997642
+2026-03-04 09:16:34,002 - INFO - Waiting for start time 09:18:00. Current: 09:16:34.002704
+2026-03-04 09:16:35,005 - INFO - Waiting for start time 09:18:00. Current: 09:16:35.005485
+2026-03-04 09:16:36,008 - INFO - Waiting for start time 09:18:00. Current: 09:16:36.008817
+2026-03-04 09:16:37,011 - INFO - Waiting for start time 09:18:00. Current: 09:16:37.011952
+2026-03-04 09:16:38,015 - INFO - Waiting for start time 09:18:00. Current: 09:16:38.015125
+2026-03-04 09:16:39,017 - INFO - Waiting for start time 09:18:00. Current: 09:16:39.017922
+2026-03-04 09:16:40,019 - INFO - Waiting for start time 09:18:00. Current: 09:16:40.019914
+2026-03-04 09:16:41,024 - INFO - Waiting for start time 09:18:00. Current: 09:16:41.024331
+2026-03-04 09:16:42,026 - INFO - Waiting for start time 09:18:00. Current: 09:16:42.026813
+2026-03-04 09:16:43,029 - INFO - Waiting for start time 09:18:00. Current: 09:16:43.029332
+2026-03-04 09:16:44,034 - INFO - Waiting for start time 09:18:00. Current: 09:16:44.034080
+2026-03-04 09:16:45,044 - INFO - Waiting for start time 09:18:00. Current: 09:16:45.044102
+2026-03-04 09:16:46,065 - INFO - Waiting for start time 09:18:00. Current: 09:16:46.065373
+2026-03-04 09:16:47,069 - INFO - Waiting for start time 09:18:00. Current: 09:16:47.069581
+2026-03-04 09:16:48,079 - INFO - Waiting for start time 09:18:00. Current: 09:16:48.079963
+2026-03-04 09:16:49,083 - INFO - Waiting for start time 09:18:00. Current: 09:16:49.083908
+2026-03-04 09:16:50,087 - INFO - Waiting for start time 09:18:00. Current: 09:16:50.087141
+2026-03-04 09:16:51,094 - INFO - Waiting for start time 09:18:00. Current: 09:16:51.094599
+2026-03-04 09:16:52,108 - INFO - Waiting for start time 09:18:00. Current: 09:16:52.108130
+2026-03-04 09:16:53,112 - INFO - Waiting for start time 09:18:00. Current: 09:16:53.112937
+2026-03-04 09:16:54,116 - INFO - Waiting for start time 09:18:00. Current: 09:16:54.116456
+2026-03-04 09:16:55,119 - INFO - Waiting for start time 09:18:00. Current: 09:16:55.119059
+2026-03-04 09:16:56,130 - INFO - Waiting for start time 09:18:00. Current: 09:16:56.130443
+2026-03-04 09:16:57,134 - INFO - Waiting for start time 09:18:00. Current: 09:16:57.134756
+2026-03-04 09:16:58,144 - INFO - Waiting for start time 09:18:00. Current: 09:16:58.141464
+2026-03-04 09:16:59,153 - INFO - Waiting for start time 09:18:00. Current: 09:16:59.153855
+2026-03-04 09:17:00,157 - INFO - Waiting for start time 09:18:00. Current: 09:17:00.157105
+2026-03-04 09:17:01,160 - INFO - Waiting for start time 09:18:00. Current: 09:17:01.160629
+2026-03-04 09:17:02,164 - INFO - Waiting for start time 09:18:00. Current: 09:17:02.164492
+2026-03-04 09:17:03,177 - INFO - Waiting for start time 09:18:00. Current: 09:17:03.177663
+2026-03-04 09:17:04,179 - INFO - Waiting for start time 09:18:00. Current: 09:17:04.179749
+2026-03-04 09:17:05,182 - INFO - Waiting for start time 09:18:00. Current: 09:17:05.182966
+2026-03-04 09:17:06,186 - INFO - Waiting for start time 09:18:00. Current: 09:17:06.186329
+2026-03-04 09:17:07,189 - INFO - Waiting for start time 09:18:00. Current: 09:17:07.189405
+2026-03-04 09:17:08,195 - INFO - Waiting for start time 09:18:00. Current: 09:17:08.195962
+2026-03-04 09:17:09,198 - INFO - Waiting for start time 09:18:00. Current: 09:17:09.198449
+2026-03-04 09:17:10,205 - INFO - Waiting for start time 09:18:00. Current: 09:17:10.205718
+2026-03-04 09:17:11,208 - INFO - Waiting for start time 09:18:00. Current: 09:17:11.208602
+2026-03-04 09:17:12,213 - INFO - Waiting for start time 09:18:00. Current: 09:17:12.213679
+2026-03-04 09:17:13,219 - INFO - Waiting for start time 09:18:00. Current: 09:17:13.218367
+2026-03-04 09:17:14,222 - INFO - Waiting for start time 09:18:00. Current: 09:17:14.222713
+2026-03-04 09:17:15,229 - INFO - Waiting for start time 09:18:00. Current: 09:17:15.229094
+2026-03-04 09:17:16,231 - INFO - Waiting for start time 09:18:00. Current: 09:17:16.231879
+2026-03-04 09:17:17,236 - INFO - Waiting for start time 09:18:00. Current: 09:17:17.236966
+2026-03-04 09:17:18,242 - INFO - Waiting for start time 09:18:00. Current: 09:17:18.242244
+2026-03-04 09:17:19,245 - INFO - Waiting for start time 09:18:00. Current: 09:17:19.245562
+2026-03-04 09:17:20,251 - INFO - Waiting for start time 09:18:00. Current: 09:17:20.251135
+2026-03-04 09:17:21,254 - INFO - Waiting for start time 09:18:00. Current: 09:17:21.254064
+2026-03-04 09:17:22,256 - INFO - Waiting for start time 09:18:00. Current: 09:17:22.256004
+2026-03-04 09:17:23,263 - INFO - Waiting for start time 09:18:00. Current: 09:17:23.263754
+2026-03-04 09:17:24,267 - INFO - Waiting for start time 09:18:00. Current: 09:17:24.267797
+2026-03-04 09:17:25,279 - INFO - Waiting for start time 09:18:00. Current: 09:17:25.279909
+2026-03-04 09:17:26,283 - INFO - Waiting for start time 09:18:00. Current: 09:17:26.283526
+2026-03-04 09:17:27,286 - INFO - Waiting for start time 09:18:00. Current: 09:17:27.286736
+2026-03-04 09:17:28,288 - INFO - Waiting for start time 09:18:00. Current: 09:17:28.288872
+2026-03-04 09:17:29,290 - INFO - Waiting for start time 09:18:00. Current: 09:17:29.290994
+2026-03-04 09:17:30,293 - INFO - Waiting for start time 09:18:00. Current: 09:17:30.293128
+2026-03-04 09:17:31,295 - INFO - Waiting for start time 09:18:00. Current: 09:17:31.295102
+2026-03-04 09:17:32,296 - INFO - Waiting for start time 09:18:00. Current: 09:17:32.296854
+2026-03-04 09:17:33,298 - INFO - Waiting for start time 09:18:00. Current: 09:17:33.298778
+2026-03-04 09:17:34,300 - INFO - Waiting for start time 09:18:00. Current: 09:17:34.300425
+2026-03-04 09:17:35,302 - INFO - Waiting for start time 09:18:00. Current: 09:17:35.302153
+2026-03-04 09:17:36,303 - INFO - Waiting for start time 09:18:00. Current: 09:17:36.303652
+2026-03-04 09:17:37,308 - INFO - Waiting for start time 09:18:00. Current: 09:17:37.308118
+2026-03-04 09:17:38,309 - INFO - Waiting for start time 09:18:00. Current: 09:17:38.309117
+2026-03-04 09:17:39,311 - INFO - Waiting for start time 09:18:00. Current: 09:17:39.311047
+2026-03-04 09:17:40,354 - INFO - Waiting for start time 09:18:00. Current: 09:17:40.354962
+2026-03-04 09:17:41,358 - INFO - Waiting for start time 09:18:00. Current: 09:17:41.358373
+2026-03-04 09:17:42,365 - INFO - Waiting for start time 09:18:00. Current: 09:17:42.365921
+2026-03-04 09:17:43,372 - INFO - Waiting for start time 09:18:00. Current: 09:17:43.372843
+2026-03-04 09:17:44,375 - INFO - Waiting for start time 09:18:00. Current: 09:17:44.375420
+2026-03-04 09:17:45,381 - INFO - Waiting for start time 09:18:00. Current: 09:17:45.381684
+2026-03-04 09:17:46,390 - INFO - Waiting for start time 09:18:00. Current: 09:17:46.390518
+2026-03-04 09:17:47,392 - INFO - Waiting for start time 09:18:00. Current: 09:17:47.392592
+2026-03-04 09:17:48,395 - INFO - Waiting for start time 09:18:00. Current: 09:17:48.395264
+2026-03-04 09:17:49,396 - INFO - Waiting for start time 09:18:00. Current: 09:17:49.396715
+2026-03-04 09:17:50,398 - INFO - Waiting for start time 09:18:00. Current: 09:17:50.398356
+2026-03-04 09:17:51,402 - INFO - Waiting for start time 09:18:00. Current: 09:17:51.402122
+2026-03-04 09:17:52,404 - INFO - Waiting for start time 09:18:00. Current: 09:17:52.404890
+2026-03-04 09:17:53,407 - INFO - Waiting for start time 09:18:00. Current: 09:17:53.407854
+2026-03-04 09:17:54,410 - INFO - Waiting for start time 09:18:00. Current: 09:17:54.410908
+2026-03-04 09:17:55,413 - INFO - Waiting for start time 09:18:00. Current: 09:17:55.413541
+2026-03-04 09:17:56,416 - INFO - Waiting for start time 09:18:00. Current: 09:17:56.416973
+2026-03-04 09:17:57,421 - INFO - Waiting for start time 09:18:00. Current: 09:17:57.421180
+2026-03-04 09:17:58,424 - INFO - Waiting for start time 09:18:00. Current: 09:17:58.424193
+2026-03-04 09:17:59,427 - INFO - Waiting for start time 09:18:00. Current: 09:17:59.427276
+2026-03-04 09:18:00,473 - INFO - NIFTY Spot: 24354.1 -> ATM Strike: 24350
+2026-03-04 09:18:00,483 - INFO - Entering Iron Fly at ATM 24350
+2026-03-04 09:18:00,573 - INFO - Order placed. ID: 260304150147099
+2026-03-04 09:18:00,574 - INFO - Order Placed: BUY NIFTY2631024850CE Qty=65 ID=260304150147099
+2026-03-04 09:18:00,627 - INFO - Trade logged to logs\2026-03-04\trades.csv: IronFly BUY NIFTY2631024850CE
+2026-03-04 09:18:00,687 - INFO - Entered BUY NIFTY2631024850CE at approx 110.75
+2026-03-04 09:18:00,757 - INFO - Order placed. ID: 260304150147183
+2026-03-04 09:18:00,760 - INFO - Order Placed: BUY NIFTY2631023850PE Qty=65 ID=260304150147183
+2026-03-04 09:18:00,818 - INFO - Trade logged to logs\2026-03-04\trades.csv: IronFly BUY NIFTY2631023850PE
+2026-03-04 09:18:00,866 - INFO - Entered BUY NIFTY2631023850PE at approx 150.55
+2026-03-04 09:18:00,935 - INFO - Order placed. ID: 260304150147278
+2026-03-04 09:18:00,935 - INFO - Order Placed: SELL NIFTY2631024350CE Qty=65 ID=260304150147278
+2026-03-04 09:18:00,999 - INFO - Trade logged to logs\2026-03-04\trades.csv: IronFly SELL NIFTY2631024350CE
+2026-03-04 09:18:01,105 - INFO - Entered SELL NIFTY2631024350CE at approx 324.4
+2026-03-04 09:18:01,238 - INFO - Order placed. ID: 260304150147373
+2026-03-04 09:18:01,242 - INFO - Order Placed: SELL NIFTY2631024350PE Qty=65 ID=260304150147373
+2026-03-04 09:18:01,300 - INFO - Trade logged to logs\2026-03-04\trades.csv: IronFly SELL NIFTY2631024350PE
+2026-03-04 09:18:01,353 - INFO - Entered SELL NIFTY2631024350PE at approx 301.2
+2026-03-04 09:20:10,313 - INFO - Momentum Check: Time=2026-03-04 09:15:00+05:30, O=24421.45, C=24385.1, H = 24476.95, L = 24334.85, TotalSize=142.10000000000218, BodySize=36.35000000000218, ATR14=58.46,Tolerance=5.00, Threshold=58.46
+2026-03-04 09:25:11,064 - INFO - Momentum Check: Time=2026-03-04 09:20:00+05:30, O=24387.9, C=24341.15, H = 24392.05, L = 24339.55, TotalSize=52.5, BodySize=46.75, ATR14=58.33,Tolerance=5.00, Threshold=58.33
+2026-03-04 09:30:10,728 - INFO - Momentum Check: Time=2026-03-04 09:25:00+05:30, O=24340.55, C=24342.85, H = 24374.45, L = 24315.45, TotalSize=59.0, BodySize=2.2999999999992724, ATR14=57.03,Tolerance=5.00, Threshold=57.03
+2026-03-04 09:35:10,086 - INFO - Momentum Check: Time=2026-03-04 09:30:00+05:30, O=24344.75, C=24332.35, H = 24366.5, L = 24328.1, TotalSize=38.400000000001455, BodySize=12.400000000001455, ATR14=56.02,Tolerance=3.84, Threshold=56.02
+2026-03-04 09:40:11,093 - INFO - Momentum Check: Time=2026-03-04 09:35:00+05:30, O=24334.95, C=24346.85, H = 24362.05, L = 24317.15, TotalSize=44.89999999999782, BodySize=11.899999999997817, ATR14=56.56,Tolerance=4.49, Threshold=56.56
+2026-03-04 09:45:10,466 - INFO - Momentum Check: Time=2026-03-04 09:40:00+05:30, O=24348.6, C=24408.75, H = 24412, L = 24345.2, TotalSize=66.79999999999927, BodySize=60.150000000001455, ATR14=56.66,Tolerance=5.00, Threshold=56.66
+2026-03-04 09:45:10,466 - INFO - Momentum Signal! BUY_CE NIFTY2631024400CE. Spot: 24408.75, SL Level: 24345.2
+2026-03-04 09:45:10,534 - INFO - Order placed. ID: 260304150515844
+2026-03-04 09:45:10,534 - INFO - Order Placed: BUY NIFTY2631024400CE Qty=130 ID=260304150515844
+2026-03-04 09:45:10,586 - INFO - Trade logged to logs\2026-03-04\trades.csv: MomentumBuy BUY NIFTY2631024400CE
+2026-03-04 09:45:10,634 - INFO - Entered NIFTY2631024400CE at 330.95. Initial SL: 310.95
+2026-03-04 09:45:10,735 - INFO - ORB Check [09:40:00]: C=24533.3, ORB_H=24557.2, ORB_L=24440, VWAP=24486.65, VolMA(5)=462722.00, Vol=232375, ATR14=52.56
+2026-03-04 09:47:11,625 - INFO - SL Hit for NIFTY2631024400CE at 313.3. Exiting...
+2026-03-04 09:47:11,702 - INFO - Order placed. ID: 260304150535290
+2026-03-04 09:47:11,703 - INFO - Order Placed: SELL NIFTY2631024400CE Qty=130 ID=260304150535290
+2026-03-04 09:47:11,812 - INFO - Trade logged to logs\2026-03-04\trades.csv: MomentumBuy SELL NIFTY2631024400CE
+2026-03-04 09:47:11,812 - INFO - Momentum Trade Exited.
+2026-03-04 09:50:10,338 - INFO - Momentum Check: Time=2026-03-04 09:45:00+05:30, O=24410.95, C=24365.25, H = 24416.2, L = 24353.8, TotalSize=62.400000000001455, BodySize=45.70000000000073, ATR14=59.03,Tolerance=5.00, Threshold=59.03
+2026-03-04 09:50:10,499 - INFO - ORB Check [09:45:00]: C=24500, ORB_H=24557.2, ORB_L=24440, VWAP=24488.99, VolMA(5)=297622.00, Vol=289120, ATR14=52.11
+2026-03-04 09:55:10,606 - INFO - Momentum Check: Time=2026-03-04 09:50:00+05:30, O=24365.75, C=24359.1, H = 24372, L = 24349.8, TotalSize=22.200000000000728, BodySize=6.650000000001455, ATR14=55.91,Tolerance=2.22, Threshold=55.91
+2026-03-04 09:55:10,757 - INFO - ORB Check [09:50:00]: C=24488, ORB_H=24557.2, ORB_L=24440, VWAP=24489.02, VolMA(5)=246233.00, Vol=153660, ATR14=54.19
+2026-03-04 10:00:10,793 - INFO - Momentum Check: Time=2026-03-04 09:55:00+05:30, O=24359.2, C=24325.9, H = 24360.35, L = 24323.6, TotalSize=36.75, BodySize=33.29999999999927, ATR14=54.06,Tolerance=3.68, Threshold=54.06
+2026-03-04 10:00:10,951 - INFO - ORB Check [09:55:00]: C=24455.8, ORB_H=24557.2, ORB_L=24440, VWAP=24487.14, VolMA(5)=219505.00, Vol=275990, ATR14=51.07
+2026-03-04 10:05:10,250 - INFO - Momentum Check: Time=2026-03-04 10:00:00+05:30, O=24325.8, C=24332.85, H = 24346.1, L = 24305.4, TotalSize=40.69999999999709, BodySize=7.049999999999272, ATR14=53.68,Tolerance=4.07, Threshold=53.68
+2026-03-04 10:05:10,384 - INFO - ORB Check [10:00:00]: C=24459.8, ORB_H=24557.2, ORB_L=24440, VWAP=24485.19, VolMA(5)=230100.00, Vol=203710, ATR14=50.14
+2026-03-04 10:10:10,389 - INFO - Momentum Check: Time=2026-03-04 10:05:00+05:30, O=24335.05, C=24367.95, H = 24371.8, L = 24329.7, TotalSize=42.099999999998545, BodySize=32.900000000001455, ATR14=52.70,Tolerance=4.21, Threshold=52.70
+2026-03-04 10:10:10,497 - INFO - ORB Check [10:05:00]: C=24486.3, ORB_H=24557.2, ORB_L=24440, VWAP=24484.90, VolMA(5)=230971.00, Vol=128310, ATR14=50.91
+2026-03-04 10:15:10,831 - INFO - Momentum Check: Time=2026-03-04 10:10:00+05:30, O=24368.85, C=24413.65, H = 24414.8, L = 24351.05, TotalSize=63.75, BodySize=44.80000000000291, ATR14=54.78,Tolerance=5.00, Threshold=54.78
+2026-03-04 10:15:10,905 - INFO - ORB Check [10:10:00]: C=24530.6, ORB_H=24557.2, ORB_L=24440, VWAP=24486.19, VolMA(5)=210158.00, Vol=171600, ATR14=50.65
+2026-03-04 10:20:10,268 - INFO - Momentum Check: Time=2026-03-04 10:15:00+05:30, O=24413.65, C=24387, H = 24417.55, L = 24384.3, TotalSize=33.25, BodySize=26.650000000001455, ATR14=53.27,Tolerance=3.33, Threshold=53.27
+2026-03-04 10:20:10,514 - INFO - ORB Check [10:15:00]: C=24511, ORB_H=24557.2, ORB_L=24440, VWAP=24487.76, VolMA(5)=186654.00, Vol=187200, ATR14=53.85
+2026-03-04 10:25:10,888 - INFO - Momentum Check: Time=2026-03-04 10:20:00+05:30, O=24387.75, C=24399.35, H = 24425, L = 24382.6, TotalSize=42.400000000001455, BodySize=11.599999999998545, ATR14=53.38,Tolerance=4.24, Threshold=53.38
+2026-03-04 10:25:10,983 - INFO - ORB Check [10:20:00]: C=24525, ORB_H=24557.2, ORB_L=24440, VWAP=24489.43, VolMA(5)=193362.00, Vol=162955, ATR14=52.01
+2026-03-04 10:30:10,134 - INFO - Momentum Check: Time=2026-03-04 10:25:00+05:30, O=24399.6, C=24419.05, H = 24437.35, L = 24394.65, TotalSize=42.69999999999709, BodySize=19.450000000000728, ATR14=46.27,Tolerance=4.27, Threshold=46.27
+2026-03-04 10:30:10,513 - INFO - ORB Check [10:25:00]: C=24533.1, ORB_H=24557.2, ORB_L=24440, VWAP=24490.86, VolMA(5)=170755.00, Vol=118300, ATR14=53.66
+2026-03-04 10:35:10,298 - INFO - Momentum Check: Time=2026-03-04 10:30:00+05:30, O=24420, C=24398.85, H = 24420.7, L = 24394.15, TotalSize=26.549999999999272, BodySize=21.150000000001455, ATR14=44.42,Tolerance=2.65, Threshold=44.42
+2026-03-04 10:35:10,367 - INFO - ORB Check [10:30:00]: C=24521.4, ORB_H=24557.2, ORB_L=24440, VWAP=24491.65, VolMA(5)=153673.00, Vol=94575, ATR14=48.51
+2026-03-04 10:40:11,063 - INFO - Momentum Check: Time=2026-03-04 10:35:00+05:30, O=24398.95, C=24390.1, H = 24409.3, L = 24382, TotalSize=27.299999999999272, BodySize=8.850000000002183, ATR14=42.16,Tolerance=2.73, Threshold=42.16
+2026-03-04 10:40:11,129 - INFO - ORB Check [10:35:00]: C=24511.2, ORB_H=24557.2, ORB_L=24440, VWAP=24492.29, VolMA(5)=146926.00, Vol=114335, ATR14=46.37
+2026-03-04 10:45:10,531 - INFO - Momentum Check: Time=2026-03-04 10:40:00+05:30, O=24391.55, C=24390.75, H = 24392.35, L = 24379.95, TotalSize=12.399999999997817, BodySize=0.7999999999992724, ATR14=40.30,Tolerance=1.24, Threshold=40.30
+2026-03-04 10:45:10,651 - INFO - ORB Check [10:40:00]: C=24511.6, ORB_H=24557.2, ORB_L=24440, VWAP=24492.58, VolMA(5)=135473.00, Vol=78195, ATR14=44.59
+2026-03-04 10:50:10,705 - INFO - Momentum Check: Time=2026-03-04 10:45:00+05:30, O=24391.65, C=24400.3, H = 24422.4, L = 24390.45, TotalSize=31.950000000000728, BodySize=8.649999999997817, ATR14=39.37,Tolerance=3.20, Threshold=39.37
+2026-03-04 10:50:10,788 - INFO - ORB Check [10:45:00]: C=24524, ORB_H=24557.2, ORB_L=24440, VWAP=24493.05, VolMA(5)=113672.00, Vol=61880, ATR14=43.60
+2026-03-04 10:55:11,001 - INFO - Momentum Check: Time=2026-03-04 10:50:00+05:30, O=24401.7, C=24398, H = 24402, L = 24382.8, TotalSize=19.200000000000728, BodySize=3.7000000000007276, ATR14=35.97,Tolerance=1.92, Threshold=35.97
+2026-03-04 10:55:11,073 - INFO - ORB Check [10:50:00]: C=24517.6, ORB_H=24557.2, ORB_L=24440, VWAP=24493.20, VolMA(5)=93457.00, Vol=32370, ATR14=42.94
+2026-03-04 11:00:12,394 - INFO - Momentum Check: Time=2026-03-04 10:55:00+05:30, O=24398.8, C=24391.45, H = 24399.75, L = 24375.7, TotalSize=24.049999999999272, BodySize=7.349999999998545, ATR14=33.24,Tolerance=2.40, Threshold=33.24
+2026-03-04 11:00:13,091 - INFO - ORB Check [10:55:00]: C=24509, ORB_H=24557.2, ORB_L=24440, VWAP=24493.40, VolMA(5)=76271.00, Vol=78455, ATR14=40.39
+2026-03-04 11:05:11,793 - INFO - Momentum Check: Time=2026-03-04 11:00:00+05:30, O=24392.45, C=24420.7, H = 24427.8, L = 24388.6, TotalSize=39.20000000000073, BodySize=28.25, ATR14=34.45,Tolerance=3.92, Threshold=34.45
+2026-03-04 11:05:12,655 - INFO - ORB Check [11:00:00]: C=24533.7, ORB_H=24557.2, ORB_L=24440, VWAP=24493.91, VolMA(5)=73047.00, Vol=74100, ATR14=38.21
+2026-03-04 11:10:11,729 - INFO - Momentum Check: Time=2026-03-04 11:05:00+05:30, O=24421.15, C=24450.9, H = 24453.4, L = 24413.2, TotalSize=40.20000000000073, BodySize=29.75, ATR14=34.70,Tolerance=4.02, Threshold=34.70
+2026-03-04 11:10:12,685 - INFO - ORB Check [11:05:00]: C=24567.9, ORB_H=24557.2, ORB_L=24440, VWAP=24495.28, VolMA(5)=65000.00, Vol=110955, ATR14=40.07
+2026-03-04 11:10:12,685 - INFO - ORB Signal Confirmed! LONG signal at spot 24567.9
+2026-03-04 11:10:12,750 - INFO - Order placed. ID: 260304151018299
+2026-03-04 11:10:12,750 - INFO - Order Placed: BUY NIFTY2631024450CE Qty=130 ID=260304151018299
+2026-03-04 11:10:12,822 - INFO - Trade logged to logs\2026-03-04\trades.csv: ORBStrategy BUY NIFTY2631024450CE
+2026-03-04 11:10:12,822 - INFO - Entered BUY NIFTY2631024450CE at spot ~24567.9. Initial Spot SL: 24507.79
+2026-03-04 11:15:11,224 - INFO - Momentum Check: Time=2026-03-04 11:10:00+05:30, O=24451.65, C=24435.45, H = 24461.4, L = 24433.85, TotalSize=27.55000000000291, BodySize=16.200000000000728, ATR14=33.76,Tolerance=2.76, Threshold=33.76
+2026-03-04 11:20:11,425 - INFO - Momentum Check: Time=2026-03-04 11:15:00+05:30, O=24436.15, C=24412.05, H = 24438.9, L = 24409.05, TotalSize=29.850000000002183, BodySize=24.100000000002183, ATR14=32.88,Tolerance=2.99, Threshold=32.88
+2026-03-04 11:25:11,095 - INFO - Momentum Check: Time=2026-03-04 11:20:00+05:30, O=24412.15, C=24393.3, H = 24422.9, L = 24390.35, TotalSize=32.55000000000291, BodySize=18.850000000002183, ATR14=30.65,Tolerance=3.26, Threshold=30.65
+2026-03-04 11:30:10,687 - INFO - Momentum Check: Time=2026-03-04 11:25:00+05:30, O=24393.45, C=24365.55, H = 24397.55, L = 24363, TotalSize=34.54999999999927, BodySize=27.900000000001455, ATR14=30.75,Tolerance=3.45, Threshold=30.75
+2026-03-04 11:35:11,300 - INFO - Momentum Check: Time=2026-03-04 11:30:00+05:30, O=24366.95, C=24364.7, H = 24378.5, L = 24354.15, TotalSize=24.349999999998545, BodySize=2.25, ATR14=29.46,Tolerance=2.43, Threshold=30.00
+2026-03-04 11:40:11,417 - INFO - Momentum Check: Time=2026-03-04 11:35:00+05:30, O=24365.75, C=24367.25, H = 24383.35, L = 24362.6, TotalSize=20.75, BodySize=1.5, ATR14=27.89,Tolerance=2.08, Threshold=30.00
+2026-03-04 11:45:10,968 - INFO - Momentum Check: Time=2026-03-04 11:40:00+05:30, O=24367.05, C=24362.2, H = 24382.3, L = 24360.8, TotalSize=21.5, BodySize=4.849999999998545, ATR14=27.53,Tolerance=2.15, Threshold=30.00
+2026-03-04 11:50:10,461 - INFO - Momentum Check: Time=2026-03-04 11:45:00+05:30, O=24364.05, C=24367.85, H = 24372.55, L = 24354.3, TotalSize=18.25, BodySize=3.7999999999992724, ATR14=26.88,Tolerance=1.83, Threshold=30.00
+2026-03-04 11:55:10,659 - INFO - Momentum Check: Time=2026-03-04 11:50:00+05:30, O=24369.05, C=24369.4, H = 24401.05, L = 24367, TotalSize=34.04999999999927, BodySize=0.3500000000021828, ATR14=28.43,Tolerance=3.40, Threshold=30.00
+2026-03-04 12:00:10,749 - INFO - Momentum Check: Time=2026-03-04 11:55:00+05:30, O=24370.15, C=24374.5, H = 24380.4, L = 24367.85, TotalSize=12.55000000000291, BodySize=4.349999999998545, ATR14=27.04,Tolerance=1.26, Threshold=30.00
+2026-03-04 12:05:10,836 - INFO - Momentum Check: Time=2026-03-04 12:00:00+05:30, O=24376.85, C=24389.1, H = 24391.5, L = 24376.35, TotalSize=15.150000000001455, BodySize=12.25, ATR14=26.75,Tolerance=1.52, Threshold=30.00
+2026-03-04 12:10:10,567 - INFO - Momentum Check: Time=2026-03-04 12:05:00+05:30, O=24389.8, C=24393.4, H = 24395.65, L = 24378.2, TotalSize=17.450000000000728, BodySize=3.600000000002183, ATR14=26.28,Tolerance=1.75, Threshold=30.00
+2026-03-04 12:15:10,673 - INFO - Momentum Check: Time=2026-03-04 12:10:00+05:30, O=24394.85, C=24379.85, H = 24402.3, L = 24378.45, TotalSize=23.849999999998545, BodySize=15.0, ATR14=25.19,Tolerance=2.38, Threshold=30.00
+2026-03-04 12:20:10,096 - INFO - Momentum Check: Time=2026-03-04 12:15:00+05:30, O=24381.15, C=24369, H = 24383.8, L = 24366.55, TotalSize=17.25, BodySize=12.150000000001455, ATR14=23.55,Tolerance=1.73, Threshold=30.00
+2026-03-04 12:25:10,927 - INFO - Momentum Check: Time=2026-03-04 12:20:00+05:30, O=24371.35, C=24375.8, H = 24385.6, L = 24369.55, TotalSize=16.049999999999272, BodySize=4.450000000000728, ATR14=22.73,Tolerance=1.60, Threshold=30.00
+2026-03-04 12:30:10,436 - INFO - Momentum Check: Time=2026-03-04 12:25:00+05:30, O=24376.65, C=24368.3, H = 24384.95, L = 24362.25, TotalSize=22.700000000000728, BodySize=8.350000000002183, ATR14=22.21,Tolerance=2.27, Threshold=30.00
+2026-03-04 12:35:10,678 - INFO - Momentum Check: Time=2026-03-04 12:30:00+05:30, O=24368.95, C=24375.05, H = 24381.6, L = 24368.95, TotalSize=12.649999999997817, BodySize=6.099999999998545, ATR14=20.79,Tolerance=1.26, Threshold=30.00
+2026-03-04 12:40:10,371 - INFO - Momentum Check: Time=2026-03-04 12:35:00+05:30, O=24375.55, C=24377.95, H = 24387.5, L = 24370.95, TotalSize=16.549999999999272, BodySize=2.400000000001455, ATR14=19.51,Tolerance=1.65, Threshold=30.00
+2026-03-04 12:45:10,622 - INFO - Momentum Check: Time=2026-03-04 12:40:00+05:30, O=24378.5, C=24382.55, H = 24383.3, L = 24357.75, TotalSize=25.549999999999272, BodySize=4.049999999999272, ATR14=19.59,Tolerance=2.55, Threshold=30.00
+2026-03-04 12:50:10,666 - INFO - Momentum Check: Time=2026-03-04 12:45:00+05:30, O=24383.35, C=24385.85, H = 24396.2, L = 24379.95, TotalSize=16.25, BodySize=2.5, ATR14=19.27,Tolerance=1.62, Threshold=30.00
+2026-03-04 12:55:10,216 - INFO - Momentum Check: Time=2026-03-04 12:50:00+05:30, O=24386.55, C=24394.15, H = 24397.9, L = 24384.2, TotalSize=13.700000000000728, BodySize=7.600000000002183, ATR14=18.71,Tolerance=1.37, Threshold=30.00
+2026-03-04 13:00:11,203 - INFO - Momentum Check: Time=2026-03-04 12:55:00+05:30, O=24394.8, C=24416.8, H = 24428.1, L = 24393.45, TotalSize=34.64999999999782, BodySize=22.0, ATR14=19.89,Tolerance=3.46, Threshold=30.00
+2026-03-04 13:05:10,066 - INFO - Momentum Check: Time=2026-03-04 13:00:00+05:30, O=24418, C=24422.15, H = 24431.95, L = 24414.75, TotalSize=17.200000000000728, BodySize=4.150000000001455, ATR14=18.68,Tolerance=1.72, Threshold=30.00
+2026-03-04 13:10:10,843 - INFO - Momentum Check: Time=2026-03-04 13:05:00+05:30, O=24423.15, C=24438.15, H = 24438.35, L = 24414.5, TotalSize=23.849999999998545, BodySize=15.0, ATR14=19.49,Tolerance=2.38, Threshold=30.00
+2026-03-04 13:15:10,074 - INFO - Momentum Check: Time=2026-03-04 13:10:00+05:30, O=24438.95, C=24461, H = 24461, L = 24433, TotalSize=28, BodySize=22.049999999999272, ATR14=20.41,Tolerance=2.80, Threshold=30.00
+2026-03-04 13:20:10,135 - INFO - Momentum Check: Time=2026-03-04 13:15:00+05:30, O=24461.45, C=24441.45, H = 24465.75, L = 24436.3, TotalSize=29.450000000000728, BodySize=20.0, ATR14=21.26,Tolerance=2.95, Threshold=30.00
+2026-03-04 13:25:10,751 - INFO - Momentum Check: Time=2026-03-04 13:20:00+05:30, O=24442.15, C=24459.55, H = 24460.2, L = 24432.35, TotalSize=27.850000000002183, BodySize=17.399999999997817, ATR14=21.55,Tolerance=2.79, Threshold=30.00
+2026-03-04 13:30:10,917 - INFO - Momentum Check: Time=2026-03-04 13:25:00+05:30, O=24459.55, C=24451.6, H = 24477.45, L = 24449.75, TotalSize=27.700000000000728, BodySize=7.950000000000728, ATR14=22.30,Tolerance=2.77, Threshold=30.00
+2026-03-04 13:35:10,856 - INFO - Momentum Check: Time=2026-03-04 13:30:00+05:30, O=24451.25, C=24435.65, H = 24466.35, L = 24435.1, TotalSize=31.25, BodySize=15.599999999998545, ATR14=23.38,Tolerance=3.12, Threshold=30.00
+2026-03-04 13:40:10,973 - INFO - Momentum Check: Time=2026-03-04 13:35:00+05:30, O=24436.05, C=24447, H = 24448.1, L = 24418.15, TotalSize=29.94999999999709, BodySize=10.950000000000728, ATR14=23.90,Tolerance=2.99, Threshold=30.00
+2026-03-04 13:45:11,068 - INFO - Momentum Check: Time=2026-03-04 13:40:00+05:30, O=24448.05, C=24462.6, H = 24462.65, L = 24440.25, TotalSize=22.400000000001455, BodySize=14.549999999999272, ATR14=24.60,Tolerance=2.24, Threshold=30.00
+2026-03-04 13:50:10,508 - INFO - Momentum Check: Time=2026-03-04 13:45:00+05:30, O=24463.5, C=24441.95, H = 24469.85, L = 24438.7, TotalSize=31.149999999997817, BodySize=21.549999999999272, ATR14=25.64,Tolerance=3.11, Threshold=30.00
+2026-03-04 13:55:10,112 - INFO - Momentum Check: Time=2026-03-04 13:50:00+05:30, O=24442.6, C=24428.55, H = 24445.3, L = 24426.9, TotalSize=18.399999999997817, BodySize=14.049999999999272, ATR14=25.13,Tolerance=1.84, Threshold=30.00
+2026-03-04 14:00:10,974 - INFO - Momentum Check: Time=2026-03-04 13:55:00+05:30, O=24428.7, C=24437, H = 24438.4, L = 24415.75, TotalSize=22.650000000001455, BodySize=8.299999999999272, ATR14=25.59,Tolerance=2.27, Threshold=30.00
+2026-03-04 14:05:10,526 - INFO - Momentum Check: Time=2026-03-04 14:00:00+05:30, O=24437.9, C=24451.1, H = 24453.9, L = 24437.55, TotalSize=16.350000000002183, BodySize=13.19999999999709, ATR14=25.77,Tolerance=1.64, Threshold=30.00
+2026-03-04 14:10:10,289 - INFO - Momentum Check: Time=2026-03-04 14:05:00+05:30, O=24451.2, C=24494.6, H = 24496.6, L = 24440.2, TotalSize=56.39999999999782, BodySize=43.39999999999782, ATR14=27.33,Tolerance=5.00, Threshold=30.00
+2026-03-04 14:13:55,281 - INFO - Trailing SL Hit! MTM: -1651.0000000000018 <= SL: -1571.0000000000005
+2026-03-04 14:13:55,281 - INFO - Exiting all positions...
+2026-03-04 14:13:55,359 - INFO - Order placed. ID: 260304151670571
+2026-03-04 14:13:55,364 - INFO - Order Placed: BUY NIFTY2631024350CE Qty=65 ID=260304151670571
+2026-03-04 14:13:55,418 - INFO - Trade logged to logs\2026-03-04\trades.csv: IronFly BUY NIFTY2631024350CE
+2026-03-04 14:13:55,418 - INFO - Exit (Cover): BUY NIFTY2631024350CE
+2026-03-04 14:13:55,506 - INFO - Order placed. ID: 260304151670584
+2026-03-04 14:13:55,507 - INFO - Order Placed: BUY NIFTY2631024350PE Qty=65 ID=260304151670584
+2026-03-04 14:13:55,555 - INFO - Trade logged to logs\2026-03-04\trades.csv: IronFly BUY NIFTY2631024350PE
+2026-03-04 14:13:55,555 - INFO - Exit (Cover): BUY NIFTY2631024350PE
+2026-03-04 14:13:55,631 - INFO - Order placed. ID: 260304151670603
+2026-03-04 14:13:55,631 - INFO - Order Placed: SELL NIFTY2631024850CE Qty=65 ID=260304151670603
+2026-03-04 14:13:55,741 - INFO - Trade logged to logs\2026-03-04\trades.csv: IronFly SELL NIFTY2631024850CE
+2026-03-04 14:13:55,741 - INFO - Exit (Close): SELL NIFTY2631024850CE
+2026-03-04 14:13:55,814 - INFO - Order placed. ID: 260304151670637
+2026-03-04 14:13:55,818 - INFO - Order Placed: SELL NIFTY2631023850PE Qty=65 ID=260304151670637
+2026-03-04 14:13:55,871 - INFO - Trade logged to logs\2026-03-04\trades.csv: IronFly SELL NIFTY2631023850PE
+2026-03-04 14:13:55,876 - INFO - Exit (Close): SELL NIFTY2631023850PE
+2026-03-04 14:13:55,878 - INFO - Iron Fly Strategy Exited. Final MTM (approx peak): 428.99999999999966
+2026-03-04 14:15:10,456 - INFO - Momentum Check: Time=2026-03-04 14:10:00+05:30, O=24495.55, C=24554.95, H = 24556.95, L = 24483.3, TotalSize=73.65000000000146, BodySize=59.400000000001455, ATR14=31.36,Tolerance=5.00, Threshold=31.36
+2026-03-04 14:20:10,327 - INFO - Momentum Check: Time=2026-03-04 14:15:00+05:30, O=24555.35, C=24567.85, H = 24574.65, L = 24541.3, TotalSize=33.35000000000218, BodySize=12.5, ATR14=32.04,Tolerance=3.34, Threshold=32.04
+2026-03-04 14:25:10,908 - INFO - Momentum Check: Time=2026-03-04 14:20:00+05:30, O=24568.35, C=24535, H = 24568.85, L = 24533.95, TotalSize=34.89999999999782, BodySize=33.349999999998545, ATR14=32.53,Tolerance=3.49, Threshold=32.53
+2026-03-04 14:25:10,911 - INFO - Momentum Signal! BUY_PE NIFTY2631024550PE. Spot: 24535, SL Level: 24568.85
+2026-03-04 14:25:10,982 - INFO - Order placed. ID: 260304151728528
+2026-03-04 14:25:10,982 - INFO - Order Placed: BUY NIFTY2631024550PE Qty=130 ID=260304151728528
+2026-03-04 14:25:11,046 - INFO - Trade logged to logs\2026-03-04\trades.csv: MomentumBuy BUY NIFTY2631024550PE
+2026-03-04 14:25:11,098 - INFO - Entered NIFTY2631024550PE at 314.45. Initial SL: 294.45
+2026-03-04 14:25:49,796 - INFO - Profit Target Hit for NIFTY2631024550PE! MTM: 721.5000000000015 >= 650. Exiting...
+2026-03-04 14:25:49,871 - INFO - Order placed. ID: 260304151731230
+2026-03-04 14:25:49,872 - INFO - Order Placed: SELL NIFTY2631024550PE Qty=130 ID=260304151731230
+2026-03-04 14:25:49,926 - INFO - Trade logged to logs\2026-03-04\trades.csv: MomentumBuy SELL NIFTY2631024550PE
+2026-03-04 14:25:49,926 - INFO - Momentum Trade Exited.
+2026-03-04 14:30:10,674 - INFO - Momentum Check: Time=2026-03-04 14:25:00+05:30, O=24536.55, C=24522.5, H = 24541.3, L = 24513.85, TotalSize=27.450000000000728, BodySize=14.049999999999272, ATR14=32.39,Tolerance=2.75, Threshold=32.39
+2026-03-04 14:35:10,184 - INFO - Momentum Check: Time=2026-03-04 14:30:00+05:30, O=24523.1, C=24534.25, H = 24553.5, L = 24502.6, TotalSize=50.900000000001455, BodySize=11.150000000001455, ATR14=34.04,Tolerance=5.00, Threshold=34.04
+2026-03-04 14:40:10,501 - INFO - Momentum Check: Time=2026-03-04 14:35:00+05:30, O=24534.85, C=24537.85, H = 24543.5, L = 24520.6, TotalSize=22.900000000001455, BodySize=3.0, ATR14=33.69,Tolerance=2.29, Threshold=33.69
+2026-03-04 14:45:10,424 - INFO - Momentum Check: Time=2026-03-04 14:40:00+05:30, O=24540.35, C=24578.75, H = 24584.15, L = 24539.25, TotalSize=44.900000000001455, BodySize=38.400000000001455, ATR14=34.67,Tolerance=4.49, Threshold=34.67
+2026-03-04 14:50:10,502 - INFO - Momentum Check: Time=2026-03-04 14:45:00+05:30, O=24579.1, C=24581.2, H = 24600.15, L = 24548, TotalSize=52.150000000001455, BodySize=2.100000000002183, ATR14=36.25,Tolerance=5.00, Threshold=36.25
+2026-03-04 14:55:10,813 - INFO - Momentum Check: Time=2026-03-04 14:50:00+05:30, O=24584.85, C=24585.55, H = 24594.05, L = 24570.7, TotalSize=23.349999999998545, BodySize=0.7000000000007276, ATR14=36.32,Tolerance=2.33, Threshold=36.32
+2026-03-04 15:00:10,829 - INFO - Momentum Check: Time=2026-03-04 14:55:00+05:30, O=24586.35, C=24582.95, H = 24602.45, L = 24571.75, TotalSize=30.700000000000728, BodySize=3.399999999997817, ATR14=36.29,Tolerance=3.07, Threshold=36.29
+2026-03-04 15:05:10,760 - INFO - Momentum Check: Time=2026-03-04 15:00:00+05:30, O=24582.95, C=24509, H = 24584.45, L = 24506.2, TotalSize=78.25, BodySize=73.95000000000073, ATR14=40.56,Tolerance=5.00, Threshold=40.56
+2026-03-04 15:05:10,760 - INFO - Momentum Signal! BUY_PE NIFTY2631024500PE. Spot: 24509, SL Level: 24584.45
+2026-03-04 15:05:10,889 - INFO - Order placed. ID: 260304151907832
+2026-03-04 15:05:10,889 - INFO - Order Placed: BUY NIFTY2631024500PE Qty=130 ID=260304151907832
+2026-03-04 15:05:10,934 - INFO - Trade logged to logs\2026-03-04\trades.csv: MomentumBuy BUY NIFTY2631024500PE
+2026-03-04 15:05:10,984 - INFO - Entered NIFTY2631024500PE at 312.75. Initial SL: 292.75
+2026-03-04 15:06:48,279 - INFO - Profit Target Hit for NIFTY2631024500PE! MTM: 701.999999999997 >= 650. Exiting...
+2026-03-04 15:06:48,353 - INFO - Order placed. ID: 260304151915811
+2026-03-04 15:06:48,353 - INFO - Order Placed: SELL NIFTY2631024500PE Qty=130 ID=260304151915811
+2026-03-04 15:06:48,402 - INFO - Trade logged to logs\2026-03-04\trades.csv: MomentumBuy SELL NIFTY2631024500PE
+2026-03-04 15:06:48,402 - INFO - Momentum Trade Exited.
+2026-03-04 15:10:10,936 - INFO - Momentum Check: Time=2026-03-04 15:05:00+05:30, O=24508.65, C=24472.2, H = 24518.45, L = 24471.05, TotalSize=47.400000000001455, BodySize=36.45000000000073, ATR14=42.33,Tolerance=4.74, Threshold=42.33
+2026-03-04 15:15:00,642 - INFO - End time 15:15:00 reached. Exiting trade.
+2026-03-04 15:15:00,708 - INFO - Order placed. ID: 260304151958444
+2026-03-04 15:15:00,708 - INFO - Order Placed: SELL NIFTY2631024450CE Qty=130 ID=260304151958444
+2026-03-04 15:15:00,760 - INFO - Trade logged to logs\2026-03-04\trades.csv: ORBStrategy SELL NIFTY2631024450CE
+2026-03-04 15:15:00,761 - INFO - ORB Trade Exited.
+2026-03-04 15:15:10,836 - INFO - Momentum Check: Time=2026-03-04 15:10:00+05:30, O=24471.15, C=24465.95, H = 24474.45, L = 24457.45, TotalSize=17.0, BodySize=5.200000000000728, ATR14=42.38,Tolerance=1.70, Threshold=42.38
+2026-03-04 15:20:00,951 - INFO - End time 15:20:00 reached. Stopping strategy.
+2026-03-04 20:07:31,392 - INFO - Stopping Application...

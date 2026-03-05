@@ -6,6 +6,7 @@ from src.kite_client import KiteWrapper
 from src.trade_manager import TradeManager
 from src.strategies.iron_fly import IronFlyStrategy
 from src.strategies.momentum_buy import MomentumBuyStrategy
+from src.strategies.opening_range_breakout import OpeningRangeBreakoutStrategy
 
 import os
 from datetime import datetime
@@ -17,8 +18,7 @@ class NoMTMFilter(logging.Filter):
             return False
         if "Trailing SL adjusted" in msg:
             return False
-        if "Trailing SL Updated" in msg:
-            return False
+        # Allow trailing SL updated logs
         return True
 
 # Setup logging
@@ -59,7 +59,19 @@ IRONFLY_PROFIT_TARGET = 1600
 MOMENTUM_CANDLE_SIZE = 30 # Default, now dynamic max(40, ATR14)
 MOMENTUM_INTERVAL = "5minute"
 MOMENTUM_QUANTITY = 130 # 2 Lot
-MOMENTUM_PROFIT_TARGET = 650
+MOMENTUM_PROFIT_TARGET = 780
+
+# ORB Strategy Config
+ORB_BASE_SYMBOL = "NFO:NIFTY24MARFUT" # Track future for ORB volume and signals
+ORB_BASE_TOKEN = 13238786           # Update manually with actual Future Token
+ORB_ITM_OFFSET = 100                 # Distance to buy ITM Option (e.g., 100 pts ITM)
+ORB_INTERVAL = "5minute"
+ORB_MINUTES = 30
+ORB_VOLUME_MULT = 1.5
+ORB_CONFIRM_BARS = 1
+ORB_ATR_STOP_MULT = 1.5
+ORB_END_TIME = time_obj(15, 15)
+ORB_PROFIT_TARGET = 100
 
 def main():
     logger.info("Starting KiteConnect Trading App...")
@@ -104,7 +116,25 @@ def main():
         profit_target=MOMENTUM_PROFIT_TARGET
     )
 
-    logger.info(f"Strategies Initialized: Iron Fly & Momentum Buy on {SYMBOL}")
+    # C. Opening Range Breakout Strategy
+    orb_strategy = OpeningRangeBreakoutStrategy(
+        kite_client=kite,
+        trade_manager=tm,
+        base_symbol=ORB_BASE_SYMBOL,
+        instrument_token=ORB_BASE_TOKEN,
+        expiry_stamp=EXPIRY_STAMP,
+        interval=ORB_INTERVAL,
+        orb_minutes=ORB_MINUTES,
+        volume_mult=ORB_VOLUME_MULT,
+        confirm_bars=ORB_CONFIRM_BARS,
+        atr_stop_mult=ORB_ATR_STOP_MULT,
+        end_time=ORB_END_TIME,
+        itm_offset=ORB_ITM_OFFSET,
+        quantity=MOMENTUM_QUANTITY,
+        profit_target=ORB_PROFIT_TARGET
+    )
+
+    logger.info(f"Strategies Initialized: Iron Fly, Momentum Buy & ORB on {SYMBOL}")
     logger.info("Application Initialized. Starting Main Loop...")
     
     try:
@@ -112,6 +142,7 @@ def main():
             # Run Strategy Logic
             iron_fly.on_tick()
             momentum_buy.on_tick()
+            orb_strategy.on_tick()
             
             # Sleep to simulate tick interval (e.g., 1 second)
             time.sleep(1)
