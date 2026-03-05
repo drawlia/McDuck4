@@ -1,4 +1,3 @@
-
 import logging
 import time
 import csv
@@ -8,23 +7,36 @@ import datetime
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+
 class TradeManager:
     def __init__(self, kite_client, base_log_dir="logs"):
         self.kite_client = kite_client
-        self.active_trades = []  # List of dictionaries: {symbol, order_id, entry_price, sl_price, quantity, trail_gap}
-        
+        self.active_trades = (
+            []
+        )  # List of dictionaries: {symbol, order_id, entry_price, sl_price, quantity, trail_gap}
+
         # Create daily logging directory
         today_str = datetime.datetime.now().strftime("%Y-%m-%d")
         self.log_dir = os.path.join(base_log_dir, today_str)
         os.makedirs(self.log_dir, exist_ok=True)
-        
+
         self.log_file = os.path.join(self.log_dir, "trades.csv")
-        
+
         # Initialize log file with headers if it doesn't exist
         if not os.path.exists(self.log_file):
             with open(self.log_file, "w", newline="") as f:
                 writer = csv.writer(f)
-                writer.writerow(["Timestamp", "Strategy", "Symbol", "Side", "Quantity", "Price", "OrderID"])
+                writer.writerow(
+                    [
+                        "Timestamp",
+                        "Strategy",
+                        "Symbol",
+                        "Side",
+                        "Quantity",
+                        "Price",
+                        "OrderID",
+                    ]
+                )
 
     def _log_to_csv(self, strategy_name, symbol, side, qty, price, order_id):
         """
@@ -34,8 +46,12 @@ class TradeManager:
         try:
             with open(self.log_file, "a", newline="") as f:
                 writer = csv.writer(f)
-                writer.writerow([timestamp, strategy_name, symbol, side, qty, price, order_id])
-            logger.info(f"Trade logged to {self.log_file}: {strategy_name} {side} {symbol}")
+                writer.writerow(
+                    [timestamp, strategy_name, symbol, side, qty, price, order_id]
+                )
+            logger.info(
+                f"Trade logged to {self.log_file}: {strategy_name} {side} {symbol}"
+            )
         except Exception as e:
             logger.error(f"Error logging to CSV: {e}")
 
@@ -47,12 +63,20 @@ class TradeManager:
         if not os.path.exists(self.log_file):
             return {}
 
-        open_positions = {} # (strategy, symbol) -> {'qty': ..., 'price': ... (avg)}
+        open_positions = {}  # (strategy, symbol) -> {'qty': ..., 'price': ... (avg)}
+        today_str = datetime.datetime.now().strftime("%Y-%m-%d")
 
         try:
             with open(self.log_file, "r") as f:
                 reader = csv.DictReader(f)
                 for row in reader:
+                    # Only process today's trades
+                    timestamp = row["Timestamp"][
+                        :10
+                    ]  # Extract YYYY-MM-DD from timestamp
+                    if timestamp != today_str:
+                        continue
+
                     strategy = row["Strategy"]
                     symbol = row["Symbol"]
                     side = row["Side"]
@@ -65,36 +89,54 @@ class TradeManager:
 
                     if side == "BUY":
                         # Simplistic average price tracking for entry
-                        total_cost = (open_positions[key]["qty"] * open_positions[key]["price"]) + (qty * price)
+                        total_cost = (
+                            open_positions[key]["qty"] * open_positions[key]["price"]
+                        ) + (qty * price)
                         open_positions[key]["qty"] += qty
                         if open_positions[key]["qty"] > 0:
-                            open_positions[key]["price"] = total_cost / open_positions[key]["qty"]
-                    else: # SELL
+                            open_positions[key]["price"] = (
+                                total_cost / open_positions[key]["qty"]
+                            )
+                    else:  # SELL
                         open_positions[key]["qty"] -= qty
-            
-            # Refined logic: Net Quantity. 
+
+            # Refined logic: Net Quantity.
             # If Strategy is IronFly, initial orders are SELL (Short), so negative is Open.
             # If Strategy is MomentumBuy, initial orders are BUY (Long), so positive is Open.
-            
+
             # Let's just return all non-zero net positions grouped by strategy.
             result = {}
             for (strategy, symbol), data in open_positions.items():
                 if data["qty"] != 0:
                     if strategy not in result:
                         result[strategy] = []
-                    result[strategy].append({
-                        "symbol": symbol,
-                        "quantity": abs(data["qty"]),
-                        "entry_price": data["price"],
-                        "side": "SELL" if data["qty"] < 0 else "BUY"
-                    })
-            
+                    result[strategy].append(
+                        {
+                            "symbol": symbol,
+                            "quantity": abs(data["qty"]),
+                            "entry_price": data["price"],
+                            "side": "SELL" if data["qty"] < 0 else "BUY",
+                        }
+                    )
+
             return result
         except Exception as e:
             logger.error(f"Error reading open trades from CSV: {e}")
             return {}
 
-    def place_order(self, symbol, transaction_type, quantity, order_type="MARKET", exchange="NSE", price=None, trigger_price=None, variety="regular", product="MIS", tag=None):
+    def place_order(
+        self,
+        symbol,
+        transaction_type,
+        quantity,
+        order_type="MARKET",
+        exchange="NSE",
+        price=None,
+        trigger_price=None,
+        variety="regular",
+        product="MIS",
+        tag=None,
+    ):
         """
         Generic method to place an order.
         """
@@ -107,12 +149,14 @@ class TradeManager:
             product=product,
             price=price,
             trigger_price=trigger_price,
-            variety=variety
+            variety=variety,
         )
 
         if order_id:
-            logger.info(f"Order Placed: {transaction_type} {symbol} Qty={quantity} ID={order_id}")
-            
+            logger.info(
+                f"Order Placed: {transaction_type} {symbol} Qty={quantity} ID={order_id}"
+            )
+
             # Log the trade
             # In MARKET orders, 'price' might be None, so we might need LTP for the log
             log_price = price if price else 0
@@ -125,7 +169,14 @@ class TradeManager:
                 except:
                     pass
 
-            self._log_to_csv(tag if tag else "Unknown", symbol, transaction_type, quantity, log_price, order_id)
+            self._log_to_csv(
+                tag if tag else "Unknown",
+                symbol,
+                transaction_type,
+                quantity,
+                log_price,
+                order_id,
+            )
             return order_id
         return None
 
@@ -139,10 +190,10 @@ class TradeManager:
             transaction_type="BUY",
             quantity=quantity,
             order_type="LIMIT",
-            price=price
+            price=price,
         )
 
-        if order_id: # Only track if order was successfully placed
+        if order_id:  # Only track if order was successfully placed
             # In a real scenario, we wait for the order to be FILLED before tracking it.
             # For this simple app, we assume immediate fill or just track the intent.
             trade = {
@@ -152,11 +203,11 @@ class TradeManager:
                 "sl_price": sl_price,
                 "quantity": quantity,
                 "trail_gap": trail_gap,
-                "status": "OPEN"
+                "status": "OPEN",
             }
             self.active_trades.append(trade)
             logger.info(f"Tracking trade for {symbol} with SL: {sl_price}")
-        
+
         return order_id
 
     def check_and_trail_sl(self):
@@ -169,13 +220,13 @@ class TradeManager:
         symbols = [t["symbol"] for t in self.active_trades]
         # Adding NSE: prefix
         api_symbols = [f"NSE:{s}" for s in symbols]
-        
+
         quotes = self.kite_client.get_quote(api_symbols)
 
         for trade in self.active_trades:
             symbol = trade["symbol"]
             api_symbol = f"NSE:{symbol}"
-            
+
             if api_symbol not in quotes:
                 continue
 
@@ -199,7 +250,9 @@ class TradeManager:
                 potential_new_sl = ltp - trail_gap
                 if potential_new_sl > sl_price:
                     trade["sl_price"] = potential_new_sl
-                    logger.info(f"Trailing SL Updated for {symbol}: Old={sl_price}, New={trade['sl_price']}")
+                    logger.info(
+                        f"Trailing SL Updated for {symbol}: Old={sl_price}, New={trade['sl_price']}"
+                    )
 
     def exit_trade(self, trade, exit_price=None):
         """
@@ -208,11 +261,11 @@ class TradeManager:
         # Close the position
         order_id = self.place_order(
             symbol=trade["symbol"],
-            transaction_type="SELL", # Assuming long exit
+            transaction_type="SELL",  # Assuming long exit
             quantity=trade["quantity"],
-            order_type="MARKET"
+            order_type="MARKET",
         )
-        
+
         if order_id:
             logger.info(f"Exit Order Placed for {trade['symbol']} at Market")
             if trade in self.active_trades:
