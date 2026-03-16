@@ -79,6 +79,15 @@ class IronFlyStrategy(BaseStrategy):
 
         # 1. ENTRY LOGIC
         if self.state == "INIT":
+            # Check if new trades cutoff time has been reached (15:10)
+            new_trades_cutoff = datetime.time(15, 10)
+            if now >= new_trades_cutoff:
+                logger.info(
+                    f"New trades cutoff time {new_trades_cutoff} reached. No new entries allowed."
+                )
+                self.state = "EXITED"
+                return
+
             # Check Start Time
             if self.start_time:
                 if now < self.start_time:

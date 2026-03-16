@@ -6,6 +6,7 @@ from src.trade_manager import TradeManager
 from src.strategies.iron_fly import IronFlyStrategy
 from src.strategies.momentum_buy import MomentumBuyStrategy
 from src.strategies.opening_range_breakout import OpeningRangeBreakoutStrategy
+from src.strategies.scalping_strategy import ScalpingStrategy
 
 import os
 from datetime import datetime
@@ -15,6 +16,8 @@ class NoMTMFilter(logging.Filter):
     def filter(self, record):
         msg = record.getMessage()
         if "Trailing SL adjusted" in msg:
+            return False
+        if "Max MTM" in msg:
             return False
         # Allow trailing SL updated logs
         return True
@@ -46,19 +49,19 @@ logger = logging.getLogger(__name__)
 
 # Configuration
 SYMBOL = "NIFTY"
-EXPIRY_STAMP = "26310"  # Update this to current expiry, e.g., 23N02 for weekly or 23OCT for monthly
-QUANTITY = 65  # 1 Lot for Iron Fly
+EXPIRY_STAMP = "26324"  # Update this to current expiry, e.g., 23N02 for weekly or 23OCT for monthly
+QUANTITY = 130  # 1 Lot for Iron Fly
 HEDGE_DIST = 500
 SL_MTM = 2000
 START_TIME = time_obj(9, 18)  # 9:18 AM
-END_TIME = time_obj(15, 20)  # 3:20 PM
-IRONFLY_PROFIT_TARGET = 1600
+END_TIME = time_obj(15, 24)  # 3:24 PM
+IRONFLY_PROFIT_TARGET = 1500
 
 # Momentum Strategy Config
-MOMENTUM_CANDLE_SIZE = 30  # Default, now dynamic max(40, ATR14)
+MOMENTUM_CANDLE_SIZE = 25  # Default, now dynamic max(40, ATR14)
 MOMENTUM_INTERVAL = "5minute"
-MOMENTUM_QUANTITY = 130  # 2 Lot
-MOMENTUM_PROFIT_TARGET = 780
+MOMENTUM_QUANTITY = 195  # 2 Lot
+MOMENTUM_PROFIT_TARGET = 3000
 
 # ORB Strategy Config
 ORB_BASE_SYMBOL = "NFO:NIFTY24MARFUT"  # Track future for ORB volume and signals
@@ -67,10 +70,18 @@ ORB_ITM_OFFSET = 100  # Distance to buy ITM Option (e.g., 100 pts ITM)
 ORB_INTERVAL = "5minute"
 ORB_MINUTES = 30
 ORB_VOLUME_MULT = 1.5
-ORB_CONFIRM_BARS = 1
+ORB_CONFIRM_BARS = 2
 ORB_ATR_STOP_MULT = 1.5
 ORB_END_TIME = time_obj(15, 15)
-ORB_PROFIT_TARGET = 1000
+ORB_PROFIT_TARGET = 1800
+
+# Scalping Strategy Config
+SCALPING_INTERVAL = "5minute"
+SCALPING_QUANTITY = 130
+SCALPING_PROFIT_TARGET = 1100
+SCALPING_TRAILING_POINTS = 30
+SCALPING_SMALL_CANDLE_THRESHOLD = 25  # Max body size to consider a candle "small"
+SCALPING_MIN_CANDLES = 3  # Minimum consecutive small candles
 
 
 def main():
@@ -135,15 +146,32 @@ def main():
         profit_target=ORB_PROFIT_TARGET,
     )
 
-    logger.info(f"Strategies Initialized: Iron Fly, Momentum Buy & ORB on {SYMBOL}")
+    # D. Scalping Strategy
+    scalping_strategy = ScalpingStrategy(
+        kite_client=kite,
+        trade_manager=tm,
+        expiry_stamp=EXPIRY_STAMP,
+        interval=SCALPING_INTERVAL,
+        quantity=SCALPING_QUANTITY,
+        end_time=END_TIME,
+        profit_target=SCALPING_PROFIT_TARGET,
+        trailing_points=SCALPING_TRAILING_POINTS,
+        small_candle_threshold=SCALPING_SMALL_CANDLE_THRESHOLD,
+        min_candles=SCALPING_MIN_CANDLES,
+    )
+
+    logger.info(
+        f"Strategies Initialized: Iron Fly, Momentum Buy, ORB & Scalping on {SYMBOL}"
+    )
     logger.info("Application Initialized. Starting Main Loop...")
 
     try:
         while True:
             # Run Strategy Logic
-            iron_fly.on_tick()
+            # iron_fly.on_tick()
             momentum_buy.on_tick()
-            orb_strategy.on_tick()
+            # orb_strategy.on_tick()
+            scalping_strategy.on_tick()
 
             # Sleep to simulate tick interval (e.g., 1 second)
             time.sleep(1)

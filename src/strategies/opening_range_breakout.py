@@ -87,7 +87,6 @@ class OpeningRangeBreakoutStrategy(BaseStrategy):
                     "trade_type": trade_type,
                     "quantity": trade_data["quantity"],
                     "max_favorable_price": 0,
-                    "atr14_at_entry": 40,
                     "entry_premium": None,  # Will be captured on first manage_trade() call
                 }
                 self.state = "IN_TRADE"
@@ -120,6 +119,15 @@ class OpeningRangeBreakoutStrategy(BaseStrategy):
 
         # 2. Check for New Entry
         if self.state == "IDLE" and not self.has_traded_today:
+            # Check if new trades cutoff time has been reached (15:10)
+            new_trades_cutoff = datetime.time(15, 10)
+            if now >= new_trades_cutoff:
+                logger.info(
+                    f"New trades cutoff time {new_trades_cutoff} reached. No new ORB entries allowed. Stopping strategy."
+                )
+                self.state = "EXITED"
+                return
+
             # Check market opened and ORB period is over
             now_dt = datetime.datetime.now()
             market_open_dt = now_dt.replace(hour=9, minute=15, second=0, microsecond=0)
@@ -289,11 +297,11 @@ class OpeningRangeBreakoutStrategy(BaseStrategy):
             if actual_entry_quote and f"NFO:{option_symbol}" in actual_entry_quote:
                 entry_premium = actual_entry_quote[f"NFO:{option_symbol}"]["last_price"]
 
-            # Calculate hard SL based on ATR on the SPOT chart.
+            # Calculate SL based on Option Price with 20-point initial SL
             if trade_type == "LONG":
-                initial_sl = spot_price - (self.atr_stop_mult * atr14)
+                initial_sl = entry_premium - 30
             else:
-                initial_sl = spot_price + (self.atr_stop_mult * atr14)
+                initial_sl = entry_premium + 30
 
             self.current_trade = {
                 "option_symbol": option_symbol,
@@ -302,15 +310,14 @@ class OpeningRangeBreakoutStrategy(BaseStrategy):
                 "sl_price": initial_sl,
                 "trade_type": trade_type,
                 "quantity": self.quantity,
-                "max_favorable_price": spot_price,
-                "atr14_at_entry": atr14,  # Store for trailing calculation
+                "max_favorable_price": entry_premium,  # Track option price for trailing
                 "entry_premium": entry_premium,
             }
             self.state = "IN_TRADE"
             self.has_traded_today = True
 
             logger.info(
-                f"Entered BUY {option_symbol} at spot ~{spot_price}. Initial Spot SL: {initial_sl:.2f}"
+                f"Entered {trade_type} {option_symbol} at premium {entry_premium:.2f}. Initial SL: {initial_sl:.2f}"
             )
 
     def manage_trade(self):
@@ -328,10 +335,8 @@ class OpeningRangeBreakoutStrategy(BaseStrategy):
         if not quote or quote_key not in quote:
             return
 
-        spot_ltp = quote[quote_key]["last_price"]
         sl_price = self.current_trade["sl_price"]
         trade_type = self.current_trade["trade_type"]
-        atr14 = self.current_trade["atr14_at_entry"]
         entry_premium = self.current_trade.get("entry_premium", 0)
         quantity = self.current_trade["quantity"]
 
@@ -359,42 +364,42 @@ class OpeningRangeBreakoutStrategy(BaseStrategy):
                 self.exit_trade()
                 return
 
-        # 1. Check SL Hit
-        if trade_type == "LONG" and spot_ltp <= sl_price:
-            logger.info(
-                f"SL Hit for LONG ORB (Spot: {spot_ltp} <= SL: {sl_price}). Exiting Option {option_symbol}..."
-            )
-            self.exit_trade()
-            return
-        elif trade_type == "SHORT" and spot_ltp >= sl_price:
-            logger.info(
-                f"SL Hit for SHORT ORB (Spot: {spot_ltp} >= SL: {sl_price}). Exiting Option {option_symbol}..."
-            )
-            self.exit_trade()
-            return
+            # 1. Check SL Hit (on option price)
+            if trade_type == "LONG" and option_ltp <= sl_price:
+                logger.info(
+                    f"SL Hit for LONG ORB (Option: {option_ltp} <= SL: {sl_price}). Exiting {option_symbol}..."
+                )
+                self.exit_trade()
+                return
+            elif trade_type == "SHORT" and option_ltp >= sl_price:
+                logger.info(
+                    f"SL Hit for SHORT ORB (Option: {option_ltp} >= SL: {sl_price}). Exiting {option_symbol}..."
+                )
+                self.exit_trade()
+                return
 
-        # 2. Trail SL (Step ATR Trial)
-        if trade_type == "LONG":
-            if spot_ltp > self.current_trade["max_favorable_price"]:
-                self.current_trade["max_favorable_price"] = spot_ltp
+            # 2. Trail SL (20-point trail on option price)
+            if trade_type == "LONG":
+                if option_ltp > self.current_trade["max_favorable_price"]:
+                    self.current_trade["max_favorable_price"] = option_ltp
 
-                potential_new_sl = spot_ltp - (self.atr_stop_mult * atr14)
-                if potential_new_sl > sl_price:
-                    self.current_trade["sl_price"] = potential_new_sl
-                    logger.info(
-                        f"Trailing SL Updated for LONG ORB: {potential_new_sl:.2f} (Spot LTP: {spot_ltp})"
-                    )
+                    potential_new_sl = option_ltp - 20
+                    if potential_new_sl > sl_price:
+                        self.current_trade["sl_price"] = potential_new_sl
+                        logger.info(
+                            f"Trailing SL Updated for LONG ORB: {potential_new_sl:.2f} (Option LTP: {option_ltp})"
+                        )
 
-        else:  # SHORT
-            if spot_ltp < self.current_trade["max_favorable_price"]:
-                self.current_trade["max_favorable_price"] = spot_ltp
+            else:  # SHORT
+                if option_ltp < self.current_trade["max_favorable_price"]:
+                    self.current_trade["max_favorable_price"] = option_ltp
 
-                potential_new_sl = spot_ltp + (self.atr_stop_mult * atr14)
-                if potential_new_sl < sl_price:
-                    self.current_trade["sl_price"] = potential_new_sl
-                    logger.info(
-                        f"Trailing SL Updated for SHORT ORB: {potential_new_sl:.2f} (Spot LTP: {spot_ltp})"
-                    )
+                    potential_new_sl = option_ltp + 20
+                    if potential_new_sl < sl_price:
+                        self.current_trade["sl_price"] = potential_new_sl
+                        logger.info(
+                            f"Trailing SL Updated for SHORT ORB: {potential_new_sl:.2f} (Option LTP: {option_ltp})"
+                        )
 
     def exit_trade(self):
         if not self.current_trade:

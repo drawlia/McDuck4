@@ -96,6 +96,15 @@ class MomentumBuyStrategy(BaseStrategy):
 
         # 2. Check for New Entry
         if self.state == "IDLE":
+            # Check if new trades cutoff time has been reached (14:50)
+            new_trades_cutoff = datetime.time(14, 50)
+            if now >= new_trades_cutoff:
+                logger.info(
+                    f"New trades cutoff time {new_trades_cutoff} reached. No new entries allowed. Stopping strategy."
+                )
+                self.state = "EXITED"
+                return
+
             # Only check at 15-minute boundaries (e.g., 00, 15, 30, 45)
             # We add a small delay (10s) to ensure the candle is formed on the server
             now_dt = datetime.datetime.now()
@@ -162,23 +171,49 @@ class MomentumBuyStrategy(BaseStrategy):
 
             # Green Candle
             if close_p > open_p:
-                # Strong Green: Open near Low, Close near High
-                is_strong_green = (open_p - low_p <= tolerance) and (
-                    high_p - close_p <= tolerance
-                )
+                # Strong Closing: Close near High (ignore opening wick)
+                is_strong_closing_green = high_p - close_p <= tolerance
 
-                if is_strong_green:
-                    self.enter_trade("BUY_CE", close_p, low_p)  # SL at Low of candle
+                if is_strong_closing_green:
+                    # Confirmation Check: Check if next candle is also green (close > open)
+                    next_candle = data[-1]
+                    next_open = next_candle["open"]
+                    next_close = next_candle["close"]
+
+                    if next_close > next_open:
+                        logger.info(
+                            f"Momentum Confirmation: Next candle is also GREEN (O={next_open}, C={next_close}). Entering trade."
+                        )
+                        self.enter_trade(
+                            "BUY_CE", close_p, low_p
+                        )  # SL at Low of candle
+                    else:
+                        logger.info(
+                            f"Momentum Confirmation Failed: Next candle is RED (O={next_open}, C={next_close}). Skipping entry."
+                        )
 
             # Red Candle
             elif open_p > close_p:
-                # Strong Red: Open near High, Close near Low
-                is_strong_red = (high_p - open_p <= tolerance) and (
-                    close_p - low_p <= tolerance
-                )
+                # Strong Closing: Close near Low (ignore opening wick)
+                is_strong_closing_red = close_p - low_p <= tolerance
 
-                if is_strong_red:
-                    self.enter_trade("BUY_PE", close_p, high_p)  # SL at High of candle
+                if is_strong_closing_red:
+                    # Confirmation Check: Check if next candle is also red (close < open)
+                    next_candle = data[-1]
+                    next_open = next_candle["open"]
+                    next_close = next_candle["close"]
+
+                    if next_close < next_open:
+                        logger.info(
+                            f"Momentum Confirmation: Next candle is also RED (O={next_open}, C={next_close}). Entering trade."
+                        )
+                        self.enter_trade(
+                            "BUY_PE", close_p, high_p
+                        )  # SL at High of candle
+                    else:
+                        logger.info(
+                            f"Momentum Confirmation Failed: Next candle is GREEN (O={next_open}, C={next_close}). Skipping entry."
+                        )
 
     def enter_trade(self, trade_type, spot_price, sl_level):
         atm_strike = round(spot_price / 50) * 50
