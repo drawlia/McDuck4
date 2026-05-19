@@ -16,11 +16,15 @@ class TradeManager:
         )  # List of dictionaries: {symbol, order_id, entry_price, sl_price, quantity, trail_gap}
 
         # Create daily logging directory
-        today_str = datetime.datetime.now().strftime("%Y-%m-%d")
-        self.log_dir = os.path.join(base_log_dir, today_str)
+        self.base_log_dir = base_log_dir
+        self.current_date = datetime.datetime.now().strftime("%Y-%m-%d")
+        self.log_dir = os.path.join(base_log_dir, self.current_date)
         os.makedirs(self.log_dir, exist_ok=True)
 
         self.log_file = os.path.join(self.log_dir, "trades.csv")
+
+        # Break tracking for consecutive losses
+        self.break_until_time = None  # datetime object for when break ends
 
         # Initialize log file with headers if it doesn't exist
         if not os.path.exists(self.log_file):
@@ -37,6 +41,41 @@ class TradeManager:
                         "OrderID",
                     ]
                 )
+
+    def _check_and_update_date(self):
+        """
+        Checks if the date has changed and updates log file paths accordingly.
+        Also resets the break if a new day has started.
+        """
+        today_str = datetime.datetime.now().strftime("%Y-%m-%d")
+        if today_str != self.current_date:
+            # Date has changed, update paths
+            self.current_date = today_str
+            self.log_dir = os.path.join(self.base_log_dir, self.current_date)
+            os.makedirs(self.log_dir, exist_ok=True)
+            self.log_file = os.path.join(self.log_dir, "trades.csv")
+
+            # Reset break on new day
+            self.break_until_time = None
+            logger.info(
+                f"Date changed to {self.current_date}. Break reset for new trading day."
+            )
+
+            # Initialize log file with headers if it doesn't exist
+            if not os.path.exists(self.log_file):
+                with open(self.log_file, "w", newline="") as f:
+                    writer = csv.writer(f)
+                    writer.writerow(
+                        [
+                            "Timestamp",
+                            "Strategy",
+                            "Symbol",
+                            "Side",
+                            "Quantity",
+                            "Price",
+                            "OrderID",
+                        ]
+                    )
 
     def _log_to_csv(self, strategy_name, symbol, side, qty, price, order_id):
         """
@@ -60,6 +99,8 @@ class TradeManager:
         Parses the today's CSV log and returns a list of currently open positions.
         Returns: { 'StrategyName': [{'symbol': '...', 'quantity': ..., 'entry_price': ...}] }
         """
+        self._check_and_update_date()
+
         if not os.path.exists(self.log_file):
             return {}
 
@@ -124,6 +165,157 @@ class TradeManager:
             logger.error(f"Error reading open trades from CSV: {e}")
             return {}
 
+    def calculate_overall_profit(self):
+        """
+        Calculates the overall profit/loss from all completed trades (matched BUY-SELL pairs).
+        Reads today's CSV file and matches trades by symbol.
+        Returns: Total P&L (float)
+        """
+        self._check_and_update_date()
+
+        total_profit = 0.0
+
+        # Read trades from today's file only
+        if not os.path.exists(self.log_file):
+            return 0.0
+
+        trades_by_symbol = (
+            {}
+        )  # symbol -> [{'side': 'BUY/SELL', 'qty': ..., 'price': ...}]
+
+        try:
+            with open(self.log_file, "r") as f:
+                reader = csv.DictReader(f)
+                for row in reader:
+                    symbol = row["Symbol"]
+                    side = row["Side"]
+                    qty = int(row["Quantity"])
+                    price = float(row["Price"])
+
+                    if symbol not in trades_by_symbol:
+                        trades_by_symbol[symbol] = []
+
+                    trades_by_symbol[symbol].append(
+                        {"side": side, "qty": qty, "price": price}
+                    )
+
+            # Calculate P&L for matched pairs
+            for symbol, trades_list in trades_by_symbol.items():
+                # Match BUY and SELL orders
+                buys = [t for t in trades_list if t["side"] == "BUY"]
+                sells = [t for t in trades_list if t["side"] == "SELL"]
+
+                # Simple matching: pair them up in order
+                for buy, sell in zip(buys, sells):
+                    qty = min(buy["qty"], sell["qty"])
+                    pnl = (sell["price"] - buy["price"]) * qty
+                    total_profit += pnl
+
+        except Exception as e:
+            logger.error(f"Error calculating overall profit: {e}")
+            return 0.0
+
+        return total_profit
+
+    def get_consecutive_losses(self):
+        """
+        Detects consecutive losing trades from today's trades.
+        Returns: (consecutive_loss_count, trades_with_pnl)
+        where trades_with_pnl is a list of (symbol, entry_price, exit_price, pnl)
+        """
+        self._check_and_update_date()
+
+        if not os.path.exists(self.log_file):
+            return 0, []
+
+        trades_by_symbol = (
+            {}
+        )  # symbol -> [{'timestamp': ..., 'side': 'BUY/SELL', 'qty': ..., 'price': ...}]
+
+        try:
+            with open(self.log_file, "r") as f:
+                reader = csv.DictReader(f)
+                for row in reader:
+                    symbol = row["Symbol"]
+                    side = row["Side"]
+                    qty = int(row["Quantity"])
+                    price = float(row["Price"])
+                    timestamp = row["Timestamp"]
+
+                    if symbol not in trades_by_symbol:
+                        trades_by_symbol[symbol] = []
+
+                    trades_by_symbol[symbol].append(
+                        {
+                            "timestamp": timestamp,
+                            "side": side,
+                            "qty": qty,
+                            "price": price,
+                        }
+                    )
+
+            # Calculate P&L for matched pairs in order and track them
+            all_trades_with_pnl = []  # List of (symbol, entry_price, exit_price, pnl)
+
+            for symbol, trades_list in trades_by_symbol.items():
+                # Match BUY and SELL orders in sequence
+                buys = [t for t in trades_list if t["side"] == "BUY"]
+                sells = [t for t in trades_list if t["side"] == "SELL"]
+
+                # Pair them up in order
+                for buy, sell in zip(buys, sells):
+                    qty = min(buy["qty"], sell["qty"])
+                    pnl = (sell["price"] - buy["price"]) * qty
+                    all_trades_with_pnl.append(
+                        (symbol, buy["price"], sell["price"], pnl)
+                    )
+
+            # Count consecutive losses from the end
+            consecutive_losses = 0
+            if all_trades_with_pnl:
+                # Iterate from the end backwards
+                for i in range(len(all_trades_with_pnl) - 1, -1, -1):
+                    if all_trades_with_pnl[i][3] < 0:  # pnl < 0 means loss
+                        consecutive_losses += 1
+                    else:
+                        break  # Stop counting at first non-loss
+
+            return consecutive_losses, all_trades_with_pnl
+
+        except Exception as e:
+            logger.error(f"Error determining consecutive losses: {e}")
+            return 0, []
+
+    def is_in_break(self):
+        """
+        Checks if currently in a break period after consecutive losses.
+        Returns: True if in break, False otherwise
+        """
+        self._check_and_update_date()
+
+        if self.break_until_time is None:
+            return False
+
+        now = datetime.datetime.now()
+        if now < self.break_until_time:
+            return True
+        else:
+            # Break period has ended, clear it
+            self.break_until_time = None
+            logger.info("Break period has ended. Resuming normal trading.")
+            return False
+
+    def trigger_break(self, duration_minutes=15):
+        """
+        Triggers a break for the specified duration.
+        """
+        self.break_until_time = datetime.datetime.now() + datetime.timedelta(
+            minutes=duration_minutes
+        )
+        logger.warning(
+            f"Consecutive losses detected! Triggering {duration_minutes} minute break. Break until: {self.break_until_time.strftime('%H:%M:%S')}"
+        )
+
     def place_order(
         self,
         symbol,
@@ -136,6 +328,7 @@ class TradeManager:
         variety="regular",
         product="MIS",
         tag=None,
+        market_protection=True,
     ):
         """
         Generic method to place an order.
@@ -150,6 +343,7 @@ class TradeManager:
             price=price,
             trigger_price=trigger_price,
             variety=variety,
+            market_protection=market_protection,
         )
 
         if order_id:

@@ -115,6 +115,11 @@ class ScalpingStrategy(BaseStrategy):
                     self.last_check_minute = now_dt.minute
 
     def check_entry(self):
+        # Check overall profit threshold
+        overall_profit = self.trade_manager.calculate_overall_profit()
+        if overall_profit > 0:
+            logger.info(f"Scalping: Current overall profit: {overall_profit:.2f}")
+
         # Fetch historical data
         now = datetime.datetime.now()
         from_date = now - datetime.timedelta(days=2)
@@ -131,7 +136,7 @@ class ScalpingStrategy(BaseStrategy):
             return
 
         # Use data[:-1] as it might contain incomplete current candle
-        completed_candles = data[:-2]
+        completed_candles = data[:-1]
         last_candles = completed_candles[-self.min_candles :]
 
         if len(last_candles) < self.min_candles:

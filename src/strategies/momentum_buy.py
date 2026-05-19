@@ -96,8 +96,8 @@ class MomentumBuyStrategy(BaseStrategy):
 
         # 2. Check for New Entry
         if self.state == "IDLE":
-            # Check if new trades cutoff time has been reached (14:50)
-            new_trades_cutoff = datetime.time(14, 50)
+            # Check if new trades cutoff time has been reached (13:50)
+            new_trades_cutoff = datetime.time(13, 50)
             if now >= new_trades_cutoff:
                 logger.info(
                     f"New trades cutoff time {new_trades_cutoff} reached. No new entries allowed. Stopping strategy."
@@ -114,6 +114,14 @@ class MomentumBuyStrategy(BaseStrategy):
                     self.last_check_minute = now_dt.minute
 
     def check_entry(self):
+        # Check overall profit threshold
+        overall_profit = self.trade_manager.calculate_overall_profit()
+        if overall_profit > 0:
+            logger.info(f"MomentumBuy: Current overall profit: {overall_profit:.2f}")
+
+        # If overall profit threshold is met, skip new entries
+        # (Threshold check is done in main.py, but we keep this as a safety check)
+
         # Calculate time range for last completed candles (need at least 15 for ATR14)
         now = datetime.datetime.now()
         # End time should be now, start time should be enough for 15-20 candles
@@ -134,7 +142,7 @@ class MomentumBuyStrategy(BaseStrategy):
         # 1. Calculate ATR14 (Simple Average of High-Low for last 14 completed candles)
         # We use data[:-1] because the last candle in 'data' is the one we want to trade on.
         # So we use the 14 candles BEFORE the current one to calculate ATR.
-        atr_candles = data[-16:-2]
+        atr_candles = data[-17:-3]
         if len(atr_candles) < 14:
             logger.warning(f"Insufficient ATR candles. Got {len(atr_candles)}, need 14")
             return
@@ -144,7 +152,7 @@ class MomentumBuyStrategy(BaseStrategy):
         # Dynamic Threshold: max(40, ATR14)
         dynamic_threshold = max(self.candle_size, atr14)
 
-        last_candle = data[-2]
+        last_candle = data[-3]
         candle_time = last_candle["date"]
 
         # Ensure we only process a candle once
@@ -176,7 +184,7 @@ class MomentumBuyStrategy(BaseStrategy):
 
                 if is_strong_closing_green:
                     # Confirmation Check: Check if next candle is also green (close > open)
-                    next_candle = data[-1]
+                    next_candle = data[-2]
                     next_open = next_candle["open"]
                     next_close = next_candle["close"]
 

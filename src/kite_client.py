@@ -1,4 +1,5 @@
 
+import inspect
 from kiteconnect import KiteConnect
 from src.config import Config
 import logging
@@ -7,11 +8,17 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 class KiteWrapper:
+    MARKET_PROTECTION_ORDER_TYPES = {"MARKET", "SL-M"}
+    MARKET_PROTECTION_AUTO = -1
+
     def __init__(self):
         self.api_key = Config.API_KEY
         self.api_secret = Config.API_SECRET
         self.access_token = Config.ACCESS_TOKEN
         self.kite = KiteConnect(api_key=self.api_key)
+        self._place_order_supports_market_protection = (
+            "market_protection" in inspect.signature(self.kite.place_order).parameters
+        )
 
         if self.access_token:
             self.kite.set_access_token(self.access_token)
@@ -39,24 +46,64 @@ class KiteWrapper:
             logger.error(f"Error fetching quote for {symbols}: {e}")
             return {}
 
-    def place_order(self, tradingsymbol, exchange, transaction_type, quantity, order_type, product, price=None, trigger_price=None, variety="regular"):
+    def place_order(
+        self,
+        tradingsymbol,
+        exchange,
+        transaction_type,
+        quantity,
+        order_type,
+        product,
+        price=None,
+        trigger_price=None,
+        variety="regular",
+        market_protection=True,
+    ):
         try:
-            order_id = self.kite.place_order(
-                variety=variety,
-                exchange=exchange,
-                tradingsymbol=tradingsymbol,
-                transaction_type=transaction_type,
-                quantity=quantity,
-                order_type=order_type,
-                product=product,
-                price=price,
-                trigger_price=trigger_price
-            )
+            params = {
+                "variety": variety,
+                "exchange": exchange,
+                "tradingsymbol": tradingsymbol,
+                "transaction_type": transaction_type,
+                "quantity": quantity,
+                "order_type": order_type,
+                "product": product,
+                "price": price,
+                "trigger_price": trigger_price,
+            }
+
+            if order_type.upper() in self.MARKET_PROTECTION_ORDER_TYPES:
+                params["market_protection"] = self._normalize_market_protection(
+                    market_protection
+                )
+
+            params = {key: value for key, value in params.items() if value is not None}
+            order_id = self._submit_order(params)
             logger.info(f"Order placed. ID: {order_id}")
             return order_id
         except Exception as e:
             logger.error(f"Error placing order: {e}")
             return None
+
+    def _normalize_market_protection(self, market_protection):
+        if market_protection is True:
+            return self.MARKET_PROTECTION_AUTO
+        if market_protection is False:
+            return 0
+        return market_protection
+
+    def _submit_order(self, params):
+        if (
+            "market_protection" in params
+            and not self._place_order_supports_market_protection
+        ):
+            return self.kite._post(
+                "order.place",
+                url_args={"variety": params["variety"]},
+                params=params,
+            )["order_id"]
+
+        return self.kite.place_order(**params)
 
 
     def get_orders(self):

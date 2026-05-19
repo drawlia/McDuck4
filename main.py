@@ -17,7 +17,7 @@ class NoMTMFilter(logging.Filter):
         msg = record.getMessage()
         if "Trailing SL adjusted" in msg:
             return False
-        if "Max MTM" in msg:
+        if "MTM" in msg:
             return False
         # Allow trailing SL updated logs
         return True
@@ -49,19 +49,22 @@ logger = logging.getLogger(__name__)
 
 # Configuration
 SYMBOL = "NIFTY"
-EXPIRY_STAMP = "26324"  # Update this to current expiry, e.g., 23N02 for weekly or 23OCT for monthly
-QUANTITY = 130  # 1 Lot for Iron Fly
+EXPIRY_STAMP = "26MAY"  # Update this to current expiry, e.g., 23N02 for weekly or 23OCT for monthly
+QUANTITY = 195  # 3 Lot for Iron Fly
 HEDGE_DIST = 500
 SL_MTM = 2000
-START_TIME = time_obj(9, 18)  # 9:18 AM
+START_TIME = time_obj(9, 28)  # 9:18 AM
 END_TIME = time_obj(15, 24)  # 3:24 PM
 IRONFLY_PROFIT_TARGET = 1500
 
 # Momentum Strategy Config
 MOMENTUM_CANDLE_SIZE = 25  # Default, now dynamic max(40, ATR14)
 MOMENTUM_INTERVAL = "5minute"
-MOMENTUM_QUANTITY = 195  # 2 Lot
-MOMENTUM_PROFIT_TARGET = 3000
+MOMENTUM_QUANTITY = 520  # 2 Lot
+
+MOMENTUM_PROFIT_TARGET = (
+    MOMENTUM_QUANTITY * 30
+)  # 30 points per lot target, adjust as needed
 
 # ORB Strategy Config
 ORB_BASE_SYMBOL = "NFO:NIFTY24MARFUT"  # Track future for ORB volume and signals
@@ -77,11 +80,14 @@ ORB_PROFIT_TARGET = 1800
 
 # Scalping Strategy Config
 SCALPING_INTERVAL = "5minute"
-SCALPING_QUANTITY = 130
-SCALPING_PROFIT_TARGET = 1100
-SCALPING_TRAILING_POINTS = 30
+SCALPING_QUANTITY = 195
+SCALPING_PROFIT_TARGET = SCALPING_QUANTITY * 20
+SCALPING_TRAILING_POINTS = 20
 SCALPING_SMALL_CANDLE_THRESHOLD = 25  # Max body size to consider a candle "small"
 SCALPING_MIN_CANDLES = 3  # Minimum consecutive small candles
+
+# Overall Profit Threshold
+OVERALL_PROFIT_THRESHOLD = 20000  # No new trades if overall profit >= 20000
 
 
 def main():
@@ -167,11 +173,46 @@ def main():
 
     try:
         while True:
-            # Run Strategy Logic
-            # iron_fly.on_tick()
-            momentum_buy.on_tick()
-            # orb_strategy.on_tick()
-            scalping_strategy.on_tick()
+            # Check for Consecutive Losses
+            consecutive_losses, trades_pnl = tm.get_consecutive_losses()
+
+            if consecutive_losses > 2:
+                if not tm.is_in_break():
+                    tm.trigger_break(duration_minutes=15)
+                    logger.warning(
+                        f"More than 2 consecutive losses detected ({consecutive_losses} losses). Enforcing 15-minute break."
+                    )
+
+            # Check if in break period
+            if tm.is_in_break():
+                logger.info(
+                    f"In break period due to consecutive losses. Break until: {tm.break_until_time.strftime('%H:%M:%S')}. "
+                    f"Managing existing trades only."
+                )
+                # Still manage existing trades, but skip new entries
+                if momentum_buy.state == "IN_TRADE":
+                    momentum_buy.manage_trade()
+                if scalping_strategy.state == "IN_TRADE":
+                    scalping_strategy.manage_trade()
+            else:
+                # Check Overall Profit Threshold
+                overall_profit = tm.calculate_overall_profit()
+
+                if overall_profit >= OVERALL_PROFIT_THRESHOLD:
+                    logger.warning(
+                        f"Overall profit target reached! Profit: {overall_profit:.2f} >= Threshold: {OVERALL_PROFIT_THRESHOLD}. No new trades will be undertaken."
+                    )
+                    # Still manage existing trades, but skip new entries
+                    if momentum_buy.state == "IN_TRADE":
+                        momentum_buy.manage_trade()
+                    if scalping_strategy.state == "IN_TRADE":
+                        scalping_strategy.manage_trade()
+                else:
+                    # Run Strategy Logic
+                    iron_fly.on_tick()
+                    momentum_buy.on_tick()
+                    # orb_strategy.on_tick()
+                    scalping_strategy.on_tick()
 
             # Sleep to simulate tick interval (e.g., 1 second)
             time.sleep(1)

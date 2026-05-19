@@ -42,6 +42,9 @@ class IronFlyStrategy(BaseStrategy):
         self.atm_strike = None
         self.max_mtm_reached = -999999
         self.trailing_sl_value = self.sl_mtm  # Starts at initial SL
+        self.entry_executed_at_start = (
+            False  # Flag to ensure entry only happens once at start_time
+        )
 
         # Restore positions from CSV if any
         self.restore_state()
@@ -53,6 +56,7 @@ class IronFlyStrategy(BaseStrategy):
                 logger.info("Restoring IronFly positions from log...")
                 self.legs = open_trades["IronFly"]
                 self.state = "OPEN"
+                self.entry_executed_at_start = True  # Mark entry as already executed
                 # Approximate max_mtm from current if we were to be precise,
                 # but for now we just resume monitoring.
         except Exception as e:
@@ -78,7 +82,7 @@ class IronFlyStrategy(BaseStrategy):
             return
 
         # 1. ENTRY LOGIC
-        if self.state == "INIT":
+        if self.state == "INIT" and not self.entry_executed_at_start:
             # Check if new trades cutoff time has been reached (15:10)
             new_trades_cutoff = datetime.time(15, 10)
             if now >= new_trades_cutoff:
@@ -91,9 +95,6 @@ class IronFlyStrategy(BaseStrategy):
             # Check Start Time
             if self.start_time:
                 if now < self.start_time:
-                    logger.info(
-                        f"Waiting for start time {self.start_time}. Current: {now}"
-                    )
                     return
 
             # Get Spot Price from NSE
@@ -107,7 +108,9 @@ class IronFlyStrategy(BaseStrategy):
             self.atm_strike = round(ltp / 50) * 50
             logger.info(f"NIFTY Spot: {ltp} -> ATM Strike: {self.atm_strike}")
 
+            logger.info(f"Executing Iron Fly at start time {self.start_time}")
             self.enter_iron_fly()
+            self.entry_executed_at_start = True  # Mark that entry has been executed
             self.state = "OPEN"
             return
 
