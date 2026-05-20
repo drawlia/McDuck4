@@ -11,10 +11,10 @@ class KiteWrapper:
     MARKET_PROTECTION_ORDER_TYPES = {"MARKET", "SL-M"}
     MARKET_PROTECTION_AUTO = -1
 
-    def __init__(self):
+    def __init__(self, access_token=None):
         self.api_key = Config.API_KEY
         self.api_secret = Config.API_SECRET
-        self.access_token = Config.ACCESS_TOKEN
+        self.access_token = access_token or Config.ACCESS_TOKEN
         self.kite = KiteConnect(api_key=self.api_key)
         self._place_order_supports_market_protection = (
             "market_protection" in inspect.signature(self.kite.place_order).parameters

@@ -1,6 +1,8 @@
 from datetime import time as time_obj
 import time
 import logging
+import argparse
+from getpass import getpass
 from src.kite_client import KiteWrapper
 from src.trade_manager import TradeManager
 from src.strategies.iron_fly import IronFlyStrategy
@@ -90,12 +92,32 @@ SCALPING_MIN_CANDLES = 3  # Minimum consecutive small candles
 OVERALL_PROFIT_THRESHOLD = 20000  # No new trades if overall profit >= 20000
 
 
+def get_startup_access_token():
+    parser = argparse.ArgumentParser(description="Run the KiteConnect trading app.")
+    parser.add_argument(
+        "--access-token",
+        dest="access_token",
+        help="Kite access token to use for this session.",
+    )
+    args = parser.parse_args()
+
+    if args.access_token:
+        return args.access_token.strip()
+
+    token = getpass(
+        "Paste Kite access token for this session "
+        "(press Enter to use .env/login flow): "
+    ).strip()
+    return token or None
+
+
 def main():
     logger.info("Starting KiteConnect Trading App...")
 
     # 1. Initialize Kite Client
     try:
-        kite = KiteWrapper()
+        startup_access_token = get_startup_access_token()
+        kite = KiteWrapper(access_token=startup_access_token)
         # Run the manual login flow (check token or prompt user)
         # kite.login_flow() # Commented out to avoid blocking if token is valid? Keep it for safety.
         kite.login_flow()
