@@ -1,5 +1,7 @@
 
+import hashlib
 import inspect
+from urllib.parse import urljoin
 from kiteconnect import KiteConnect
 from src.config import Config
 import logging
@@ -10,6 +12,7 @@ logger = logging.getLogger(__name__)
 class KiteWrapper:
     MARKET_PROTECTION_ORDER_TYPES = {"MARKET", "SL-M"}
     MARKET_PROTECTION_AUTO = -1
+    API_ROOT = "https://api.kite.trade"
 
     def __init__(self, access_token=None):
         self.api_key = Config.API_KEY
@@ -31,13 +34,79 @@ class KiteWrapper:
 
     def generate_session(self, request_token):
         try:
-            data = self.kite.generate_session(request_token, api_secret=self.api_secret)
+            if not self.api_key or not self.api_secret:
+                raise RuntimeError(
+                    "KITE_API_KEY and KITE_API_SECRET are required to generate a session."
+                )
+
+            checksum = hashlib.sha256(
+                (self.api_key + request_token + self.api_secret).encode("utf-8")
+            ).hexdigest()
+            data = self._request_kite_api(
+                "POST",
+                "/session/token",
+                data={
+                    "api_key": self.api_key,
+                    "request_token": request_token,
+                    "checksum": checksum,
+                },
+                auth=False,
+            )
             self.kite.set_access_token(data["access_token"])
-            logger.info(f"Session generated. Access Token: {data['access_token']}")
+            self.access_token = data["access_token"]
+            logger.info("Session generated and access token set.")
             return data["access_token"]
         except Exception as e:
             logger.error(f"Error generating session: {e}")
             raise
+
+    def _request_kite_api(self, method, path, data=None, auth=True):
+        if auth and not self.access_token:
+            raise RuntimeError("Kite access token is required for this API request.")
+
+        headers = {
+            "X-Kite-Version": self.kite.kite_header_version,
+            "User-Agent": self.kite._user_agent(),
+        }
+        if auth:
+            headers["Authorization"] = f"token {self.api_key}:{self.access_token}"
+
+        response = self.kite.reqsession.request(
+            method,
+            urljoin(self.API_ROOT, path),
+            data=data,
+            headers=headers,
+            timeout=self.kite.timeout,
+            proxies=self.kite.proxies,
+            verify=not self.kite.disable_ssl,
+            allow_redirects=True,
+        )
+        content_type = response.headers.get("content-type", "<missing>")
+        body = response.text or ""
+
+        try:
+            payload = response.json()
+        except ValueError:
+            preview = body[:500] if body else "<empty>"
+            raise RuntimeError(
+                f"Kite API returned HTTP {response.status_code} without JSON. "
+                f"Content-Type: {content_type}. Body: {preview}"
+            )
+
+        if payload.get("status") == "error" or payload.get("error_type"):
+            message = payload.get("message", "Unknown Kite API error")
+            error_type = payload.get("error_type", "UnknownError")
+            raise RuntimeError(
+                f"Kite API error {response.status_code} ({error_type}): {message}"
+            )
+
+        if response.status_code >= 400:
+            raise RuntimeError(
+                f"Kite API returned HTTP {response.status_code}. "
+                f"Content-Type: {content_type}. Body: {body[:500]}"
+            )
+
+        return payload.get("data", payload)
 
     def get_quote(self, symbols):
         try:
@@ -134,11 +203,11 @@ class KiteWrapper:
         if self.access_token:
             logger.info("Access token found in environment. Testing validity...")
             try:
-                self.kite.profile() # Simple call to check if token is valid
+                self._request_kite_api("GET", "/user/profile")
                 logger.info("Access token is valid.")
                 return
             except Exception as e:
-                logger.warning(f"Existing access token invalid: {e}")
+                logger.warning(f"Existing access token invalid or unreachable: {e}")
         
         url = self.get_login_url()
         print(f"\n[LOGIN REQUIRED] Open this URL in your browser:\n{url}\n")
