@@ -235,10 +235,10 @@ def main():
                         scalping_strategy.manage_trade()
                 else:
                     # Run Strategy Logic
-                    iron_fly.on_tick()
+                    # iron_fly.on_tick()
                     momentum_buy.on_tick()
                     # orb_strategy.on_tick()
-                    scalping_strategy.on_tick()
+                    # scalping_strategy.on_tick()
 
             # Sleep to simulate tick interval (e.g., 1 second)
             time.sleep(1)
