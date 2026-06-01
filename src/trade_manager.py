@@ -4,7 +4,6 @@ import csv
 import os
 import datetime
 
-logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 

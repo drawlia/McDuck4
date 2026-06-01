@@ -207,7 +207,7 @@ class MomentumBuyStrategy(BaseStrategy):
 
                 if is_strong_closing_red:
                     # Confirmation Check: Check if next candle is also red (close < open)
-                    next_candle = data[-1]
+                    next_candle = data[-2]
                     next_open = next_candle["open"]
                     next_close = next_candle["close"]
 

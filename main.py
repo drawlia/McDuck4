@@ -31,6 +31,9 @@ os.makedirs(log_dir, exist_ok=True)
 log_file = os.path.join(log_dir, "app.log")
 
 root_logger = logging.getLogger()
+for handler in root_logger.handlers[:]:
+    root_logger.removeHandler(handler)
+    handler.close()
 root_logger.setLevel(logging.INFO)
 
 # Console Handler
@@ -191,6 +194,7 @@ def main():
     logger.info(
         f"Strategies Initialized: Iron Fly, Momentum Buy, ORB & Scalping on {SYMBOL}"
     )
+    logger.info(f"Iron Fly entry scheduled at {START_TIME.strftime('%H:%M:%S')}")
     logger.info("Application Initialized. Starting Main Loop...")
 
     try:

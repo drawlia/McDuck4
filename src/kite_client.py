@@ -6,7 +6,6 @@ from kiteconnect import KiteConnect
 from src.config import Config
 import logging
 
-logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 class KiteWrapper:
