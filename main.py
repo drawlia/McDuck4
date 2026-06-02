@@ -54,22 +54,20 @@ logger = logging.getLogger(__name__)
 
 # Configuration
 SYMBOL = "NIFTY"
-EXPIRY_STAMP = "26MAY"  # Update this to current expiry, e.g., 23N02 for weekly or 23OCT for monthly
+EXPIRY_STAMP = "26609"  # Update this to current expiry, e.g., 23N02 for weekly or 23OCT for monthly
 QUANTITY = 195  # 3 Lot for Iron Fly
 HEDGE_DIST = 500
 SL_MTM = 2000
 START_TIME = time_obj(9, 28)  # 9:18 AM
 END_TIME = time_obj(15, 24)  # 3:24 PM
-IRONFLY_PROFIT_TARGET = 1500
+IRONFLY_PROFIT_TARGET = 1800
 
 # Momentum Strategy Config
-MOMENTUM_CANDLE_SIZE = 25  # Default, now dynamic max(40, ATR14)
+MOMENTUM_CANDLE_SIZE = 20  # Default, now dynamic max(40, ATR14)
 MOMENTUM_INTERVAL = "5minute"
 MOMENTUM_QUANTITY = 520  # 2 Lot
 
-MOMENTUM_PROFIT_TARGET = (
-    MOMENTUM_QUANTITY * 30
-)  # 30 points per lot target, adjust as needed
+MOMENTUM_PROFIT_TARGET = 8000  # 20 points per lot target, adjust as needed
 
 # ORB Strategy Config
 ORB_BASE_SYMBOL = "NFO:NIFTY24MARFUT"  # Track future for ORB volume and signals
@@ -235,10 +233,10 @@ def main():
                         scalping_strategy.manage_trade()
                 else:
                     # Run Strategy Logic
-                    # iron_fly.on_tick()
+                    iron_fly.on_tick()
                     momentum_buy.on_tick()
                     # orb_strategy.on_tick()
-                    # scalping_strategy.on_tick()
+                    scalping_strategy.on_tick()
 
             # Sleep to simulate tick interval (e.g., 1 second)
             time.sleep(1)

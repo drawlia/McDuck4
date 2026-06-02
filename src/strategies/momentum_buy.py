@@ -13,7 +13,7 @@ class MomentumBuyStrategy(BaseStrategy):
         expiry_stamp,
         candle_size=50,
         interval="15minute",
-        trailing_points=20,
+        trailing_points=15,
         quantity=65,
         end_time=None,
         profit_target=500,
@@ -96,8 +96,8 @@ class MomentumBuyStrategy(BaseStrategy):
 
         # 2. Check for New Entry
         if self.state == "IDLE":
-            # Check if new trades cutoff time has been reached (13:50)
-            new_trades_cutoff = datetime.time(13, 50)
+            # Check if new trades cutoff time has been reached (14:20)
+            new_trades_cutoff = datetime.time(14, 20)
             if now >= new_trades_cutoff:
                 logger.info(
                     f"New trades cutoff time {new_trades_cutoff} reached. No new entries allowed. Stopping strategy."
