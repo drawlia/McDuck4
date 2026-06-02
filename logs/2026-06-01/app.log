@@ -1,0 +1,41 @@
+2026-06-01 11:50:25,188 - INFO - Starting KiteConnect Trading App...
+2026-06-01 11:50:34,246 - WARNING - No Access Token found. You may need to generate one.
+2026-06-01 11:51:00,680 - INFO - Session generated and access token set.
+2026-06-01 11:51:00,680 - INFO - Strategies Initialized: Iron Fly, Momentum Buy, ORB & Scalping on NIFTY
+2026-06-01 11:51:00,681 - INFO - Iron Fly entry scheduled at 09:28:00
+2026-06-01 11:51:00,681 - INFO - Application Initialized. Starting Main Loop...
+2026-06-01 11:55:10,045 - INFO - Momentum Check: Time=2026-06-01 11:45:00+05:30, O=23549.75, C=23554.35, H = 23555.8, L = 23534.7, TotalSize=21.099999999998545, BodySize=4.599999999998545, ATR14=26.20,Tolerance=2.11, Threshold=26.20
+2026-06-01 12:00:10,469 - INFO - Momentum Check: Time=2026-06-01 11:50:00+05:30, O=23553.4, C=23554.75, H = 23562.2, L = 23548.7, TotalSize=13.5, BodySize=1.3499999999985448, ATR14=25.19,Tolerance=1.35, Threshold=25.19
+2026-06-01 12:05:10,893 - INFO - Momentum Check: Time=2026-06-01 11:55:00+05:30, O=23554.8, C=23493.75, H = 23555.2, L = 23491.85, TotalSize=63.35000000000218, BodySize=61.04999999999927, ATR14=24.77,Tolerance=5.00, Threshold=25.00
+2026-06-01 12:05:10,893 - INFO - Momentum Confirmation Failed: Next candle is GREEN (O=23493.65, C=23499.25). Skipping entry.
+2026-06-01 12:10:10,363 - INFO - Momentum Check: Time=2026-06-01 12:00:00+05:30, O=23493.65, C=23499.25, H = 23504.9, L = 23486, TotalSize=18.900000000001455, BodySize=5.599999999998545, ATR14=26.32,Tolerance=1.89, Threshold=26.32
+2026-06-01 12:15:10,787 - INFO - Momentum Check: Time=2026-06-01 12:05:00+05:30, O=23498.3, C=23506.05, H = 23520.25, L = 23498.3, TotalSize=21.950000000000728, BodySize=7.75, ATR14=25.59,Tolerance=2.20, Threshold=25.59
+2026-06-01 12:20:10,214 - INFO - Momentum Check: Time=2026-06-01 12:10:00+05:30, O=23506.9, C=23530, H = 23533.35, L = 23499.75, TotalSize=33.599999999998545, BodySize=23.099999999998545, ATR14=25.05,Tolerance=3.36, Threshold=25.05
+2026-06-01 12:20:10,214 - INFO - Momentum Confirmation Failed: Next candle is RED (O=23529.35, C=23528.75). Skipping entry.
+2026-06-01 12:25:10,648 - INFO - Momentum Check: Time=2026-06-01 12:15:00+05:30, O=23529.35, C=23528.75, H = 23533.15, L = 23514.65, TotalSize=18.5, BodySize=0.5999999999985448, ATR14=25.57,Tolerance=1.85, Threshold=25.57
+2026-06-01 12:30:10,167 - INFO - Momentum Check: Time=2026-06-01 12:20:00+05:30, O=23527.85, C=23518.85, H = 23530.85, L = 23510.65, TotalSize=20.19999999999709, BodySize=9.0, ATR14=24.95,Tolerance=2.02, Threshold=25.00
+2026-06-01 12:35:10,592 - INFO - Momentum Check: Time=2026-06-01 12:25:00+05:30, O=23518.1, C=23516.95, H = 23525.4, L = 23514.45, TotalSize=10.950000000000728, BodySize=1.1499999999978172, ATR14=25.37,Tolerance=1.10, Threshold=25.37
+2026-06-01 12:40:11,014 - INFO - Momentum Check: Time=2026-06-01 12:30:00+05:30, O=23516.4, C=23513.4, H = 23522.7, L = 23509.1, TotalSize=13.600000000002183, BodySize=3.0, ATR14=24.59,Tolerance=1.36, Threshold=25.00
+2026-06-01 12:45:10,436 - INFO - Momentum Check: Time=2026-06-01 12:35:00+05:30, O=23512.95, C=23514.65, H = 23526, L = 23511.1, TotalSize=14.900000000001455, BodySize=1.7000000000007276, ATR14=23.65,Tolerance=1.49, Threshold=25.00
+2026-06-01 12:50:10,858 - INFO - Momentum Check: Time=2026-06-01 12:40:00+05:30, O=23514.35, C=23515.85, H = 23515.9, L = 23502.95, TotalSize=12.950000000000728, BodySize=1.5, ATR14=22.89,Tolerance=1.30, Threshold=25.00
+2026-06-01 12:55:10,286 - INFO - Momentum Check: Time=2026-06-01 12:45:00+05:30, O=23515.05, C=23532.8, H = 23536.95, L = 23514.05, TotalSize=22.900000000001455, BodySize=17.75, ATR14=22.19,Tolerance=2.29, Threshold=25.00
+2026-06-01 13:00:10,709 - INFO - Momentum Check: Time=2026-06-01 12:50:00+05:30, O=23532.3, C=23528.2, H = 23535.85, L = 23522.05, TotalSize=13.799999999999272, BodySize=4.099999999998545, ATR14=21.88,Tolerance=1.38, Threshold=25.00
+2026-06-01 13:05:10,131 - INFO - Momentum Check: Time=2026-06-01 12:55:00+05:30, O=23528, C=23513.45, H = 23531.45, L = 23499.25, TotalSize=32.20000000000073, BodySize=14.549999999999272, ATR14=21.44,Tolerance=3.22, Threshold=25.00
+2026-06-01 13:10:10,558 - INFO - Momentum Check: Time=2026-06-01 13:00:00+05:30, O=23513.05, C=23496.5, H = 23520.75, L = 23491.8, TotalSize=28.950000000000728, BodySize=16.549999999999272, ATR14=22.24,Tolerance=2.90, Threshold=25.00
+2026-06-01 13:15:10,983 - INFO - Momentum Check: Time=2026-06-01 13:05:00+05:30, O=23495.7, C=23478.65, H = 23501.4, L = 23473.5, TotalSize=27.900000000001455, BodySize=17.049999999999272, ATR14=23.34,Tolerance=2.79, Threshold=25.00
+2026-06-01 13:15:30,224 - INFO - Stopping Application...
+2026-06-01 13:20:11,235 - INFO - Starting KiteConnect Trading App...
+2026-06-01 13:20:14,662 - WARNING - No Access Token found. You may need to generate one.
+2026-06-01 13:20:43,796 - INFO - Session generated and access token set.
+2026-06-01 13:20:43,796 - INFO - Strategies Initialized: Iron Fly, Momentum Buy, ORB & Scalping on NIFTY
+2026-06-01 13:20:43,797 - INFO - Iron Fly entry scheduled at 09:28:00
+2026-06-01 13:20:43,797 - INFO - Application Initialized. Starting Main Loop...
+2026-06-01 13:20:43,823 - INFO - Momentum Check: Time=2026-06-01 13:10:00+05:30, O=23477.35, C=23460.65, H = 23479.05, L = 23453.25, TotalSize=25.799999999999272, BodySize=16.69999999999709, ATR14=20.81,Tolerance=2.58, Threshold=25.00
+2026-06-01 13:25:10,209 - INFO - Momentum Check: Time=2026-06-01 13:15:00+05:30, O=23459.95, C=23474.25, H = 23478.35, L = 23458.15, TotalSize=20.19999999999709, BodySize=14.299999999999272, ATR14=21.30,Tolerance=2.02, Threshold=25.00
+2026-06-01 13:30:10,638 - INFO - Momentum Check: Time=2026-06-01 13:20:00+05:30, O=23473.05, C=23469, H = 23479.1, L = 23467.6, TotalSize=11.5, BodySize=4.049999999999272, ATR14=21.18,Tolerance=1.15, Threshold=25.00
+2026-06-01 13:35:10,347 - INFO - Momentum Check: Time=2026-06-01 13:25:00+05:30, O=23469, C=23483.5, H = 23486.45, L = 23464.2, TotalSize=22.25, BodySize=14.5, ATR14=19.60,Tolerance=2.23, Threshold=25.00
+2026-06-01 13:40:10,775 - INFO - Momentum Check: Time=2026-06-01 13:30:00+05:30, O=23482.3, C=23485.7, H = 23500.4, L = 23476, TotalSize=24.400000000001455, BodySize=3.400000000001455, ATR14=19.86,Tolerance=2.44, Threshold=25.00
+2026-06-01 13:45:10,280 - INFO - Momentum Check: Time=2026-06-01 13:35:00+05:30, O=23484.95, C=23488.15, H = 23492.3, L = 23475.2, TotalSize=17.099999999998545, BodySize=3.2000000000007276, ATR14=20.16,Tolerance=1.71, Threshold=25.00
+2026-06-01 13:50:00,672 - INFO - New trades cutoff time 13:50:00 reached. No new entries allowed. Stopping strategy.
+2026-06-02 00:00:00,371 - INFO - Date changed to 2026-06-02. Break reset for new trading day.
+2026-06-02 09:01:39,922 - INFO - Stopping Application...
