@@ -142,7 +142,7 @@ class MomentumBuyStrategy(BaseStrategy):
         # 1. Calculate ATR14 (Simple Average of High-Low for last 14 completed candles)
         # We use data[:-1] because the last candle in 'data' is the one we want to trade on.
         # So we use the 14 candles BEFORE the current one to calculate ATR.
-        atr_candles = data[-17:-3]
+        atr_candles = data[-15:-1]
         if len(atr_candles) < 14:
             logger.warning(f"Insufficient ATR candles. Got {len(atr_candles)}, need 14")
             return
