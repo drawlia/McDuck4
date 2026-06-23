@@ -150,7 +150,7 @@ class MomentumBuyStrategy(BaseStrategy):
         atr14 = sum([(c["high"] - c["low"]) for c in atr_candles]) / 14
 
         # Dynamic Threshold: max(40, ATR14)
-        dynamic_threshold = max(self.candle_size, atr14)
+        dynamic_threshold = min(self.candle_size, atr14)
 
         last_candle = data[-3]
         candle_time = last_candle["date"]
@@ -169,7 +169,7 @@ class MomentumBuyStrategy(BaseStrategy):
         candle_total_size = high_p - low_p
         body_size = abs(close_p - open_p)
         # Wick Tolerance: min(5, 0.1 * candle_total_size)
-        tolerance = min(5, 0.1 * candle_total_size)
+        tolerance = max(5, 0.1 * candle_total_size)
 
         logger.info(
             f"Momentum Check: Time={candle_time}, O={open_p}, C={close_p}, H = {high_p}, L = {low_p}, TotalSize={candle_total_size}, BodySize={body_size}, ATR14={atr14:.2f},Tolerance={tolerance:.2f}, Threshold={dynamic_threshold:.2f}"

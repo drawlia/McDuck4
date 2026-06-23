@@ -11,6 +11,7 @@ class ScalpingStrategy(BaseStrategy):
         kite_client,
         trade_manager,
         expiry_stamp,
+        start_time=None,
         interval="5minute",
         quantity=65,
         end_time=None,
@@ -24,6 +25,7 @@ class ScalpingStrategy(BaseStrategy):
 
         Args:
             expiry_stamp: e.g. "23OCT"
+            start_time: datetime.time object for allowing new entries (e.g., 09:45)
             interval: Candle interval str (default "5minute")
             quantity: Quantity to trade
             end_time: datetime.time object for auto-exit time (e.g., 15:20)
@@ -34,6 +36,7 @@ class ScalpingStrategy(BaseStrategy):
         """
         super().__init__(kite_client, trade_manager)
         self.expiry_stamp = expiry_stamp
+        self.start_time = start_time
         self.interval = interval
         self.quantity = quantity
         self.end_time = end_time
@@ -63,7 +66,11 @@ class ScalpingStrategy(BaseStrategy):
                     "symbol": trade_data["symbol"],
                     "order_id": "RESTORED",
                     "entry_price": trade_data["entry_price"],
-                    "sl_price": trade_data["sl_price"],
+                    "sl_price": trade_data["entry_price"] - self.trailing_points,
+                    "mtm_sl": -self.trailing_points * trade_data["quantity"],
+                    "initial_mtm_risk": self.trailing_points
+                    * trade_data["quantity"],
+                    "max_mtm_reached": 0,
                     "quantity": trade_data["quantity"],
                     "highest_ltp": trade_data["entry_price"],
                 }
@@ -98,6 +105,9 @@ class ScalpingStrategy(BaseStrategy):
 
         # 2. Check for New Entry
         if self.state == "IDLE":
+            if self.start_time and now < self.start_time:
+                return
+
             # Check if new trades cutoff time has been reached (14:50)
             new_trades_cutoff = datetime.time(14, 50)
             if now >= new_trades_cutoff:
@@ -262,12 +272,16 @@ class ScalpingStrategy(BaseStrategy):
             # Set initial SL for the option based on candle distance
             # We'll trail it from the entry price
             initial_sl = entry_option_price - sl_distance
+            initial_mtm_sl = (initial_sl - entry_option_price) * self.quantity
 
             self.current_trade = {
                 "symbol": symbol,
                 "order_id": order_id,
                 "entry_price": entry_option_price,
                 "sl_price": initial_sl,
+                "mtm_sl": initial_mtm_sl,
+                "initial_mtm_risk": abs(initial_mtm_sl),
+                "max_mtm_reached": 0,
                 "quantity": self.quantity,
                 "highest_ltp": entry_option_price,
                 "trade_type": trade_type,
@@ -289,15 +303,39 @@ class ScalpingStrategy(BaseStrategy):
             return
 
         ltp = quote[quote_key]["last_price"]
-        sl_price = self.current_trade["sl_price"]
         entry_price = self.current_trade["entry_price"]
         quantity = self.current_trade["quantity"]
 
         # 0. Check Profit Target
         current_mtm = (ltp - entry_price) * quantity
 
+        mtm_sl = self.current_trade.get("mtm_sl")
+        if mtm_sl is None:
+            mtm_sl = (self.current_trade["sl_price"] - entry_price) * quantity
+            self.current_trade["mtm_sl"] = mtm_sl
+
+        initial_mtm_risk = self.current_trade.get("initial_mtm_risk", abs(mtm_sl))
+        max_mtm_reached = self.current_trade.get("max_mtm_reached", 0)
+
+        if current_mtm > max_mtm_reached:
+            self.current_trade["max_mtm_reached"] = current_mtm
+            new_mtm_sl = current_mtm - initial_mtm_risk
+
+            if new_mtm_sl > mtm_sl:
+                self.current_trade["mtm_sl"] = new_mtm_sl
+                mtm_sl = new_mtm_sl
+                logger.info(
+                    f"Scalping MTM SL Updated for {symbol}: MTM SL={mtm_sl:.2f}, "
+                    f"Max MTM={current_mtm:.2f}"
+                )
+
+        sl_price = entry_price + (mtm_sl / quantity)
+        self.current_trade["sl_price"] = sl_price
+
         logger.info(
-            f"Strategy MTM: Scalping ({symbol}): {current_mtm:.2f} | LTP: {ltp} | SL: {sl_price}"
+            f"Strategy MTM: Scalping ({symbol}): {current_mtm:.2f} | "
+            f"Max MTM: {self.current_trade['max_mtm_reached']:.2f} | "
+            f"MTM SL: {mtm_sl:.2f} | LTP: {ltp} | SL Price: {sl_price:.2f}"
         )
 
         if current_mtm >= self.profit_target:
@@ -308,20 +346,12 @@ class ScalpingStrategy(BaseStrategy):
             return
 
         # 1. Check SL Hit
-        if ltp <= sl_price:
-            logger.info(f"SL Hit for {symbol} at {ltp}. Exiting...")
+        if current_mtm <= mtm_sl:
+            logger.info(
+                f"Scalping MTM SL Hit for {symbol}. MTM={current_mtm:.2f} <= SL={mtm_sl:.2f}. Exiting..."
+            )
             self.exit_trade()
             return
-
-        # 2. Trail SL
-        # Logic: If LTP moves up, drag SL up by trailing_points
-        if ltp > self.current_trade["highest_ltp"]:
-            self.current_trade["highest_ltp"] = ltp
-            new_sl = ltp - self.trailing_points
-
-            if new_sl > sl_price:
-                self.current_trade["sl_price"] = new_sl
-                logger.info(f"Trailing SL Updated for {symbol}: {new_sl} (LTP: {ltp})")
 
     def exit_trade(self):
         if not self.current_trade:

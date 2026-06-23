@@ -54,20 +54,20 @@ logger = logging.getLogger(__name__)
 
 # Configuration
 SYMBOL = "NIFTY"
-EXPIRY_STAMP = "26609"  # Update this to current expiry, e.g., 23N02 for weekly or 23OCT for monthly
+EXPIRY_STAMP = "26JUN"  # Update this to current expiry, e.g., 23N02 for weekly or 23OCT for monthly
 QUANTITY = 195  # 3 Lot for Iron Fly
 HEDGE_DIST = 500
 SL_MTM = 2000
-START_TIME = time_obj(9, 28)  # 9:18 AM
+START_TIME = time_obj(9, 18)  # 9:18 AM
 END_TIME = time_obj(15, 24)  # 3:24 PM
 IRONFLY_PROFIT_TARGET = 1800
 
 # Momentum Strategy Config
 MOMENTUM_CANDLE_SIZE = 20  # Default, now dynamic max(40, ATR14)
-MOMENTUM_INTERVAL = "5minute"
+MOMENTUM_INTERVAL = "3minute"
 MOMENTUM_QUANTITY = 520  # 2 Lot
 
-MOMENTUM_PROFIT_TARGET = 8000  # 20 points per lot target, adjust as needed
+MOMENTUM_PROFIT_TARGET = 5000  # 20 points per lot target, adjust as needed
 
 # ORB Strategy Config
 ORB_BASE_SYMBOL = "NFO:NIFTY24MARFUT"  # Track future for ORB volume and signals
@@ -82,11 +82,12 @@ ORB_END_TIME = time_obj(15, 15)
 ORB_PROFIT_TARGET = 1800
 
 # Scalping Strategy Config
+SCALPING_START_TIME = time_obj(9, 45)
 SCALPING_INTERVAL = "5minute"
 SCALPING_QUANTITY = 195
-SCALPING_PROFIT_TARGET = SCALPING_QUANTITY * 20
+SCALPING_PROFIT_TARGET = SCALPING_QUANTITY * 10
 SCALPING_TRAILING_POINTS = 20
-SCALPING_SMALL_CANDLE_THRESHOLD = 25  # Max body size to consider a candle "small"
+SCALPING_SMALL_CANDLE_THRESHOLD = 10  # Max body size to consider a candle "small"
 SCALPING_MIN_CANDLES = 3  # Minimum consecutive small candles
 
 # Overall Profit Threshold
@@ -180,6 +181,7 @@ def main():
         kite_client=kite,
         trade_manager=tm,
         expiry_stamp=EXPIRY_STAMP,
+        start_time=SCALPING_START_TIME,
         interval=SCALPING_INTERVAL,
         quantity=SCALPING_QUANTITY,
         end_time=END_TIME,
@@ -193,6 +195,7 @@ def main():
         f"Strategies Initialized: Iron Fly, Momentum Buy, ORB & Scalping on {SYMBOL}"
     )
     logger.info(f"Iron Fly entry scheduled at {START_TIME.strftime('%H:%M:%S')}")
+    logger.info(f"Scalping entry starts at {SCALPING_START_TIME.strftime('%H:%M:%S')}")
     logger.info("Application Initialized. Starting Main Loop...")
 
     try:
