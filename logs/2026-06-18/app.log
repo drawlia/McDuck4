@@ -1,0 +1,165 @@
+2026-06-18 09:04:57,319 - INFO - Starting KiteConnect Trading App...
+2026-06-18 09:04:59,263 - WARNING - No Access Token found. You may need to generate one.
+2026-06-18 09:05:40,463 - INFO - Session generated and access token set.
+2026-06-18 09:05:40,464 - INFO - Strategies Initialized: Iron Fly, Momentum Buy, ORB & Scalping on NIFTY
+2026-06-18 09:05:40,464 - INFO - Iron Fly entry scheduled at 09:28:00
+2026-06-18 09:05:40,464 - INFO - Application Initialized. Starting Main Loop...
+2026-06-18 09:05:40,495 - INFO - Momentum Check: Time=2026-06-17 15:15:00+05:30, O=24083.6, C=24088.05, H = 24088.8, L = 24078.25, TotalSize=10.549999999999272, BodySize=4.450000000000728, ATR14=17.01,Tolerance=1.05, Threshold=20.00
+2026-06-18 09:15:10,317 - INFO - Momentum Check: Time=2026-06-17 15:20:00+05:30, O=24087.65, C=24081.45, H = 24090, L = 24079.95, TotalSize=10.049999999999272, BodySize=6.200000000000728, ATR14=16.81,Tolerance=1.00, Threshold=20.00
+2026-06-18 09:20:10,749 - INFO - Momentum Check: Time=2026-06-17 15:25:00+05:30, O=24081.25, C=24081.95, H = 24087.15, L = 24073.1, TotalSize=14.05000000000291, BodySize=0.7000000000007276, ATR14=21.20,Tolerance=1.41, Threshold=21.20
+2026-06-18 09:25:10,257 - INFO - Momentum Check: Time=2026-06-18 09:15:00+05:30, O=24073.8, C=24082.65, H = 24133.35, L = 24058.85, TotalSize=74.5, BodySize=8.850000000002183, ATR14=21.22,Tolerance=5.00, Threshold=21.22
+2026-06-18 09:28:00,497 - INFO - NIFTY Spot: 24094.65 -> ATM Strike: 24100
+2026-06-18 09:28:00,497 - INFO - Executing Iron Fly at start time 09:28:00
+2026-06-18 09:28:00,497 - INFO - Entering Iron Fly at ATM 24100
+2026-06-18 09:28:00,523 - INFO - Order placed. ID: 2067456771659702272
+2026-06-18 09:28:00,523 - INFO - Order Placed: BUY NIFTY2662324600CE Qty=195 ID=2067456771659702272
+2026-06-18 09:28:00,536 - INFO - Trade logged to logs/2026-06-18/trades.csv: IronFly BUY NIFTY2662324600CE
+2026-06-18 09:28:00,549 - INFO - Entered BUY NIFTY2662324600CE at approx 11.85
+2026-06-18 09:28:00,573 - INFO - Order placed. ID: 2067456771877806080
+2026-06-18 09:28:00,573 - INFO - Order Placed: BUY NIFTY2662323600PE Qty=195 ID=2067456771877806080
+2026-06-18 09:28:00,586 - INFO - Trade logged to logs/2026-06-18/trades.csv: IronFly BUY NIFTY2662323600PE
+2026-06-18 09:28:00,600 - INFO - Entered BUY NIFTY2662323600PE at approx 14.25
+2026-06-18 09:28:00,625 - INFO - Order placed. ID: 2067456772087521281
+2026-06-18 09:28:00,625 - INFO - Order Placed: SELL NIFTY2662324100CE Qty=195 ID=2067456772087521281
+2026-06-18 09:28:00,637 - INFO - Trade logged to logs/2026-06-18/trades.csv: IronFly SELL NIFTY2662324100CE
+2026-06-18 09:28:00,651 - INFO - Entered SELL NIFTY2662324100CE at approx 123.35
+2026-06-18 09:28:00,673 - ERROR - Error placing order: Insufficient funds. Required margin is 282035.96 but available margin is 261909.05.
+2026-06-18 09:30:10,795 - INFO - Momentum Check: Time=2026-06-18 09:20:00+05:30, O=24085.1, C=24092.7, H = 24099.75, L = 24079.1, TotalSize=20.650000000001455, BodySize=7.600000000002183, ATR14=20.89,Tolerance=2.07, Threshold=20.89
+2026-06-18 09:35:10,436 - INFO - Momentum Check: Time=2026-06-18 09:25:00+05:30, O=24094.7, C=24090.25, H = 24096, L = 24083.55, TotalSize=12.450000000000728, BodySize=4.450000000000728, ATR14=20.77,Tolerance=1.25, Threshold=20.77
+2026-06-18 09:35:23,637 - INFO - Exiting all positions...
+2026-06-18 09:35:23,660 - INFO - Order placed. ID: 2067458630319382528
+2026-06-18 09:35:23,660 - INFO - Order Placed: BUY NIFTY2662324100CE Qty=195 ID=2067458630319382528
+2026-06-18 09:35:23,674 - INFO - Trade logged to logs/2026-06-18/trades.csv: IronFly BUY NIFTY2662324100CE
+2026-06-18 09:35:23,674 - INFO - Exit (Cover): BUY NIFTY2662324100CE
+2026-06-18 09:35:23,699 - ERROR - Error placing order: Insufficient funds. Required margin is 515998.46 but available margin is 261938.30.
+2026-06-18 09:35:23,699 - INFO - Exit (Close): SELL NIFTY2662324600CE
+2026-06-18 09:35:23,724 - INFO - Order placed. ID: 2067458630583623680
+2026-06-18 09:35:23,724 - INFO - Order Placed: SELL NIFTY2662323600PE Qty=195 ID=2067458630583623680
+2026-06-18 09:35:23,736 - INFO - Trade logged to logs/2026-06-18/trades.csv: IronFly SELL NIFTY2662323600PE
+2026-06-18 09:35:23,736 - INFO - Exit (Close): SELL NIFTY2662323600PE
+2026-06-18 09:40:10,145 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 09:40:10,265 - INFO - Momentum Check: Time=2026-06-18 09:30:00+05:30, O=24092.2, C=24085.1, H = 24100.9, L = 24080.2, TotalSize=20.700000000000728, BodySize=7.100000000002183, ATR14=21.61,Tolerance=2.07, Threshold=21.61
+2026-06-18 09:45:10,691 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 09:45:10,722 - INFO - Momentum Check: Time=2026-06-18 09:35:00+05:30, O=24088.05, C=24085.65, H = 24088.05, L = 24066.85, TotalSize=21.200000000000728, BodySize=2.399999999997817, ATR14=23.47,Tolerance=2.12, Threshold=23.47
+2026-06-18 09:50:10,146 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 09:50:10,271 - INFO - Momentum Check: Time=2026-06-18 09:40:00+05:30, O=24088.45, C=24108.9, H = 24121.05, L = 24085.75, TotalSize=35.29999999999927, BodySize=20.450000000000728, ATR14=23.86,Tolerance=3.53, Threshold=23.86
+2026-06-18 09:55:10,697 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 09:55:10,730 - INFO - Momentum Check: Time=2026-06-18 09:45:00+05:30, O=24112, C=24126.7, H = 24136.8, L = 24107.4, TotalSize=29.399999999997817, BodySize=14.700000000000728, ATR14=22.72,Tolerance=2.94, Threshold=22.72
+2026-06-18 10:00:10,157 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 10:00:11,233 - INFO - Momentum Check: Time=2026-06-18 09:50:00+05:30, O=24128.55, C=24135.15, H = 24139.1, L = 24121.85, TotalSize=17.25, BodySize=6.600000000002183, ATR14=21.98,Tolerance=1.73, Threshold=21.98
+2026-06-18 10:05:10,659 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 10:05:10,692 - INFO - Momentum Check: Time=2026-06-18 09:55:00+05:30, O=24137.4, C=24123.2, H = 24139.65, L = 24121.75, TotalSize=17.900000000001455, BodySize=14.200000000000728, ATR14=22.31,Tolerance=1.79, Threshold=22.31
+2026-06-18 10:10:10,119 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 10:10:10,243 - INFO - Momentum Check: Time=2026-06-18 10:00:00+05:30, O=24126.85, C=24116.05, H = 24131.15, L = 24113.65, TotalSize=17.5, BodySize=10.799999999999272, ATR14=22.58,Tolerance=1.75, Threshold=22.58
+2026-06-18 10:15:10,673 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 10:15:10,705 - INFO - Momentum Check: Time=2026-06-18 10:05:00+05:30, O=24117.65, C=24126.95, H = 24127.8, L = 24113.15, TotalSize=14.649999999997817, BodySize=9.299999999999272, ATR14=23.11,Tolerance=1.46, Threshold=23.11
+2026-06-18 10:20:10,133 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 10:20:10,163 - INFO - Momentum Check: Time=2026-06-18 10:10:00+05:30, O=24129.6, C=24125.6, H = 24138.4, L = 24120.5, TotalSize=17.900000000001455, BodySize=4.0, ATR14=24.01,Tolerance=1.79, Threshold=24.01
+2026-06-18 10:25:10,592 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 10:25:10,625 - INFO - Momentum Check: Time=2026-06-18 10:15:00+05:30, O=24127.4, C=24114.6, H = 24130.8, L = 24108.1, TotalSize=22.700000000000728, BodySize=12.80000000000291, ATR14=23.72,Tolerance=2.27, Threshold=23.72
+2026-06-18 10:30:10,052 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 10:30:10,220 - INFO - Momentum Check: Time=2026-06-18 10:20:00+05:30, O=24116.05, C=24115.45, H = 24116.8, L = 24106.8, TotalSize=10.0, BodySize=0.5999999999985448, ATR14=19.34,Tolerance=1.00, Threshold=20.00
+2026-06-18 10:35:10,647 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 10:35:10,678 - INFO - Momentum Check: Time=2026-06-18 10:25:00+05:30, O=24116.9, C=24109.25, H = 24116.9, L = 24103.7, TotalSize=13.200000000000728, BodySize=7.650000000001455, ATR14=18.86,Tolerance=1.32, Threshold=20.00
+2026-06-18 10:40:10,107 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 10:40:10,276 - INFO - Momentum Check: Time=2026-06-18 10:30:00+05:30, O=24111.4, C=24111.6, H = 24113.95, L = 24100.1, TotalSize=13.850000000002183, BodySize=0.19999999999708962, ATR14=20.56,Tolerance=1.39, Threshold=20.56
+2026-06-18 10:45:10,705 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 10:45:10,735 - INFO - Momentum Check: Time=2026-06-18 10:35:00+05:30, O=24112.9, C=24078.75, H = 24114.2, L = 24077.85, TotalSize=36.35000000000218, BodySize=34.150000000001455, ATR14=20.76,Tolerance=3.64, Threshold=20.76
+2026-06-18 10:45:10,736 - INFO - Momentum Confirmation: Next candle is also RED (O=24079.95, C=24076.35). Entering trade.
+2026-06-18 10:45:10,736 - INFO - Momentum Signal! BUY_PE NIFTY2662324100PE. Spot: 24078.75, SL Level: 24114.2
+2026-06-18 10:45:10,761 - ERROR - Error placing order: Insufficient funds. Required margin is 330908.75 but available margin is 261938.30.
+2026-06-18 10:50:10,198 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 10:50:10,286 - INFO - Momentum Check: Time=2026-06-18 10:40:00+05:30, O=24079.95, C=24076.35, H = 24083.05, L = 24059.55, TotalSize=23.5, BodySize=3.600000000002183, ATR14=20.61,Tolerance=2.35, Threshold=20.61
+2026-06-18 10:55:10,714 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 10:55:10,749 - INFO - Momentum Check: Time=2026-06-18 10:45:00+05:30, O=24078.35, C=24075.1, H = 24091.9, L = 24072.8, TotalSize=19.100000000002183, BodySize=3.25, ATR14=19.41,Tolerance=1.91, Threshold=20.00
+2026-06-18 11:00:10,183 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 11:00:10,439 - INFO - Momentum Check: Time=2026-06-18 10:50:00+05:30, O=24076.55, C=24083.15, H = 24085.6, L = 24067.1, TotalSize=18.5, BodySize=6.600000000002183, ATR14=18.19,Tolerance=1.85, Threshold=20.00
+2026-06-18 11:05:10,867 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 11:05:10,901 - INFO - Momentum Check: Time=2026-06-18 10:55:00+05:30, O=24085.1, C=24092.55, H = 24093.9, L = 24081.7, TotalSize=12.200000000000728, BodySize=7.450000000000728, ATR14=17.93,Tolerance=1.22, Threshold=20.00
+2026-06-18 11:10:10,329 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 11:10:10,362 - INFO - Momentum Check: Time=2026-06-18 11:00:00+05:30, O=24093.85, C=24082.9, H = 24093.85, L = 24080.25, TotalSize=13.599999999998545, BodySize=10.94999999999709, ATR14=17.53,Tolerance=1.36, Threshold=20.00
+2026-06-18 11:15:10,794 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 11:15:10,824 - INFO - Momentum Check: Time=2026-06-18 11:05:00+05:30, O=24085.1, C=24077.95, H = 24085.35, L = 24073.05, TotalSize=12.299999999999272, BodySize=7.149999999997817, ATR14=17.81,Tolerance=1.23, Threshold=20.00
+2026-06-18 11:20:10,253 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 11:20:10,304 - INFO - Momentum Check: Time=2026-06-18 11:10:00+05:30, O=24079.7, C=24064.65, H = 24081.35, L = 24059.9, TotalSize=21.44999999999709, BodySize=15.049999999999272, ATR14=18.08,Tolerance=2.14, Threshold=20.00
+2026-06-18 11:25:10,732 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 11:25:10,765 - INFO - Momentum Check: Time=2026-06-18 11:15:00+05:30, O=24066.2, C=24048.3, H = 24066.35, L = 24047.85, TotalSize=18.5, BodySize=17.900000000001455, ATR14=18.20,Tolerance=1.85, Threshold=20.00
+2026-06-18 11:30:10,195 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 11:30:10,283 - INFO - Momentum Check: Time=2026-06-18 11:20:00+05:30, O=24049.75, C=24050.5, H = 24056.55, L = 24036.95, TotalSize=19.599999999998545, BodySize=0.75, ATR14=17.53,Tolerance=1.96, Threshold=20.00
+2026-06-18 11:35:10,711 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 11:35:10,743 - INFO - Momentum Check: Time=2026-06-18 11:25:00+05:30, O=24052.55, C=24054.95, H = 24057.65, L = 24044.4, TotalSize=13.25, BodySize=2.400000000001455, ATR14=17.82,Tolerance=1.33, Threshold=20.00
+2026-06-18 11:40:10,170 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 11:40:10,202 - INFO - Momentum Check: Time=2026-06-18 11:30:00+05:30, O=24057.5, C=24061.4, H = 24063.8, L = 24049.7, TotalSize=14.099999999998545, BodySize=3.900000000001455, ATR14=18.18,Tolerance=1.41, Threshold=20.00
+2026-06-18 11:45:10,630 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 11:45:10,666 - INFO - Momentum Check: Time=2026-06-18 11:35:00+05:30, O=24062.05, C=24053.1, H = 24065.5, L = 24047.3, TotalSize=18.200000000000728, BodySize=8.950000000000728, ATR14=18.34,Tolerance=1.82, Threshold=20.00
+2026-06-18 11:50:10,094 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 11:55:10,630 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 11:55:10,661 - INFO - Momentum Check: Time=2026-06-18 11:45:00+05:30, O=24064.6, C=24063.75, H = 24075.35, L = 24057.6, TotalSize=17.75, BodySize=0.8499999999985448, ATR14=16.86,Tolerance=1.78, Threshold=20.00
+2026-06-18 12:00:10,091 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 12:00:10,146 - INFO - Momentum Check: Time=2026-06-18 11:50:00+05:30, O=24062.7, C=24062.95, H = 24071.5, L = 24050.05, TotalSize=21.450000000000728, BodySize=0.25, ATR14=16.29,Tolerance=2.15, Threshold=20.00
+2026-06-18 12:05:10,577 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 12:05:10,607 - INFO - Momentum Check: Time=2026-06-18 11:55:00+05:30, O=24064.4, C=24071.95, H = 24073.3, L = 24062.25, TotalSize=11.049999999999272, BodySize=7.549999999999272, ATR14=16.39,Tolerance=1.10, Threshold=20.00
+2026-06-18 12:10:10,036 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 12:10:10,068 - INFO - Momentum Check: Time=2026-06-18 12:00:00+05:30, O=24072.7, C=24088.15, H = 24090.95, L = 24071.05, TotalSize=19.900000000001455, BodySize=15.450000000000728, ATR14=16.50,Tolerance=1.99, Threshold=20.00
+2026-06-18 12:15:10,497 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 12:15:10,529 - INFO - Momentum Check: Time=2026-06-18 12:05:00+05:30, O=24089, C=24094.05, H = 24099.7, L = 24085.9, TotalSize=13.799999999999272, BodySize=5.049999999999272, ATR14=16.56,Tolerance=1.38, Threshold=20.00
+2026-06-18 12:20:10,959 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 12:20:10,991 - INFO - Momentum Check: Time=2026-06-18 12:10:00+05:30, O=24095.7, C=24088.2, H = 24096.55, L = 24082.1, TotalSize=14.450000000000728, BodySize=7.5, ATR14=17.09,Tolerance=1.45, Threshold=20.00
+2026-06-18 12:25:10,420 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 12:25:10,453 - INFO - Momentum Check: Time=2026-06-18 12:15:00+05:30, O=24089.85, C=24095.6, H = 24098.15, L = 24078.45, TotalSize=19.700000000000728, BodySize=5.75, ATR14=16.65,Tolerance=1.97, Threshold=20.00
+2026-06-18 12:30:10,882 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 12:30:10,914 - INFO - Momentum Check: Time=2026-06-18 12:20:00+05:30, O=24097.7, C=24099.45, H = 24103.3, L = 24087.95, TotalSize=15.349999999998545, BodySize=1.75, ATR14=17.05,Tolerance=1.53, Threshold=20.00
+2026-06-18 12:35:10,344 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 12:35:10,376 - INFO - Momentum Check: Time=2026-06-18 12:25:00+05:30, O=24100.95, C=24118.7, H = 24119.95, L = 24095.85, TotalSize=24.100000000002183, BodySize=17.75, ATR14=17.28,Tolerance=2.41, Threshold=20.00
+2026-06-18 12:35:10,376 - INFO - Momentum Confirmation: Next candle is also GREEN (O=24120.85, C=24128.8). Entering trade.
+2026-06-18 12:35:10,376 - INFO - Momentum Signal! BUY_CE NIFTY2662324100CE. Spot: 24118.7, SL Level: 24095.85
+2026-06-18 12:35:10,403 - ERROR - Error placing order: Insufficient funds. Required margin is 331674.00 but available margin is 261938.30.
+2026-06-18 12:40:10,836 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 12:40:10,868 - INFO - Momentum Check: Time=2026-06-18 12:30:00+05:30, O=24120.85, C=24128.8, H = 24132.05, L = 24109.25, TotalSize=22.799999999999272, BodySize=7.950000000000728, ATR14=17.78,Tolerance=2.28, Threshold=20.00
+2026-06-18 12:45:10,295 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 12:45:10,328 - INFO - Momentum Check: Time=2026-06-18 12:35:00+05:30, O=24131.3, C=24118.8, H = 24133.75, L = 24113.5, TotalSize=20.25, BodySize=12.5, ATR14=17.67,Tolerance=2.02, Threshold=20.00
+2026-06-18 12:50:10,760 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 12:50:10,794 - INFO - Momentum Check: Time=2026-06-18 12:40:00+05:30, O=24119.7, C=24117.25, H = 24128.95, L = 24116.45, TotalSize=12.5, BodySize=2.4500000000007276, ATR14=17.02,Tolerance=1.25, Threshold=20.00
+2026-06-18 12:55:10,220 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 12:55:10,253 - INFO - Momentum Check: Time=2026-06-18 12:45:00+05:30, O=24118.75, C=24117.4, H = 24120.55, L = 24111.45, TotalSize=9.099999999998545, BodySize=1.3499999999985448, ATR14=17.00,Tolerance=0.91, Threshold=20.00
+2026-06-18 13:00:10,682 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 13:00:10,715 - INFO - Momentum Check: Time=2026-06-18 12:50:00+05:30, O=24118.65, C=24126.7, H = 24132.25, L = 24116.45, TotalSize=15.799999999999272, BodySize=8.049999999999272, ATR14=16.26,Tolerance=1.58, Threshold=20.00
+2026-06-18 13:05:10,142 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 13:05:10,238 - INFO - Momentum Check: Time=2026-06-18 12:55:00+05:30, O=24127.3, C=24125.65, H = 24131.45, L = 24124.1, TotalSize=7.350000000002183, BodySize=1.6499999999978172, ATR14=15.52,Tolerance=0.74, Threshold=20.00
+2026-06-18 13:10:10,666 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 13:10:10,699 - INFO - Momentum Check: Time=2026-06-18 13:00:00+05:30, O=24127.65, C=24123.3, H = 24129.4, L = 24118.25, TotalSize=11.150000000001455, BodySize=4.350000000002183, ATR14=15.75,Tolerance=1.12, Threshold=20.00
+2026-06-18 13:15:10,126 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 13:15:11,224 - INFO - Momentum Check: Time=2026-06-18 13:05:00+05:30, O=24125.3, C=24126.3, H = 24130.85, L = 24116.6, TotalSize=14.25, BodySize=1.0, ATR14=14.73,Tolerance=1.43, Threshold=20.00
+2026-06-18 13:20:10,653 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 13:20:10,685 - INFO - Momentum Check: Time=2026-06-18 13:10:00+05:30, O=24128, C=24127.8, H = 24128.2, L = 24122.6, TotalSize=5.600000000002183, BodySize=0.2000000000007276, ATR14=15.24,Tolerance=0.56, Threshold=20.00
+2026-06-18 13:25:10,112 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 13:25:11,166 - INFO - Momentum Check: Time=2026-06-18 13:15:00+05:30, O=24129.95, C=24116.9, H = 24136.3, L = 24115.3, TotalSize=21.0, BodySize=13.049999999999272, ATR14=15.15,Tolerance=2.10, Threshold=20.00
+2026-06-18 13:25:11,167 - INFO - Momentum Confirmation: Next candle is also RED (O=24117.7, C=24112.75). Entering trade.
+2026-06-18 13:25:11,167 - INFO - Momentum Signal! BUY_PE NIFTY2662324100PE. Spot: 24116.9, SL Level: 24136.3
+2026-06-18 13:25:11,196 - ERROR - Error placing order: Insufficient funds. Required margin is 324056.00 but available margin is 261938.30.
+2026-06-18 13:30:10,624 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 13:30:10,656 - INFO - Momentum Check: Time=2026-06-18 13:20:00+05:30, O=24117.7, C=24112.75, H = 24125.85, L = 24112.65, TotalSize=13.19999999999709, BodySize=4.950000000000728, ATR14=15.35,Tolerance=1.32, Threshold=20.00
+2026-06-18 13:35:10,083 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 13:35:10,122 - INFO - Momentum Check: Time=2026-06-18 13:25:00+05:30, O=24114.35, C=24120.45, H = 24123.1, L = 24100.65, TotalSize=22.44999999999709, BodySize=6.100000000002183, ATR14=15.88,Tolerance=2.24, Threshold=20.00
+2026-06-18 13:40:10,550 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 13:40:10,582 - INFO - Momentum Check: Time=2026-06-18 13:30:00+05:30, O=24121.9, C=24123.35, H = 24135, L = 24112.25, TotalSize=22.75, BodySize=1.4499999999970896, ATR14=14.97,Tolerance=2.27, Threshold=20.00
+2026-06-18 13:45:10,011 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 13:45:10,045 - INFO - Momentum Check: Time=2026-06-18 13:35:00+05:30, O=24125.05, C=24120.9, H = 24128, L = 24116.65, TotalSize=11.349999999998545, BodySize=4.149999999997817, ATR14=14.52,Tolerance=1.13, Threshold=20.00
+2026-06-18 13:50:10,474 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 13:50:10,508 - INFO - Momentum Check: Time=2026-06-18 13:40:00+05:30, O=24122.3, C=24120.7, H = 24128.35, L = 24111.8, TotalSize=16.549999999999272, BodySize=1.5999999999985448, ATR14=14.15,Tolerance=1.65, Threshold=20.00
+2026-06-18 13:55:10,937 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 13:55:10,971 - INFO - Momentum Check: Time=2026-06-18 13:45:00+05:30, O=24122, C=24116.15, H = 24127.65, L = 24112.55, TotalSize=15.100000000002183, BodySize=5.849999999998545, ATR14=13.74,Tolerance=1.51, Threshold=20.00
+2026-06-18 14:00:10,403 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 14:00:10,435 - INFO - Momentum Check: Time=2026-06-18 13:50:00+05:30, O=24117.4, C=24117.2, H = 24119.7, L = 24112.95, TotalSize=6.75, BodySize=0.2000000000007276, ATR14=14.24,Tolerance=0.68, Threshold=20.00
+2026-06-18 14:05:10,864 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 14:05:10,897 - INFO - Momentum Check: Time=2026-06-18 13:55:00+05:30, O=24118.05, C=24108.35, H = 24119.95, L = 24103.85, TotalSize=16.100000000002183, BodySize=9.700000000000728, ATR14=13.88,Tolerance=1.61, Threshold=20.00
+2026-06-18 14:10:10,324 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 14:10:10,367 - INFO - Momentum Check: Time=2026-06-18 14:00:00+05:30, O=24109.95, C=24106.45, H = 24112, L = 24101.3, TotalSize=10.700000000000728, BodySize=3.5, ATR14=14.60,Tolerance=1.07, Threshold=20.00
+2026-06-18 14:15:10,795 - INFO - MomentumBuy: Current overall profit: 1998.75
+2026-06-18 14:15:10,826 - INFO - Momentum Check: Time=2026-06-18 14:05:00+05:30, O=24107.15, C=24096.05, H = 24112, L = 24094.6, TotalSize=17.400000000001455, BodySize=11.100000000002183, ATR14=14.76,Tolerance=1.74, Threshold=20.00
+2026-06-18 14:20:00,239 - INFO - New trades cutoff time 14:20:00 reached. No new entries allowed. Stopping strategy.
+2026-06-19 00:00:00,685 - INFO - Date changed to 2026-06-19. Break reset for new trading day.
+2026-06-20 00:00:00,519 - INFO - Date changed to 2026-06-20. Break reset for new trading day.
+2026-06-21 00:00:00,651 - INFO - Date changed to 2026-06-21. Break reset for new trading day.
+2026-06-22 00:00:00,643 - INFO - Date changed to 2026-06-22. Break reset for new trading day.
+2026-06-22 09:46:23,953 - INFO - Stopping Application...

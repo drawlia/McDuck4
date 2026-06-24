@@ -1,0 +1,9 @@
+2026-06-24 08:42:52,492 - INFO - Starting KiteConnect Trading App...
+2026-06-24 08:42:54,202 - WARNING - No Access Token found. You may need to generate one.
+2026-06-24 08:43:41,434 - INFO - Session generated and access token set.
+2026-06-24 08:43:41,435 - INFO - Strategies Initialized: Iron Fly, Momentum Buy, ORB & Scalping on NIFTY
+2026-06-24 08:43:41,435 - INFO - Iron Fly entry scheduled at 09:18:00
+2026-06-24 08:43:41,435 - INFO - Scalping entry starts at 09:45:00
+2026-06-24 08:43:41,435 - INFO - Application Initialized. Starting Main Loop...
+2026-06-24 08:45:10,590 - INFO - Momentum Check: Time=2026-06-23 15:21:00+05:30, O=23805.15, C=23797, H = 23813.05, L = 23795.5, TotalSize=17.549999999999272, BodySize=8.150000000001455, ATR14=23.80,Tolerance=5.00, Threshold=20.00
+2026-06-24 08:53:24,661 - INFO - Stopping Application...

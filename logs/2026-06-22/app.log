@@ -1,0 +1,139 @@
+2026-06-22 09:46:26,925 - INFO - Starting KiteConnect Trading App...
+2026-06-22 09:46:28,462 - WARNING - No Access Token found. You may need to generate one.
+2026-06-22 09:47:15,831 - INFO - Session generated and access token set.
+2026-06-22 09:47:15,832 - INFO - Strategies Initialized: Iron Fly, Momentum Buy, ORB & Scalping on NIFTY
+2026-06-22 09:47:15,832 - INFO - Iron Fly entry scheduled at 09:48:00
+2026-06-22 09:47:15,832 - INFO - Application Initialized. Starting Main Loop...
+2026-06-22 09:48:00,909 - INFO - NIFTY Spot: 24107.95 -> ATM Strike: 24100
+2026-06-22 09:48:00,910 - INFO - Executing Iron Fly at start time 09:48:00
+2026-06-22 09:48:00,910 - INFO - Entering Iron Fly at ATM 24100
+2026-06-22 09:48:00,937 - INFO - Order placed. ID: 2068911358027538432
+2026-06-22 09:48:00,937 - INFO - Order Placed: BUY NIFTY2662324600CE Qty=195 ID=2068911358027538432
+2026-06-22 09:48:00,954 - INFO - Trade logged to logs/2026-06-22/trades.csv: IronFly BUY NIFTY2662324600CE
+2026-06-22 09:48:00,973 - INFO - Entered BUY NIFTY2662324600CE at approx 2.5
+2026-06-22 09:48:01,000 - INFO - Order placed. ID: 2068911358291779584
+2026-06-22 09:48:01,000 - INFO - Order Placed: BUY NIFTY2662323600PE Qty=195 ID=2068911358291779584
+2026-06-22 09:48:01,017 - INFO - Trade logged to logs/2026-06-22/trades.csv: IronFly BUY NIFTY2662323600PE
+2026-06-22 09:48:01,035 - INFO - Entered BUY NIFTY2662323600PE at approx 3
+2026-06-22 09:48:01,061 - INFO - Order placed. ID: 2068911358547632128
+2026-06-22 09:48:01,062 - INFO - Order Placed: SELL NIFTY2662324100CE Qty=195 ID=2068911358547632128
+2026-06-22 09:48:01,080 - INFO - Trade logged to logs/2026-06-22/trades.csv: IronFly SELL NIFTY2662324100CE
+2026-06-22 09:48:01,098 - INFO - Entered SELL NIFTY2662324100CE at approx 85.35
+2026-06-22 09:48:01,129 - ERROR - Error placing order: Insufficient funds. Required margin is 282728.77 but available margin is 231879.05.
+2026-06-22 09:50:10,622 - INFO - Momentum Check: Time=2026-06-22 09:40:00+05:30, O=24124.2, C=24108.75, H = 24127.7, L = 24108.75, TotalSize=18.950000000000728, BodySize=15.450000000000728, ATR14=28.84,Tolerance=1.90, Threshold=28.84
+2026-06-22 09:50:10,640 - INFO - Scalping: Not all candles are small. Bodies: [7.650000000001455, 15.450000000000728, 0.5499999999992724], Threshold: 10
+2026-06-22 09:56:22,878 - INFO - Exiting all positions...
+2026-06-22 09:56:22,909 - INFO - Order placed. ID: 2068913463446511616
+2026-06-22 09:56:22,909 - INFO - Order Placed: BUY NIFTY2662324100CE Qty=195 ID=2068913463446511616
+2026-06-22 09:56:22,926 - INFO - Trade logged to logs/2026-06-22/trades.csv: IronFly BUY NIFTY2662324100CE
+2026-06-22 09:56:22,927 - INFO - Exit (Cover): BUY NIFTY2662324100CE
+2026-06-22 09:56:22,958 - INFO - Order placed. ID: 2068913463639449600
+2026-06-22 09:56:22,958 - INFO - Order Placed: SELL NIFTY2662324600CE Qty=195 ID=2068913463639449600
+2026-06-22 09:56:22,976 - INFO - Trade logged to logs/2026-06-22/trades.csv: IronFly SELL NIFTY2662324600CE
+2026-06-22 09:56:22,976 - INFO - Exit (Close): SELL NIFTY2662324600CE
+2026-06-22 09:56:23,005 - INFO - Order placed. ID: 2068913463849164800
+2026-06-22 09:56:23,006 - INFO - Order Placed: SELL NIFTY2662323600PE Qty=195 ID=2068913463849164800
+2026-06-22 09:56:23,022 - INFO - Trade logged to logs/2026-06-22/trades.csv: IronFly SELL NIFTY2662323600PE
+2026-06-22 09:56:23,022 - INFO - Exit (Close): SELL NIFTY2662323600PE
+2026-06-22 10:00:10,376 - INFO - Momentum Check: Time=2026-06-22 09:50:00+05:30, O=24109.25, C=24127.3, H = 24130.5, L = 24108.5, TotalSize=22.0, BodySize=18.049999999999272, ATR14=22.20,Tolerance=2.20, Threshold=22.20
+2026-06-22 10:00:10,394 - INFO - Scalping: Not all candles are small. Bodies: [0.5499999999992724, 18.049999999999272, 13.55000000000291], Threshold: 10
+2026-06-22 10:05:10,853 - INFO - Momentum Check: Time=2026-06-22 09:55:00+05:30, O=24127.6, C=24141.15, H = 24144.05, L = 24124.8, TotalSize=19.25, BodySize=13.55000000000291, ATR14=21.69,Tolerance=1.93, Threshold=21.69
+2026-06-22 10:05:10,873 - INFO - Scalping: Not all candles are small. Bodies: [18.049999999999272, 13.55000000000291, 7.650000000001455], Threshold: 10
+2026-06-22 10:10:10,347 - INFO - Momentum Check: Time=2026-06-22 10:00:00+05:30, O=24141.5, C=24133.85, H = 24148.7, L = 24133.85, TotalSize=14.850000000002183, BodySize=7.650000000001455, ATR14=21.97,Tolerance=1.49, Threshold=21.97
+2026-06-22 10:10:10,367 - INFO - Scalping: Not all candles are small. Bodies: [13.55000000000291, 7.650000000001455, 21.80000000000291], Threshold: 10
+2026-06-22 10:15:10,826 - INFO - Momentum Check: Time=2026-06-22 10:05:00+05:30, O=24133.35, C=24155.15, H = 24155.15, L = 24129.5, TotalSize=25.650000000001455, BodySize=21.80000000000291, ATR14=21.85,Tolerance=2.57, Threshold=21.85
+2026-06-22 10:15:10,826 - INFO - Momentum Confirmation Failed: Next candle is RED (O=24154.7, C=24149.65). Skipping entry.
+2026-06-22 10:15:10,846 - INFO - Scalping: Not all candles are small. Bodies: [7.650000000001455, 21.80000000000291, 5.049999999999272], Threshold: 10
+2026-06-22 10:20:10,316 - INFO - Momentum Check: Time=2026-06-22 10:10:00+05:30, O=24154.7, C=24149.65, H = 24159.65, L = 24142.3, TotalSize=17.350000000002183, BodySize=5.049999999999272, ATR14=21.68,Tolerance=1.74, Threshold=21.68
+2026-06-22 10:20:10,341 - INFO - Scalping: Not all candles are small. Bodies: [21.80000000000291, 5.049999999999272, 0.3500000000021828], Threshold: 10
+2026-06-22 10:25:10,798 - INFO - Momentum Check: Time=2026-06-22 10:15:00+05:30, O=24149.55, C=24149.9, H = 24155.1, L = 24146.4, TotalSize=8.69999999999709, BodySize=0.3500000000021828, ATR14=20.64,Tolerance=0.87, Threshold=20.64
+2026-06-22 10:25:10,821 - INFO - Scalping: Not all candles in same direction. Directions: [-1, 1, -1]
+2026-06-22 10:35:10,789 - INFO - Momentum Check: Time=2026-06-22 10:25:00+05:30, O=24147.45, C=24152.8, H = 24156.2, L = 24144.25, TotalSize=11.950000000000728, BodySize=5.349999999998545, ATR14=16.64,Tolerance=1.20, Threshold=20.00
+2026-06-22 10:35:10,811 - INFO - Scalping: Not all candles are small. Bodies: [3.5, 5.349999999998545, 15.399999999997817], Threshold: 10
+2026-06-22 10:40:10,267 - INFO - Momentum Check: Time=2026-06-22 10:30:00+05:30, O=24153.85, C=24138.45, H = 24159.1, L = 24137.75, TotalSize=21.349999999998545, BodySize=15.399999999997817, ATR14=16.90,Tolerance=2.13, Threshold=20.00
+2026-06-22 10:40:10,267 - INFO - Momentum Confirmation Failed: Next candle is GREEN (O=24138.55, C=24153.2). Skipping entry.
+2026-06-22 10:40:10,286 - INFO - Scalping: Not all candles are small. Bodies: [5.349999999998545, 15.399999999997817, 14.650000000001455], Threshold: 10
+2026-06-22 10:45:10,742 - INFO - Momentum Check: Time=2026-06-22 10:35:00+05:30, O=24138.55, C=24153.2, H = 24157.35, L = 24136.55, TotalSize=20.799999999999272, BodySize=14.650000000001455, ATR14=16.59,Tolerance=2.08, Threshold=20.00
+2026-06-22 10:45:10,762 - INFO - Scalping: Not all candles are small. Bodies: [15.399999999997817, 14.650000000001455, 0.5], Threshold: 10
+2026-06-22 10:50:10,254 - INFO - Momentum Check: Time=2026-06-22 10:40:00+05:30, O=24153.4, C=24152.9, H = 24156.15, L = 24149.4, TotalSize=6.75, BodySize=0.5, ATR14=15.65,Tolerance=0.68, Threshold=20.00
+2026-06-22 10:50:10,279 - INFO - Scalping: Not all candles are small. Bodies: [14.650000000001455, 0.5, 1.6500000000014552], Threshold: 10
+2026-06-22 10:55:10,738 - INFO - Momentum Check: Time=2026-06-22 10:45:00+05:30, O=24152.75, C=24151.1, H = 24159.5, L = 24147.8, TotalSize=11.700000000000728, BodySize=1.6500000000014552, ATR14=15.26,Tolerance=1.17, Threshold=20.00
+2026-06-22 10:55:10,758 - INFO - Scalping: Not all candles in same direction. Directions: [-1, -1, 1]
+2026-06-22 11:00:10,278 - INFO - Momentum Check: Time=2026-06-22 10:50:00+05:30, O=24150.4, C=24155.55, H = 24162.4, L = 24148.9, TotalSize=13.5, BodySize=5.149999999997817, ATR14=15.53,Tolerance=1.35, Threshold=20.00
+2026-06-22 11:00:10,302 - INFO - Scalping: Not all candles in same direction. Directions: [-1, 1, 1]
+2026-06-22 11:05:10,759 - INFO - Momentum Check: Time=2026-06-22 10:55:00+05:30, O=24154.8, C=24162.85, H = 24168.05, L = 24154, TotalSize=14.049999999999272, BodySize=8.049999999999272, ATR14=14.80,Tolerance=1.40, Threshold=20.00
+2026-06-22 11:05:10,779 - INFO - Scalping: Not all candles in same direction. Directions: [1, 1, -1]
+2026-06-22 11:10:10,259 - INFO - Momentum Check: Time=2026-06-22 11:00:00+05:30, O=24162.75, C=24158.95, H = 24165.1, L = 24153.35, TotalSize=11.75, BodySize=3.7999999999992724, ATR14=14.06,Tolerance=1.18, Threshold=20.00
+2026-06-22 11:10:10,301 - INFO - Scalping: Not all candles in same direction. Directions: [1, -1, 1]
+2026-06-22 11:15:10,761 - INFO - Momentum Check: Time=2026-06-22 11:05:00+05:30, O=24159, C=24161.95, H = 24165.3, L = 24156.3, TotalSize=9.0, BodySize=2.9500000000007276, ATR14=13.73,Tolerance=0.90, Threshold=20.00
+2026-06-22 11:15:10,782 - INFO - Scalping: Not all candles in same direction. Directions: [-1, 1, -1]
+2026-06-22 11:20:10,239 - INFO - Momentum Check: Time=2026-06-22 11:10:00+05:30, O=24160.95, C=24157.3, H = 24164.2, L = 24154.05, TotalSize=10.150000000001455, BodySize=3.650000000001455, ATR14=12.80,Tolerance=1.02, Threshold=20.00
+2026-06-22 11:20:10,360 - INFO - Scalping: Not all candles in same direction. Directions: [1, -1, -1]
+2026-06-22 11:25:10,816 - INFO - Momentum Check: Time=2026-06-22 11:15:00+05:30, O=24156.65, C=24152.05, H = 24162.8, L = 24150.2, TotalSize=12.599999999998545, BodySize=4.600000000002183, ATR14=12.53,Tolerance=1.26, Threshold=20.00
+2026-06-22 11:25:10,840 - INFO - Scalping: Not all candles in same direction. Directions: [-1, -1, 1]
+2026-06-22 11:35:10,772 - INFO - Momentum Check: Time=2026-06-22 11:25:00+05:30, O=24151.4, C=24160.65, H = 24163.1, L = 24149.45, TotalSize=13.649999999997817, BodySize=9.25, ATR14=12.75,Tolerance=1.36, Threshold=20.00
+2026-06-22 11:35:10,795 - INFO - Scalping Pattern Found! Direction: BUY_CE, Bodies: [0.2000000000007276, 9.25, 1.1999999999970896], Entry: 24161.85, High: 24166.05, Low: 24141.4
+2026-06-22 11:35:10,795 - INFO - Scalping Signal! BUY_CE NIFTY2662324150CE. Entry Spot: 24161.85, SL Level: 24141.4, SL Distance: 20.44999999999709
+2026-06-22 11:35:10,823 - ERROR - Error placing order: Insufficient funds. Required margin is 246288.25 but available margin is 231934.30.
+2026-06-22 11:40:10,277 - INFO - Momentum Check: Time=2026-06-22 11:30:00+05:30, O=24160.65, C=24161.85, H = 24166.05, L = 24158.45, TotalSize=7.599999999998545, BodySize=1.1999999999970896, ATR14=12.57,Tolerance=0.76, Threshold=20.00
+2026-06-22 11:40:10,300 - INFO - Scalping: Not all candles in same direction. Directions: [1, 1, -1]
+2026-06-22 11:45:10,755 - INFO - Momentum Check: Time=2026-06-22 11:35:00+05:30, O=24161.9, C=24158.4, H = 24165.1, L = 24155.6, TotalSize=9.5, BodySize=3.5, ATR14=12.02,Tolerance=0.95, Threshold=20.00
+2026-06-22 11:45:10,775 - INFO - Scalping: Not all candles in same direction. Directions: [1, -1, -1]
+2026-06-22 11:50:10,252 - INFO - Momentum Check: Time=2026-06-22 11:40:00+05:30, O=24158.15, C=24148.35, H = 24159.35, L = 24145.7, TotalSize=13.649999999997817, BodySize=9.80000000000291, ATR14=11.07,Tolerance=1.36, Threshold=20.00
+2026-06-22 11:50:10,283 - INFO - Scalping Pattern Found! Direction: BUY_PE, Bodies: [3.5, 9.80000000000291, 0.5500000000029104], Entry: 24147.6, High: 24165.1, Low: 24145.1
+2026-06-22 11:50:10,283 - INFO - Scalping Signal! BUY_PE NIFTY2662324150PE. Entry Spot: 24147.6, SL Level: 24165.1, SL Distance: 17.5
+2026-06-22 11:50:10,335 - ERROR - Error placing order: Insufficient funds. Required margin is 246171.25 but available margin is 231934.30.
+2026-06-22 11:55:10,798 - INFO - Momentum Check: Time=2026-06-22 11:45:00+05:30, O=24148.15, C=24147.6, H = 24152.55, L = 24145.1, TotalSize=7.450000000000728, BodySize=0.5500000000029104, ATR14=11.69,Tolerance=0.75, Threshold=20.00
+2026-06-22 11:55:10,820 - INFO - Scalping: Not all candles are small. Bodies: [9.80000000000291, 0.5500000000029104, 12.05000000000291], Threshold: 10
+2026-06-22 12:00:10,278 - INFO - Momentum Check: Time=2026-06-22 11:50:00+05:30, O=24146.15, C=24134.1, H = 24148.9, L = 24133.4, TotalSize=15.5, BodySize=12.05000000000291, ATR14=11.71,Tolerance=1.55, Threshold=20.00
+2026-06-22 12:00:10,301 - INFO - Scalping: Not all candles are small. Bodies: [0.5500000000029104, 12.05000000000291, 5.950000000000728], Threshold: 10
+2026-06-22 12:05:10,775 - INFO - Momentum Check: Time=2026-06-22 11:55:00+05:30, O=24134.45, C=24140.4, H = 24141.6, L = 24129.65, TotalSize=11.94999999999709, BodySize=5.950000000000728, ATR14=12.11,Tolerance=1.19, Threshold=20.00
+2026-06-22 12:05:10,814 - INFO - Scalping: Not all candles are small. Bodies: [12.05000000000291, 5.950000000000728, 16.299999999999272], Threshold: 10
+2026-06-22 12:10:10,270 - INFO - Momentum Check: Time=2026-06-22 12:00:00+05:30, O=24140.45, C=24124.15, H = 24142.15, L = 24123.1, TotalSize=19.05000000000291, BodySize=16.299999999999272, ATR14=11.62,Tolerance=1.91, Threshold=20.00
+2026-06-22 12:10:10,291 - INFO - Scalping: Not all candles are small. Bodies: [5.950000000000728, 16.299999999999272, 1.3499999999985448], Threshold: 10
+2026-06-22 12:15:10,803 - INFO - Momentum Check: Time=2026-06-22 12:05:00+05:30, O=24125.05, C=24123.7, H = 24128.2, L = 24121, TotalSize=7.200000000000728, BodySize=1.3499999999985448, ATR14=11.33,Tolerance=0.72, Threshold=20.00
+2026-06-22 12:15:10,829 - INFO - Scalping: Not all candles are small. Bodies: [16.299999999999272, 1.3499999999985448, 5.849999999998545], Threshold: 10
+2026-06-22 12:20:10,286 - INFO - Momentum Check: Time=2026-06-22 12:10:00+05:30, O=24124.05, C=24118.2, H = 24125.6, L = 24117.85, TotalSize=7.75, BodySize=5.849999999998545, ATR14=11.48,Tolerance=0.78, Threshold=20.00
+2026-06-22 12:20:10,307 - INFO - Scalping: Not all candles in same direction. Directions: [-1, -1, 1]
+2026-06-22 12:25:10,765 - INFO - Momentum Check: Time=2026-06-22 12:15:00+05:30, O=24117.65, C=24122.7, H = 24127.25, L = 24116.15, TotalSize=11.099999999998545, BodySize=5.049999999999272, ATR14=11.52,Tolerance=1.11, Threshold=20.00
+2026-06-22 12:25:10,785 - INFO - Scalping: Not all candles in same direction. Directions: [-1, 1, 1]
+2026-06-22 12:30:10,247 - INFO - Momentum Check: Time=2026-06-22 12:20:00+05:30, O=24123.05, C=24125.6, H = 24129.15, L = 24118.4, TotalSize=10.75, BodySize=2.5499999999992724, ATR14=11.70,Tolerance=1.07, Threshold=20.00
+2026-06-22 12:30:10,268 - INFO - Scalping: Not all candles in same direction. Directions: [1, 1, -1]
+2026-06-22 12:35:10,725 - INFO - Momentum Check: Time=2026-06-22 12:25:00+05:30, O=24125.55, C=24119.85, H = 24127.4, L = 24112.35, TotalSize=15.05000000000291, BodySize=5.700000000000728, ATR14=11.90,Tolerance=1.51, Threshold=20.00
+2026-06-22 12:35:10,746 - INFO - Scalping: Not all candles in same direction. Directions: [1, -1, 1]
+2026-06-22 12:40:10,204 - INFO - Momentum Check: Time=2026-06-22 12:30:00+05:30, O=24119.65, C=24122.75, H = 24126.25, L = 24109.8, TotalSize=16.450000000000728, BodySize=3.099999999998545, ATR14=11.59,Tolerance=1.65, Threshold=20.00
+2026-06-22 12:40:10,231 - INFO - Scalping: Not all candles in same direction. Directions: [-1, 1, -1]
+2026-06-22 12:45:10,688 - INFO - Momentum Check: Time=2026-06-22 12:35:00+05:30, O=24123.2, C=24119.6, H = 24125.25, L = 24115.95, TotalSize=9.299999999999272, BodySize=3.600000000002183, ATR14=11.43,Tolerance=0.93, Threshold=20.00
+2026-06-22 12:45:10,712 - INFO - Scalping: Not all candles in same direction. Directions: [1, -1, -1]
+2026-06-22 12:50:10,237 - INFO - Momentum Check: Time=2026-06-22 12:40:00+05:30, O=24119.5, C=24118.75, H = 24120.65, L = 24115.35, TotalSize=5.30000000000291, BodySize=0.75, ATR14=11.37,Tolerance=0.53, Threshold=20.00
+2026-06-22 12:50:10,260 - INFO - Scalping: Not all candles in same direction. Directions: [-1, -1, 1]
+2026-06-22 12:55:10,721 - INFO - Momentum Check: Time=2026-06-22 12:45:00+05:30, O=24118.6, C=24119.4, H = 24120.95, L = 24112.25, TotalSize=8.700000000000728, BodySize=0.8000000000029104, ATR14=11.11,Tolerance=0.87, Threshold=20.00
+2026-06-22 12:55:10,746 - INFO - Scalping: Not all candles in same direction. Directions: [-1, 1, 1]
+2026-06-22 13:00:10,202 - INFO - Momentum Check: Time=2026-06-22 12:50:00+05:30, O=24119.2, C=24120.3, H = 24127.05, L = 24117.05, TotalSize=10.0, BodySize=1.0999999999985448, ATR14=10.97,Tolerance=1.00, Threshold=20.00
+2026-06-22 13:00:10,224 - INFO - Scalping Pattern Found! Direction: BUY_CE, Bodies: [0.8000000000029104, 1.0999999999985448, 3.349999999998545], Entry: 24123.5, High: 24127.05, Low: 24112.25
+2026-06-22 13:00:10,225 - INFO - Scalping Signal! BUY_CE NIFTY2662324100CE. Entry Spot: 24123.5, SL Level: 24112.25, SL Distance: 11.25
+2026-06-22 13:00:10,256 - INFO - Order placed. ID: 2068959715487948800
+2026-06-22 13:00:10,256 - INFO - Order Placed: BUY NIFTY2662324100CE Qty=195 ID=2068959715487948800
+2026-06-22 13:00:10,273 - INFO - Trade logged to logs/2026-06-22/trades.csv: ScalpingStrategy BUY NIFTY2662324100CE
+2026-06-22 13:00:10,291 - INFO - Entered Scalping NIFTY2662324100CE at 87.1. Initial SL: 75.85, Distance: 11.25
+2026-06-22 13:05:10,282 - INFO - Momentum Check: Time=2026-06-22 12:55:00+05:30, O=24120.15, C=24123.5, H = 24124.6, L = 24119.15, TotalSize=5.44999999999709, BodySize=3.349999999998545, ATR14=10.58,Tolerance=0.54, Threshold=20.00
+2026-06-22 13:10:10,371 - INFO - Momentum Check: Time=2026-06-22 13:00:00+05:30, O=24123.3, C=24116.65, H = 24123.85, L = 24113.75, TotalSize=10.099999999998545, BodySize=6.649999999997817, ATR14=10.45,Tolerance=1.01, Threshold=20.00
+2026-06-22 13:15:10,261 - INFO - Momentum Check: Time=2026-06-22 13:05:00+05:30, O=24116.3, C=24112.5, H = 24120.7, L = 24110.65, TotalSize=10.049999999999272, BodySize=3.7999999999992724, ATR14=9.65,Tolerance=1.00, Threshold=20.00
+2026-06-22 13:20:10,947 - INFO - Momentum Check: Time=2026-06-22 13:10:00+05:30, O=24112.6, C=24112.8, H = 24113, L = 24105.1, TotalSize=7.900000000001455, BodySize=0.2000000000007276, ATR14=10.25,Tolerance=0.79, Threshold=20.00
+2026-06-22 13:25:10,543 - INFO - Momentum Check: Time=2026-06-22 13:15:00+05:30, O=24112.8, C=24123.2, H = 24127.2, L = 24111.55, TotalSize=15.650000000001455, BodySize=10.400000000001455, ATR14=10.43,Tolerance=1.57, Threshold=20.00
+2026-06-22 13:30:10,165 - INFO - Momentum Check: Time=2026-06-22 13:20:00+05:30, O=24123.3, C=24122.5, H = 24125.15, L = 24114.9, TotalSize=10.25, BodySize=0.7999999999992724, ATR14=10.30,Tolerance=1.03, Threshold=20.00
+2026-06-22 13:35:10,106 - INFO - Momentum Check: Time=2026-06-22 13:25:00+05:30, O=24122.25, C=24118.7, H = 24125.05, L = 24115.75, TotalSize=9.299999999999272, BodySize=3.5499999999992724, ATR14=10.09,Tolerance=0.93, Threshold=20.00
+2026-06-22 13:45:10,535 - INFO - Momentum Check: Time=2026-06-22 13:35:00+05:30, O=24119.6, C=24115.5, H = 24125.45, L = 24113.4, TotalSize=12.049999999999272, BodySize=4.099999999998545, ATR14=10.88,Tolerance=1.20, Threshold=20.00
+2026-06-22 13:50:10,420 - INFO - Momentum Check: Time=2026-06-22 13:40:00+05:30, O=24115.75, C=24119.45, H = 24127.7, L = 24097.15, TotalSize=30.549999999999272, BodySize=3.7000000000007276, ATR14=10.81,Tolerance=3.05, Threshold=20.00
+2026-06-22 13:55:10,409 - INFO - Momentum Check: Time=2026-06-22 13:45:00+05:30, O=24119.65, C=24119.05, H = 24124.1, L = 24115.85, TotalSize=8.25, BodySize=0.6000000000021828, ATR14=11.04,Tolerance=0.83, Threshold=20.00
+2026-06-22 14:00:10,798 - INFO - Momentum Check: Time=2026-06-22 13:50:00+05:30, O=24118.85, C=24124.9, H = 24126.75, L = 24118.15, TotalSize=8.599999999998545, BodySize=6.05000000000291, ATR14=11.57,Tolerance=0.86, Threshold=20.00
+2026-06-22 14:05:10,644 - INFO - Momentum Check: Time=2026-06-22 13:55:00+05:30, O=24125.3, C=24126, H = 24136.5, L = 24120.4, TotalSize=16.099999999998545, BodySize=0.7000000000007276, ATR14=11.61,Tolerance=1.61, Threshold=20.00
+2026-06-22 14:10:10,630 - INFO - Momentum Check: Time=2026-06-22 14:00:00+05:30, O=24126.2, C=24127, H = 24132.25, L = 24121.75, TotalSize=10.5, BodySize=0.7999999999992724, ATR14=12.23,Tolerance=1.05, Threshold=20.00
+2026-06-22 14:15:10,554 - INFO - Momentum Check: Time=2026-06-22 14:05:00+05:30, O=24127.4, C=24119, H = 24133.15, L = 24119, TotalSize=14.150000000001455, BodySize=8.400000000001455, ATR14=12.51,Tolerance=1.42, Threshold=20.00
+2026-06-22 14:20:00,288 - INFO - New trades cutoff time 14:20:00 reached. No new entries allowed. Stopping strategy.
+2026-06-22 14:30:11,242 - INFO - Trailing SL Updated for NIFTY2662324100CE: 75.95 (LTP: 95.95)
+2026-06-22 15:00:23,788 - INFO - SL Hit for NIFTY2662324100CE at 75.7. Exiting...
+2026-06-22 15:00:23,817 - ERROR - Error placing order: Insufficient funds. Required margin is 509749.98 but available margin is 231934.30.
+2026-06-22 15:00:23,817 - INFO - Scalping Trade Exited.
+2026-06-22 15:00:24,819 - INFO - New trades cutoff time 14:50:00 reached. No new entries allowed.
+2026-06-22 17:38:29,601 - INFO - Stopping Application...

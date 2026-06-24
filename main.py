@@ -54,6 +54,7 @@ logger = logging.getLogger(__name__)
 
 # Configuration
 SYMBOL = "NIFTY"
+
 EXPIRY_STAMP = "26JUN"  # Update this to current expiry, e.g., 23N02 for weekly or 23OCT for monthly
 QUANTITY = 195  # 3 Lot for Iron Fly
 HEDGE_DIST = 500
@@ -68,7 +69,10 @@ MOMENTUM_START_TIME = time_obj(9, 30)
 MOMENTUM_INTERVAL = "3minute"
 MOMENTUM_QUANTITY = 520  # 2 Lot
 
+
+
 MOMENTUM_PROFIT_TARGET = 4000  # 20 points per lot target, adjust as needed
+
 
 # ORB Strategy Config
 ORB_BASE_SYMBOL = "NFO:NIFTY24MARFUT"  # Track future for ORB volume and signals
@@ -239,6 +243,7 @@ def main():
                         scalping_strategy.manage_trade()
                 else:
                     # Run Strategy Logic
+
                     # iron_fly.on_tick()
                     momentum_buy.on_tick()
                     # orb_strategy.on_tick()
