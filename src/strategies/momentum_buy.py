@@ -12,6 +12,7 @@ class MomentumBuyStrategy(BaseStrategy):
         trade_manager,
         expiry_stamp,
         candle_size=50,
+        start_time=None,
         interval="15minute",
         trailing_points=15,
         quantity=65,
@@ -21,6 +22,7 @@ class MomentumBuyStrategy(BaseStrategy):
         """
         expiry_stamp: e.g. "23OCT"
         candle_size: Default minimum points difference, but will be dynamic max(40, ATR14).
+        start_time: datetime.time object for allowing new entries (e.g., 09:45)
         interval: Candle interval str (default "15minute")
         trailing_points: Points to trail SL by
         end_time: datetime.time object for auto-exit time (e.g., 15:20)
@@ -29,7 +31,9 @@ class MomentumBuyStrategy(BaseStrategy):
         super().__init__(kite_client, trade_manager)
         self.expiry_stamp = expiry_stamp
         self.candle_size = candle_size
+        self.start_time = start_time
         self.interval = interval
+        self.interval_minutes = self._get_interval_minutes(interval)
         self.trailing_points = trailing_points
         self.quantity = quantity
         self.end_time = end_time
@@ -96,6 +100,9 @@ class MomentumBuyStrategy(BaseStrategy):
 
         # 2. Check for New Entry
         if self.state == "IDLE":
+            if self.start_time and now < self.start_time:
+                return
+
             # Check if new trades cutoff time has been reached (14:20)
             new_trades_cutoff = datetime.time(14, 20)
             if now >= new_trades_cutoff:
@@ -105,13 +112,20 @@ class MomentumBuyStrategy(BaseStrategy):
                 self.state = "EXITED"
                 return
 
-            # Only check at 15-minute boundaries (e.g., 00, 15, 30, 45)
+            # Only check at candle boundaries for the configured interval.
             # We add a small delay (10s) to ensure the candle is formed on the server
             now_dt = datetime.datetime.now()
-            if now_dt.minute % 5 == 0 and now_dt.second >= 10:
+            if now_dt.minute % self.interval_minutes == 0 and now_dt.second >= 10:
                 if now_dt.minute != self.last_check_minute:
                     self.check_entry()
                     self.last_check_minute = now_dt.minute
+
+    def _get_interval_minutes(self, interval):
+        if interval.endswith("minute"):
+            return int(interval.removesuffix("minute"))
+        if interval.endswith("minutes"):
+            return int(interval.removesuffix("minutes"))
+        raise ValueError(f"Unsupported momentum interval: {interval}")
 
     def check_entry(self):
         # Check overall profit threshold

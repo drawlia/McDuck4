@@ -64,10 +64,11 @@ IRONFLY_PROFIT_TARGET = 1800
 
 # Momentum Strategy Config
 MOMENTUM_CANDLE_SIZE = 20  # Default, now dynamic max(40, ATR14)
+MOMENTUM_START_TIME = time_obj(9, 30)
 MOMENTUM_INTERVAL = "3minute"
 MOMENTUM_QUANTITY = 520  # 2 Lot
 
-MOMENTUM_PROFIT_TARGET = 5000  # 20 points per lot target, adjust as needed
+MOMENTUM_PROFIT_TARGET = 4000  # 20 points per lot target, adjust as needed
 
 # ORB Strategy Config
 ORB_BASE_SYMBOL = "NFO:NIFTY24MARFUT"  # Track future for ORB volume and signals
@@ -82,7 +83,7 @@ ORB_END_TIME = time_obj(15, 15)
 ORB_PROFIT_TARGET = 1800
 
 # Scalping Strategy Config
-SCALPING_START_TIME = time_obj(9, 45)
+SCALPING_START_TIME = MOMENTUM_START_TIME
 SCALPING_INTERVAL = "5minute"
 SCALPING_QUANTITY = 195
 SCALPING_PROFIT_TARGET = SCALPING_QUANTITY * 10
@@ -150,6 +151,7 @@ def main():
         trade_manager=tm,
         expiry_stamp=EXPIRY_STAMP,
         candle_size=MOMENTUM_CANDLE_SIZE,
+        start_time=MOMENTUM_START_TIME,
         interval=MOMENTUM_INTERVAL,
         quantity=MOMENTUM_QUANTITY,
         end_time=END_TIME,
@@ -195,6 +197,7 @@ def main():
         f"Strategies Initialized: Iron Fly, Momentum Buy, ORB & Scalping on {SYMBOL}"
     )
     logger.info(f"Iron Fly entry scheduled at {START_TIME.strftime('%H:%M:%S')}")
+    logger.info(f"Momentum entry starts at {MOMENTUM_START_TIME.strftime('%H:%M:%S')}")
     logger.info(f"Scalping entry starts at {SCALPING_START_TIME.strftime('%H:%M:%S')}")
     logger.info("Application Initialized. Starting Main Loop...")
 
@@ -236,10 +239,10 @@ def main():
                         scalping_strategy.manage_trade()
                 else:
                     # Run Strategy Logic
-                    iron_fly.on_tick()
+                    # iron_fly.on_tick()
                     momentum_buy.on_tick()
                     # orb_strategy.on_tick()
-                    scalping_strategy.on_tick()
+                    # scalping_strategy.on_tick()
 
             # Sleep to simulate tick interval (e.g., 1 second)
             time.sleep(1)
