@@ -71,7 +71,7 @@ MOMENTUM_QUANTITY = 520  # 2 Lot
 
 
 
-MOMENTUM_PROFIT_TARGET = 4000  # 20 points per lot target, adjust as needed
+MOMENTUM_PROFIT_TARGET = 4800  # 20 points per lot target, adjust as needed
 
 
 # ORB Strategy Config
@@ -96,7 +96,7 @@ SCALPING_SMALL_CANDLE_THRESHOLD = 10  # Max body size to consider a candle "smal
 SCALPING_MIN_CANDLES = 3  # Minimum consecutive small candles
 
 # Overall Profit Threshold
-OVERALL_PROFIT_THRESHOLD = 20000  # No new trades if overall profit >= 20000
+OVERALL_PROFIT_THRESHOLD = 25000  # No new trades if overall profit >= 20000
 
 
 def get_startup_access_token():
